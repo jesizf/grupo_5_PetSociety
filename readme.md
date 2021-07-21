@@ -15,6 +15,8 @@ Buscamos que la pagina sea intuitiva y que cualquier persona puede comprar a tra
 - https://www.timoteopetshop.com/ : La forma en la que estan posicionadas las cosas nos pareció prolija, hace que la página no se vea tan cargada.
 - https://cordoba.pluspet.com.ar/products/gato-alimento-cachorro-balanced?variant=40372446691498 : Nos gusto la forma en que estan posicionados los detalles del producto.
 - https://www.puppis.com.ar/checkout#/cart : Nos parecio interesante como estan organizados los objetos en el carrito de una forma limpia y no se ve cargada.
+- https://www.petmania.com.ar/: La organización de categorías nos gustó mucho y quisimos hacer algo parecido.
+- https://multipet.com.ar/: Es muy sencilla y completa a la vez. 
 
 ## Paleta de colores:
 
@@ -22,6 +24,7 @@ Buscamos que la pagina sea intuitiva y que cualquier persona puede comprar a tra
 - E5E5E5.
 - 383E56
 - FFFFFF
+- 000000
 
 ## Tipografía:
 - Poppins
