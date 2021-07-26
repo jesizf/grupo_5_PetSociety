@@ -1,7 +1,8 @@
 # Proyecto Integrador : Pet Society
-Nos especializamos en la venta de productos para perros y gatos.
-La idea de hacer un Pet shop surgió porque la mayoría de nosotros tiene perros/gatos, así que nos sentimos un poco familiarizados con las cosas que venden.
-Buscamos que la pagina sea intuitiva y que cualquier persona puede comprar a traves de ella.
+Pet Society es una tienda de productos para mascotas. Nos especializamos principalmente en la comercialización de alimentos y accesorios para perros y gatos.
+Ofrecemos una página simple y segura para que tu experiencia de compra sea la mejor. 
+Realizamos envíos a todo Buenos Aires.
+Nos enfocamos en darte el mejor servicio de atención, los mejores productos y precios totalmente accesibles.
 
 ## Integrantes:
 - Jesica Daniela Guerrero: 26 años. Boedo, CABA. Estudiante de Desarrollo web y Testing QA manual.
