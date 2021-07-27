@@ -3,6 +3,7 @@ Pet Society es una tienda de productos para mascotas que se especializa principa
 en la comercialización de alimentos y accesorios para perros y gatos es por eso que nuestra propuesta es realizar
 un sitio web intuitivo y seguro para que la experiencia de compra y navegación de los usuarios sea la mejor.
 Cualquier cliente va a ser capaz de comprar a traves de ella y volver a hacerlo las veces que quiera.
+
 Contamos con varias paletas de colores que le permitirán destacar de la competencia manteniendo la escencia de la empresa.
 
 ## Integrantes:
