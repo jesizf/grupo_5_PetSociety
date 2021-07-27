@@ -1,6 +1,6 @@
 # Proyecto Integrador : Pet Society
 Pet Society es una tienda de productos para mascotas. Nos especializamos principalmente en la comercialización de alimentos y accesorios para perros y gatos.
-Ofrecemos una página simple y segura para que tu experiencia de compra sea la mejor. 
+Ofrecemos una página intuitiva y segura para que tu experiencia de compra sea la mejor. 
 Realizamos envíos a todo Buenos Aires.
 Nos enfocamos en darte el mejor servicio de atención, los mejores productos y precios totalmente accesibles.
 
