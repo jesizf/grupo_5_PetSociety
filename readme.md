@@ -10,7 +10,7 @@ Contamos con varias paletas de colores que le permitirán destacar de la compete
 - Jesica Daniela Guerrero: 26 años. Boedo, CABA. Estudiante de Desarrollo web y Testing QA manual.
 - Patricia Soledad Pacheco: 25 años. Arroyito, Córdoba.
 - Lourdes Micaela Cáceres:  24 años. San Miguel de Tucumán, Tucumán.
-- Rodrigo Aspeti: 35 años. Tartagal, Salta.
+- Rodrigo Aspeti: 35 años. Tartagal, Salta. 
 
 ## Sitios de referencia
 - https://www.puppis.com.ar/ : Destaca por su color y queremos que nuestro sitio tambien. Es un pet shop muy conocido.
