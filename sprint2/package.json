@@ -1,22 +1,13 @@
 {
-  "name": "petsociety",
+  "name": "header",
   "version": "1.0.0",
-  "description": "Pet Society es una tienda de productos para mascotas que se especializa principalmente\r en la comercialización de alimentos y accesorios para perros y gatos es por eso que nuestra propuesta es realizar\r un sitio web intuitivo y seguro para que la experiencia de compra y navegación de los usuarios sea la mejor.\r Cualquier cliente va a ser capaz de comprar a traves de ella y volver a hacerlo las veces que quiera.",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jesizf/grupo_5_PetSociety.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jesizf/grupo_5_PetSociety/issues"
-  },
-  "homepage": "https://github.com/jesizf/grupo_5_PetSociety#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
