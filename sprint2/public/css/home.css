@@ -1,3 +1,35 @@
-main{
-    background-color: var(--colorGrisClaro);
+.home{
+    background-color: #E5E5E5;
+}
+.home main {
+  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.home main section.productos {
+  width: 800px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+}
+
+.home main section.productos article {
+    width: 40%;
+    text-align: center;
+    border-radius: 15%;
+    /* border: 1px solid black; */
+    margin-bottom: 20px;
+    background-color: white;
+   
+}
+ 
+  
+
+.home main section.productos img {
+  width: 80%;
 }
