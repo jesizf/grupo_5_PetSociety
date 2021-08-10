@@ -10,7 +10,7 @@ ul{
     text-decoration: none;
 }
 
-root{
+:root{
     --colorNaranja: #fb9d5a;
     --colorAzul: #383e56;
     --colorGrisClaro: #E5E5E5;
