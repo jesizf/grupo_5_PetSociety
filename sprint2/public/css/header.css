@@ -1,0 +1,185 @@
+header .header-principal{
+    background-color: var(--colorNaranja);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+header .burger-menu{
+
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+header .header-principal .logo{
+    width: 80px;
+    height: 59px;
+    
+}
+
+header div.buscador{
+width: 200px;
+display: flex;
+flex-wrap: wrap;
+}
+
+header div.buscador input{
+    width: 52vw;
+    border-radius: 112px;
+    height: 29px;
+    padding: 5px;   
+    font-size: 12px; 
+}
+header div div.buscador div.lupa{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+header div div.buscador div.lupa a.input-group-btn{
+    font-size: 10px;
+    color: black;
+    padding: 10px 12px 0 0;
+}
+
+header div a.user{
+    display: none;
+}
+
+header div a.carrito{
+    color: white;
+    font-size: 25px;
+    margin: 10px; 
+}
+
+header div.categorias{
+   display: none;
+}
+
+/*Tablet*/
+@media (min-width: 768px) {      
+    header .header-principal{  /*header*/
+    flex-wrap: wrap;
+    width: 100%;
+    
+    }
+
+    header .burger-menu{  /*menu hamburguesa*/
+        display: none;
+        
+    }
+header .header-principal div.img{
+    display: flex;
+    margin-right: 50px;
+}
+  
+    header .header-principal div.img a img.logo{  /*logo*/
+        width: 115px;
+        height: 85px;
+      
+    }
+
+    header div.buscador{
+        justify-content: center;  /*buscador (barra y lupa)*/
+    }
+
+    header div.buscador input{  /*buscador solo*/
+        width: 400px;
+        font-size: 20px;  
+    }
+    header div div.buscador div.lupa{ /*caja de la lupa*/
+        padding-left: 370px;
+    }
+
+    header div div.buscador div.lupa a.input-group-btn{
+        padding: 10px 0 50px 0;
+    }
+
+
+    header div.header-principal div.iconos{ /*caja de los iconos*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header div.header-principal div.iconos div a.user{
+        display: inline-block;   /*icono de usuario*/
+        align-items: center;
+        margin-left: 60px;
+        font-size: 30px;
+        color: #fff;
+        
+    }
+    
+    header div a.carrito{  /*icono del carrito*/
+        font-size: 30px;
+        margin-left: 30px;
+       
+    }
+    header div.categorias{
+        padding: 5px;
+    }
+    header div.categorias ul li a{  /*barra de categorias*/
+        margin: 2px;
+        color: #ffff;
+        
+    }
+
+    header div.categorias{ /*las categotias (inicio, perros, gatos)*/
+        display: block;
+        background-color: var(--colorAzul);
+    }
+
+    header div.categorias ul{  /*ul categorias e iconos*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        }
+}
+
+/*Desktop*/
+
+@media (min-width:1024px) {
+    header .header-principal{
+        height: 100px;
+        width: 100%;
+    }
+  
+    header .header-principal div.img a img.logo{  /*logo*/
+        width: 167px;
+        height: 120px;
+        margin-right: 100px;        
+    }
+
+    header div.buscador input{  /*buscador solo*/
+        width: 570px;  
+        height: 45px;
+        margin-right: 50px;
+       
+    }
+    header div div.buscador div.lupa{ /*caja de la lupa*/
+        padding-left: 500px;
+    }
+    header div div.buscador div.lupa a.input-group-btn{
+        font-size: 20px;
+        margin-right: 40px;
+    }
+
+    header div.header-principal div.iconos div a.user{  /*icono de usuario*/
+        font-size: 50px;
+    }
+
+    .box-user{
+        margin-left: 50px;
+    }
+
+    header div.header-principal div.iconos div a.carrito{  /*icono del carrito*/
+        font-size: 50px;
+        margin-left: 50px;       
+    }
+     
+}
+
+
