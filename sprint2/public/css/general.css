@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+ul{
+    text-decoration: none;
+}
+
+root{
+    --colorNaranja: #fb9d5a;
+    --colorAzul: #383e56;
+    --colorGrisClaro: #E5E5E5;
+    --colorNegro:#000000;
+
+}
