@@ -1,26 +1,28 @@
-header .header-principal{
+header div.header-principal{
     background-color: var(--colorNaranja);
+    width: 100%;
     height: 70px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center; 
 }
 
 header .burger-menu{
-
+    margin-right: -5px;
     color: #fff;
-    padding: 10px 10px;
+    padding: 10px;
     font-size: 20px;
 }
 
 header .header-principal .logo{
-    width: 80px;
+   margin: 0 -5px;
+    width: 65px;
     height: 59px;
     
 }
 
 header div.buscador{
-width: 200px;
+flex-grow: 0.4;
 display: flex;
 flex-wrap: wrap;
 }
@@ -51,7 +53,7 @@ header div a.user{
 header div a.carrito{
     color: white;
     font-size: 25px;
-    margin: 10px; 
+    margin-right: 10px;
 }
 
 header div.categorias{
@@ -61,9 +63,7 @@ header div.categorias{
 /*Tablet*/
 @media (min-width: 768px) {      
     header .header-principal{  /*header*/
-    flex-wrap: wrap;
-    width: 100%;
-    
+        align-content: center;
     }
 
     header .burger-menu{  /*menu hamburguesa*/
@@ -77,54 +77,53 @@ header .header-principal div.img{
   
     header .header-principal div.img a img.logo{  /*logo*/
         width: 115px;
-        height: 85px;
+        height: 125px;
+        margin-top: 10px;
       
     }
 
     header div.buscador{
+        position: relative;
         justify-content: center;  /*buscador (barra y lupa)*/
     }
 
     header div.buscador input{  /*buscador solo*/
-        width: 400px;
-        font-size: 20px;  
+        
+        font-size: 18px;  
     }
     header div div.buscador div.lupa{ /*caja de la lupa*/
-        padding-left: 370px;
+       justify-content: flex-end;
+       margin-right: 17%;
     }
 
-    header div div.buscador div.lupa a.input-group-btn{
-        padding: 10px 0 50px 0;
-    }
-
-
-    header div.header-principal div.iconos{ /*caja de los iconos*/
+   header div.header-principal div.iconos{ /*caja de los iconos*/
         display: flex;
         flex-wrap: wrap;
+        margin-left: 5%;
     }
 
     header div.header-principal div.iconos div a.user{
-        display: inline-block;   /*icono de usuario*/
-        align-items: center;
-        margin-left: 60px;
+        display: inline-block;   /*icono de usuario*/      
         font-size: 30px;
         color: #fff;
-        
     }
     
     header div a.carrito{  /*icono del carrito*/
-        font-size: 30px;
-        margin-left: 30px;
-       
+        margin-left: 120%;
+        margin-right: -20%;
+        font-size: 30px;       
     }
     header div.categorias{
         padding: 5px;
     }
-    header div.categorias ul li a{  /*barra de categorias*/
-        margin: 2px;
-        color: #ffff;
-        
+    header div.categorias ul li{
+        margin: 5px;
     }
+    header div.categorias ul li a{  /*barra de categorias*/
+        
+        color: #ffff;
+    }
+   
 
     header div.categorias{ /*las categotias (inicio, perros, gatos)*/
         display: block;
@@ -135,7 +134,6 @@ header .header-principal div.img{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        
         }
 }
 
@@ -149,36 +147,30 @@ header .header-principal div.img{
   
     header .header-principal div.img a img.logo{  /*logo*/
         width: 167px;
-        height: 120px;
-        margin-right: 100px;        
+        height: 120px;      
     }
 
     header div.buscador input{  /*buscador solo*/
-        width: 570px;  
-        height: 45px;
-        margin-right: 50px;
+      height: 100%;
        
     }
-    header div div.buscador div.lupa{ /*caja de la lupa*/
-        padding-left: 500px;
-    }
     header div div.buscador div.lupa a.input-group-btn{
-        font-size: 20px;
-        margin-right: 40px;
+        font-size: 100%;
+        margin-right: -22px;
     }
 
     header div.header-principal div.iconos div a.user{  /*icono de usuario*/
         font-size: 50px;
     }
 
-    .box-user{
-        margin-left: 50px;
-    }
-
     header div.header-principal div.iconos div a.carrito{  /*icono del carrito*/
         font-size: 50px;
         margin-left: 50px;       
     }
+    header div.categorias ul li{  /*ul categorias e iconos*/
+        font-size: 18px;
+        }
+
      
 }
 
