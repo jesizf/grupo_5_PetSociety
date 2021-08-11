@@ -9,6 +9,9 @@ li{
 ul{
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+}
 
 :root{
     --colorNaranja: #fb9d5a;

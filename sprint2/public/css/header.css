@@ -158,17 +158,44 @@ header .header-principal div.img{
         font-size: 100%;
         margin-right: -22px;
     }
+    header div.header-principal div.iconos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
 
     header div.header-principal div.iconos div a.user{  /*icono de usuario*/
         font-size: 50px;
+       
+      
+       
+    }
+    header div.header-principal div.iconos div a.user i{
+        margin-left: 20%;
+        
+        
     }
 
-    header div.header-principal div.iconos div a.carrito{  /*icono del carrito*/
+    header div.header-principal div.iconos div.box-carrito{
+       display: flex;
+       flex-wrap: wrap;
+       
+       
+      
+    }
+
+    header div.header-principal div.iconos div a.carrito i{  /*icono del carrito*/
         font-size: 50px;
-        margin-left: 50px;       
+        justify-content: flex-start;
+        align-content: flex-end;
+        width: 100%;
+        margin-left: -15%;
+    margin-right: 10%;
+       
     }
     header div.categorias ul li{  /*ul categorias e iconos*/
         font-size: 18px;
+       
         }
 
      
