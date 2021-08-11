@@ -15,21 +15,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  
  
 }
 
 .home main section.productos article {
     width: 40%;
+   
     text-align: center;
     border-radius: 15%;
     /* border: 1px solid black; */
     margin-bottom: 20px;
+    box-shadow: 0 0 0 rgb(0,0,1);
     background-color: white;
    
 }
- 
-  
+.home main section.productos article .tarjeta {
+  text-align: center;
+  padding:5px;
+}
 
 .home main section.productos img {
-  width: 80%;
+  width: 70%;
+}
+.home main section.productos article .detalle-producto{
+width: 100%;
+text-align: center;
+font-size: 0.8rem;
+color: var(--colorNaranja);
+text-align:center;
+padding:2px;
+
 }
