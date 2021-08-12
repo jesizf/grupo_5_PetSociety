@@ -1,13 +1,15 @@
-header div.header-principal{
+header .header-principal{
     background-color: var(--colorNaranja);
     width: 100%;
     height: 70px;
     display: flex;
     flex-wrap: wrap;
+  
     align-items: center; 
 }
 
 header .burger-menu{
+
     margin-right: -5px;
     color: #fff;
     padding: 10px;
@@ -15,16 +17,15 @@ header .burger-menu{
 }
 
 header .header-principal .logo{
-   margin: 0 -5px;
+    margin: 0 -5px;
     width: 65px;
     height: 59px;
-    
 }
 
 header div.buscador{
-flex-grow: 0.4;
-display: flex;
-flex-wrap: wrap;
+    flex-grow: 0.4;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header div.buscador input{
@@ -46,11 +47,11 @@ header div div.buscador div.lupa a.input-group-btn{
     padding: 10px 12px 0 0;
 }
 
-header div a.user{
+header div.iconos nav ul a.user{
     display: none;
 }
 
-header div a.carrito{
+header div.iconos nav ul a.carrito{
     color: white;
     font-size: 25px;
     margin-right: 10px;
@@ -61,141 +62,162 @@ header div.categorias{
 }
 
 /*Tablet*/
-@media (min-width: 768px) {      
+
+@media (min-width: 768px) {
     header .header-principal{  /*header*/
-        align-content: center;
+        width: 100%;
+     
+   display: flex;
+   flex-wrap: wrap;
+justify-content: center;
+align-content: center;
     }
 
     header .burger-menu{  /*menu hamburguesa*/
         display: none;
-        
     }
-header .header-principal div.img{
-    display: flex;
-    margin-right: 50px;
-}
-  
-    header .header-principal div.img a img.logo{  /*logo*/
-        width: 115px;
-        height: 125px;
-        margin-top: 10px;
-      
+    
+    header .header-principal div.img{
+     margin-right: 50px;
+     
     }
 
+     header .header-principal div.img a img.logo{  /*logo*/
+        margin-left: -50px;
+        width: 115px;
+        height: 125px;
+      
+    }
     header div.buscador{
         position: relative;
-        justify-content: center;  /*buscador (barra y lupa)*/
+        
+        justify-content: flex-start;  /*buscador (barra y lupa)*/
     }
 
     header div.buscador input{  /*buscador solo*/
-        
         font-size: 18px;  
+        
+  
     }
     header div div.buscador div.lupa{ /*caja de la lupa*/
-       justify-content: flex-end;
-       margin-right: 17%;
-    }
-
-   header div.header-principal div.iconos{ /*caja de los iconos*/
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 5%;
+        justify-content: flex-end;
+        margin-left: -18%;
        
     }
 
-    header div.header-principal div.iconos div a.user{
-        display: inline-block;   /*icono de usuario*/      
-        font-size: 30px;
-        color: #fff;
-    }
-    
-    header div a.carrito{  /*icono del carrito*/
-        margin-left: 120%;
-        margin-right: -20%;
-        font-size: 30px;       
-    }
-    header div.categorias{
-        padding: 2px 5px;
-    }
-    header div.categorias ul{  /*ul categorias e iconos*/
+    header div.iconos nav{
+        width: 160%;
+        
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        }
+        justify-content: flex-end;
+    }
+    
+    header div.iconos nav ul  {
+        width: 140%;
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: space-around;
+       
+    
+       
+    }
 
-    header div.categorias ul li{
-        margin: 0 5px;
+    header div.iconos nav ul a.carrito{
+        font-size: 30px;
+        
+        
+    }
+
+    header div.iconos nav ul a.user{
+  margin-left: -35%;
+           display: block;
+           color: #fff;
+        font-size: 30px;
+       
+        
+    }
+    
+  
+    header div.categorias{
+        padding: 5px;
+        width: 100%;
     }
     header div.categorias ul li a{  /*barra de categorias*/
-        
+        margin: 2px;
         color: #ffff;
+        
     }
-   
 
     header div.categorias{ /*las categotias (inicio, perros, gatos)*/
         display: block;
         background-color: var(--colorAzul);
     }
 
-   
+    header div.categorias ul{  /*ul categorias e iconos*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        }
 }
 
 /*Desktop*/
 
 @media (min-width:1024px) {
-    header div.header-principal{
-        width: 100%;
+    header .header-principal{
+      width: 104%;
         height: 90px;
-       
+      
     }
-  
+   
     header .header-principal div.img a img.logo{  /*logo*/
         width: 167px;
-        height: 120px;      
+        height: 170px; 
+        padding-left: -22%;
+        margin-left: -40% ;
+        
     }
 
     header div.buscador input{  /*buscador solo*/
-      height: 100%;
+        height: 100%;  
+    }
+
+    header div div.buscador div.lupa{ /*caja de la lupa*/
+ 
+        margin-left: -17%;
        
     }
+
     header div div.buscador div.lupa a.input-group-btn{
         font-size: 100%;
-        margin-right: -22px;
     }
-    header div.header-principal div.iconos{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      
+  
+    header div.iconos nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    header div.header-principal div.iconos div a.user{  /*icono de usuario*/
+    header div.iconos nav ul div a.carrito{
+       margin-left: -20%;
         font-size: 50px;
-      
        
-    }
-    header div.header-principal div.iconos div a.user i{
-    
-
-    }
-
-    header div.header-principal div.box-carrito {
- 
-    }
-
-    header div.header-principal div a.carrito i{  /*icono del carrito*/
-        font-size: 50px;
         
-        }
-    
-    header div.categorias ul li{  /*ul categorias e iconos*/
-        font-size: 18px;
+    }
+
+    header div.iconos nav ul a.user{
+           margin-left: -102%;
+        
+        font-size: 50px;
        
-        }
-        header div.categorias{
-            padding: 5px 5px;
-        }
-            
+        
+    }
+    header div.categorias{ /*las categotias (inicio, perros, gatos)*/
+        width: 104%;
+    }
+     
 }
+
 
 
