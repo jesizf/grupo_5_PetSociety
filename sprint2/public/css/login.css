@@ -2,44 +2,84 @@
     background-color: var(--colorGrisClaro);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content : center;
+    align-items : center;
     font-family: 'Roboto', sans-serif;;
+    background-color: var(--colorGrisClaro);  
     
-  
 }
 
-.login main{
-    
-   
-   
-    
+.login main div.formulario {
+    height: 100%;
+    margin-top: 30%;
+}
+
+.login main div.formulario h2{
+   text-align: center;
+   margin-bottom: 10%;
 }
 .login main div.formulario div.box-formulario{
-    width: 270px;
-    height: 270px;
+    width: 280px;
+    height: 194px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
+    padding-left: 10%;
     background-color: #ffff;
     border: 1px solid var(--colorGrisClaro);
     border-radius: 10%;  
 }
 
-.login main div.formulario div.box-formulario label.primer-label{
+.login main div.formulario div.box-formulario div.box-form{
+    display: flex;
+    flex-wrap: wrap;
+     align-items: center;
+}
+
+.login main div.formulario div.box-formulario div.box-form label.primer-label{
     margin-top: 30px;
 }
 
-.login main div.formulario div.box-formulario label{
-    
+.login main div.formulario div.box-formulario div.box-form label{
+    width: 100%;
+    margin: 2px;
+ 
 }
 
-.login main div.formulario div.box-formulario input{
-    width: 200px;
+.login main div.formulario div.box-formulario div.box-form input{
+    width: 220px;
     background-color: var(--colorGrisClaro);
     border: none;
     height: 23px;
-    
-
 }
+
+.login main div.formulario div.box-formulario div.box-error{
+    margin-left: 37.5%;
+    display: flex;
+    justify-content: center;
+    color: var(--colorNaranja);
+    font-size: 12px;
+}
+.login main div.formulario div.box-formulario div.box-error p{
+    padding-bottom: 20px;
+}
+
+.login main div.formulario div.box-crea-cuenta{
+    margin-top: 12px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.login main div.formulario div.box-crea-cuenta a p{
+    color: var(--colorNaranja);
+}
+
+.login main form button{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
 
