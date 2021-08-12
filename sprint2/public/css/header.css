@@ -100,6 +100,7 @@ header .header-principal div.img{
         display: flex;
         flex-wrap: wrap;
         margin-left: 5%;
+       
     }
 
     header div.header-principal div.iconos div a.user{
@@ -114,10 +115,16 @@ header .header-principal div.img{
         font-size: 30px;       
     }
     header div.categorias{
-        padding: 5px;
+        padding: 2px 5px;
     }
+    header div.categorias ul{  /*ul categorias e iconos*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
     header div.categorias ul li{
-        margin: 5px;
+        margin: 0 5px;
     }
     header div.categorias ul li a{  /*barra de categorias*/
         
@@ -130,19 +137,16 @@ header .header-principal div.img{
         background-color: var(--colorAzul);
     }
 
-    header div.categorias ul{  /*ul categorias e iconos*/
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        }
+   
 }
 
 /*Desktop*/
 
 @media (min-width:1024px) {
-    header .header-principal{
-        height: 100px;
+    header div.header-principal{
         width: 100%;
+        height: 90px;
+       
     }
   
     header .header-principal div.img a img.logo{  /*logo*/
@@ -159,46 +163,39 @@ header .header-principal div.img{
         margin-right: -22px;
     }
     header div.header-principal div.iconos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      
     }
 
     header div.header-principal div.iconos div a.user{  /*icono de usuario*/
         font-size: 50px;
-       
       
        
     }
     header div.header-principal div.iconos div a.user i{
-        margin-left: 20%;
-        
-        
+    
+
     }
 
-    header div.header-principal div.iconos div.box-carrito{
-       display: flex;
-       flex-wrap: wrap;
-       
-       
-      
+    header div.header-principal div.box-carrito {
+ 
     }
 
-    header div.header-principal div.iconos div a.carrito i{  /*icono del carrito*/
+    header div.header-principal div a.carrito i{  /*icono del carrito*/
         font-size: 50px;
-        justify-content: flex-start;
-        align-content: flex-end;
-        width: 100%;
-        margin-left: -15%;
-    margin-right: 10%;
-       
-    }
+        
+        }
+    
     header div.categorias ul li{  /*ul categorias e iconos*/
         font-size: 18px;
        
         }
-
-     
+        header div.categorias{
+            padding: 5px 5px;
+        }
+            
 }
 
 
