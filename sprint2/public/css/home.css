@@ -15,8 +15,8 @@
 .home .banner img {
   display: flex;
   width:100%;
-  border-radius:16%;
-  padding:15px;
+  
+  padding-bottom:15px;
 }
 .home main section.productos-perros  {
   width: 100%;
@@ -91,4 +91,25 @@ color: var(--colorNaranja);
 text-align:center;
 padding:2px;
 
+}
+@media (min-width: 769px) {
+  .home .banner{
+    width:100%;
+    height: 40%;
+  } 
+  .home .banner img {
+    display: flex;
+    width: 70%;
+    padding-bottom: 15px;
+   
+}
+  .home .div.banner {justify-content: space-around;}
+  .home main section{
+  
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 }
