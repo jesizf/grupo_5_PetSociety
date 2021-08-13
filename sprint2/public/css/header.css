@@ -8,12 +8,15 @@ header .header-principal{
     align-items: center; 
 }
 
-header .burger-menu{
+header div.burger-menu{
 
     margin-right: -5px;
     color: #fff;
     padding: 10px;
     font-size: 20px;
+}
+header div.burger-menu a i{
+    color: #fff;
 }
 
 header .header-principal .logo{
