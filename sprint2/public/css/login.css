@@ -28,6 +28,8 @@
     background-color: #ffff;
     border: 1px solid var(--colorGrisClaro);
     border-radius: 10%;  
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
 }
 
 .login main div.formulario div.box-formulario div.box-form{
@@ -51,6 +53,9 @@
     background-color: var(--colorGrisClaro);
     border: none;
     height: 23px;
+    box-shadow: 0px 5px  5px #888;
+
+ 
 }
 
 .login main div.formulario div.box-formulario div.box-error{
