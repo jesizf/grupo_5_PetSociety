@@ -78,12 +78,33 @@
 .login main div.formulario div.box-crea-cuenta a p{
     color: var(--colorNaranja);
 }
-
-.login main form button{
-    padding: 10px;
+.login main div.formulario div.box-crea-cuenta a p:hover{
+    color: #ffb572;
+}
+.login main form div.box-button{
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.login main form button{
+    width: 120px;
+    height: 40px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    border: none;
+   background-color: var(--colorNaranja);
+   text-align: center;
+   font-weight:bold;
+}
+
+.login main form button:hover{
+    background-color: #ffad6a;
+    cursor: pointer;
 }
 
 
