@@ -4,13 +4,22 @@
 .home main {
   
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 10px;
 }
-
-.home main section.productos {
-  width: 800px;
+.home .banner{
+  width:100%;
+} 
+.home .banner img {
+  display: flex;
+  width:100%;
+  border-radius:16%;
+  padding:15px;
+}
+.home main section.productos-perros  {
+  width: 100%;
   
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +28,7 @@
  
 }
 
-.home main section.productos article {
+.home main section.productos-perros article {
     width: 40%;
    
     text-align: center;
@@ -30,15 +39,51 @@
     background-color: white;
    
 }
-.home main section.productos article .tarjeta {
+.home main section.productos-perros article .tarjeta {
   text-align: center;
   padding:5px;
 }
 
-.home main section.productos img {
+.home main section.productos-perros img {
   width: 70%;
 }
-.home main section.productos article .detalle-producto{
+.home main section.productos-perros article .detalle-producto{
+width: 100%;
+text-align: center;
+font-size: 0.8rem;
+color: var(--colorNaranja);
+text-align:center;
+padding:2px;
+
+}
+.home main section.productos-gatos{
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  
+}
+.home main section.productos-gatos article {
+  width: 40%;
+   
+  text-align: center;
+  border-radius: 15%;
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 rgb(0,0,1);
+  background-color: white;
+ 
+}
+.home main section.productos-gatos article .tarjeta {
+  text-align: center;
+  padding:5px;
+}
+
+.home main section.productos-gatos img {
+  width: 70%;
+}
+.home main section.productos-gatos article .detalle-producto{
 width: 100%;
 text-align: center;
 font-size: 0.8rem;
