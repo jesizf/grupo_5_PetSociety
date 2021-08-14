@@ -54,8 +54,6 @@
     border: none;
     height: 23px;
     box-shadow: 0px 5px  5px #888;
-
- 
 }
 
 .login main div.formulario div.box-formulario div.box-error{
@@ -99,7 +97,6 @@
     border: none;
    background-color: var(--colorNaranja);
    text-align: center;
-   font-weight:bold;
 }
 
 .login main form button:hover{
@@ -107,5 +104,72 @@
     cursor: pointer;
 }
 
+@media (min-width: 768px) {
+
+    .login main div.formulario {
+        margin-top: 0;
+    }
+    .login main div.formulario h2{
+        margin: 5% 0;  
+     }
+
+    .login main div.formulario div.box-formulario{
+    width: 580px;
+    height: 244px;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+}
+
+.login main div.formulario div.box-formulario div.box-form input{
+    width: 460px;
+}
+
+.login main div.formulario div.box-formulario div.box-error{
+    margin-left: 60%;
+    font-size: 14px; 
+}
+
+.login main div.formulario div.box-crea-cuenta{
+    margin-top: 21px;
+    font-size: 17px;
+}
 
 
+.login main form button{
+    width: 170px;
+    height: 45px;
+font-size: 18px;
+}
+}
+
+@media (min-width: 1024px) {
+    
+.login main div.formulario h2{
+    font-size: 30px;
+  
+}
+    .login main div.formulario div.box-formulario{
+        width: 880px;
+        height: 330px;
+}
+
+.login main div.formulario div.box-formulario div.box-form label{
+    font-size: 22px;
+}
+.login main div.formulario div.box-formulario div.box-form input{
+    width: 700px;
+    height: 30px;
+}
+.login main div.formulario div.box-formulario div.box-error{
+    margin-left: 67%;
+    display: flex;
+    margin-top: -20px;
+    font-size: 16px;
+}
+.login main form button{
+    width: 220px;
+    height: 55px;
+font-size: 20px;
+}
+}
