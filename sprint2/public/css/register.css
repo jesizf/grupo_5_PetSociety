@@ -1,0 +1,37 @@
+.register main div.formulario div.box-formulario{
+    height: 310px;
+}
+main div.formulario div.box-formulario div.box-form input.ultimo-input{
+    margin-bottom: 40px;
+}
+body main form div div.box-check-box{
+    margin-top: 21px;
+    font-size: 12px;
+    color: var(--colorNaranja);
+}
+.register main form div.box-button{
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    body main form div div.box-check-box div.box-check{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+    }
+    body main form div div.box-check-box div.box-check label{
+        font-size: 14px;
+       
+    }
+}
+
+@media (min-width: 1024px) {
+  
+    .register main div.formulario div.box-formulario{
+        height: 410px;
+    }
+    body main form div div.box-check-box div.box-check label{
+        font-size: 16px;
+       
+    }
+}

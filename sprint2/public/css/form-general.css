@@ -1,4 +1,4 @@
-.login{
+body{
     background-color: var(--colorGrisClaro);
     display: flex;
     flex-wrap: wrap;
@@ -9,16 +9,15 @@
     
 }
 
-.login main div.formulario {
+ main div.formulario {
     height: 100%;
     margin-top: 30%;
 }
-
-.login main div.formulario h2{
+ main div.formulario h2{
    text-align: center;
    margin-bottom: 10%;
 }
-.login main div.formulario div.box-formulario{
+ main div.formulario div.box-formulario{
     width: 280px;
     height: 194px;
     display: flex;
@@ -32,62 +31,61 @@
 
 }
 
-.login main div.formulario div.box-formulario div.box-form{
+ main div.formulario div.box-formulario div.box-form{
     display: flex;
     flex-wrap: wrap;
      align-items: center;
 }
-
-.login main div.formulario div.box-formulario div.box-form label.primer-label{
+main div.formulario div.box-formulario div.box-form label.primer-label{
     margin-top: 30px;
 }
 
-.login main div.formulario div.box-formulario div.box-form label{
+ main div.formulario div.box-formulario div.box-form label{
     width: 100%;
     margin: 2px;
  
 }
 
-.login main div.formulario div.box-formulario div.box-form input{
+ main div.formulario div.box-formulario div.box-form input{
     width: 220px;
     background-color: var(--colorGrisClaro);
     border: none;
     height: 23px;
     box-shadow: 0px 5px  5px #888;
 }
-
-.login main div.formulario div.box-formulario div.box-error{
+ main div.formulario div.box-formulario div.box-error{
     margin-left: 37.5%;
     display: flex;
     justify-content: center;
     color: var(--colorNaranja);
     font-size: 12px;
 }
-.login main div.formulario div.box-formulario div.box-error p{
+ main div.formulario div.box-formulario div.box-error a p{
     padding-bottom: 20px;
+    color: var(--colorNaranja);
 }
-
-.login main div.formulario div.box-crea-cuenta{
+main div.formulario div.box-formulario div.box-error a p:hover{
+    color: #ffb572;
+}
+ main div.formulario div.box-crea-cuenta{
     margin-top: 12px;
     font-size: 15px;
     text-align: center;
 }
 
-.login main div.formulario div.box-crea-cuenta a p{
+main div.formulario div.box-crea-cuenta a p{
     color: var(--colorNaranja);
 }
-.login main div.formulario div.box-crea-cuenta a p:hover{
+ main div.formulario div.box-crea-cuenta a p:hover{
     color: #ffb572;
 }
-.login main form div.box-button{
+main form div.box-button{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
-    
 }
-
-.login main form button{
+main form button{
     width: 120px;
     height: 40px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -99,21 +97,21 @@
    text-align: center;
 }
 
-.login main form button:hover{
+main form button:hover{
     background-color: #ffad6a;
     cursor: pointer;
 }
 
 @media (min-width: 768px) {
 
-    .login main div.formulario {
+  main div.formulario {
         margin-top: 0;
     }
-    .login main div.formulario h2{
+     main div.formulario h2{
         margin: 5% 0;  
      }
 
-    .login main div.formulario div.box-formulario{
+     main div.formulario div.box-formulario{
     width: 580px;
     height: 244px;
     -webkit-border-radius: 28;
@@ -121,22 +119,22 @@
     border-radius: 28px;
 }
 
-.login main div.formulario div.box-formulario div.box-form input{
+ main div.formulario div.box-formulario div.box-form input{
     width: 460px;
 }
 
-.login main div.formulario div.box-formulario div.box-error{
+ main div.formulario div.box-formulario div.box-error{
     margin-left: 60%;
     font-size: 14px; 
 }
 
-.login main div.formulario div.box-crea-cuenta{
+ main div.formulario div.box-check-box{
     margin-top: 21px;
-    font-size: 17px;
+    font-size: 10px;
 }
 
 
-.login main form button{
+ main form button{
     width: 170px;
     height: 45px;
 font-size: 18px;
@@ -145,29 +143,29 @@ font-size: 18px;
 
 @media (min-width: 1024px) {
     
-.login main div.formulario h2{
+ main div.formulario h2{
     font-size: 30px;
   
 }
-    .login main div.formulario div.box-formulario{
+     main div.formulario div.box-formulario{
         width: 880px;
         height: 330px;
 }
 
-.login main div.formulario div.box-formulario div.box-form label{
+ main div.formulario div.box-formulario div.box-form label{
     font-size: 22px;
 }
-.login main div.formulario div.box-formulario div.box-form input{
+ main div.formulario div.box-formulario div.box-form input{
     width: 700px;
     height: 30px;
 }
-.login main div.formulario div.box-formulario div.box-error{
+ main div.formulario div.box-formulario div.box-error{
     margin-left: 67%;
     display: flex;
     margin-top: -20px;
     font-size: 16px;
 }
-.login main form button{
+ main form button{
     width: 220px;
     height: 55px;
 font-size: 20px;

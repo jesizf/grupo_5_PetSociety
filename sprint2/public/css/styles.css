@@ -1,4 +1,5 @@
 @import url('./general.css');
 @import url('./header.css');
 @import url('./home.css');
-@import url('./login.css');
+@import url('./form-general.css');
+@import url('./register.css');
