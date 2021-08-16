@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+
+.terminos-condiciones main, 
+.nosotros main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--colorGrisClaro);
+}
+
+.terminos-condiciones main div.inicio,
+.nosotros main div.inicio{
+    width: 90%;
+display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+    font-size: 13px;
+}
+.terminos-condiciones main div.inicio a,
+.nosotros main div.inicio a{
+    color: var(--colorNaranja);
+    cursor: pointer;
+}
+
+.terminos-condiciones main div.texto,
+.nosotros main div.texto{
+    width: 90%;   
+    text-align: justify; 
+}
+
+.terminos-condiciones main div h1{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.terminos-condiciones main div h4{
+    font-size: 12px;
+}
+
+.terminos-condiciones main div p,
+.nosotros main div p{
+    font-size: 11px;
+}
+.nosotros main div p{
+    margin: 10px 0;
+}
+.terminos-condiciones main div.ultimo-parrafo,
+.nosotros main div.ultimo-parrafo{
+    margin-bottom: 30px;
+}
