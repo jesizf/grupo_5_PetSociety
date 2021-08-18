@@ -4,15 +4,15 @@ header .header-principal{
     height: 70px;
     display: flex;
     flex-wrap: wrap;
-  
     align-items: center; 
+    justify-content: space-around;
 }
 
-header div.burger-menu{
+header div .burger-menu{
 
     margin-right: -5px;
     color: #fff;
-    padding: 10px;
+    padding: 0 0 0 10px;
     font-size: 20px;
 }
 header div.burger-menu a i{
@@ -20,44 +20,52 @@ header div.burger-menu a i{
 }
 
 header .header-principal .logo{
-    margin: 0 -5px;
     width: 65px;
-    height: 59px;
+    height: 68px;
 }
 
-header div.buscador{
-    flex-grow: 0.4;
+header div.buscador form{
+   
     display: flex;
-    flex-wrap: wrap;
-}
-
-header div.buscador input{
-    width: 52vw;
-    border-radius: 112px;
-    height: 29px;
-    padding: 5px;   
-    font-size: 12px; 
-}
-header div div.buscador div.lupa{
-    width: 100%;
-    display: flex;
-    position: absolute;
+    flex-wrap: wrap; 
     justify-content: center;
 }
-header div div.buscador div.lupa a.input-group-btn{
+
+header div .buscador form input{
+    width: 52vw;
+    border-radius: 15px 0 0 15px;
+    height: 29px;
+    padding: 5px;
+    font-size: 12px; 
+    border: none;
+    box-shadow: 3px 3px  10px #888;
+}
+header div .buscador form .lupa{
     font-size: 10px;
+    padding: 7.5px 4px 7.5px 0;
     color: black;
-    padding: 10px 12px 0 0;
+    border-radius: 0 15px 15px 0;
+    background-color: #fff;  
 }
 
 header div.iconos nav ul a.user{
     display: none;
 }
+header div.iconos nav ul a.user:hover{
+    cursor: pointer;
+    color: #ffb572;
+
+}
 
 header div.iconos nav ul a.carrito{
     color: white;
-    font-size: 25px;
-    margin-right: 10px;
+    font-size: 28px; 
+}
+
+header div.iconos nav ul a.carrito:hover{
+    cursor: pointer;
+    color: #ffb572;
+
 }
 
 header div.categorias{
@@ -69,21 +77,17 @@ header div.categorias{
 @media (min-width: 768px) {
     header .header-principal{  /*header*/
         width: 100%;
-     
    display: flex;
    flex-wrap: wrap;
-justify-content: center;
-align-content: center;
+   align-content: center;
+   justify-content: space-evenly;
     }
 
     header .burger-menu{  /*menu hamburguesa*/
         display: none;
     }
     
-    header .header-principal div.img{
-     margin-right: 50px;
-     
-    }
+   
 
      header .header-principal div.img a img.logo{  /*logo*/
         margin-left: -50px;
@@ -91,53 +95,36 @@ align-content: center;
         height: 125px;
       
     }
-    header div.buscador{
-        position: relative;
-        
-        justify-content: flex-start;  /*buscador (barra y lupa)*/
-    }
 
-    header div.buscador input{  /*buscador solo*/
-        font-size: 18px;  
-        
-  
-    }
-    header div div.buscador div.lupa{ /*caja de la lupa*/
-        justify-content: flex-end;
-        margin-left: -18%;
-       
-    }
 
-    header div.iconos nav{
-        width: 160%;
-        
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+    header div .buscador form input{  /*buscador solo*/
+        font-size: 16px;  
+      
     }
     
-    header div.iconos nav ul  {
+
+    header div .iconos nav {
+        width: 100%;
+        
+        
+    }
+    
+    header div .iconos nav ul  {
         width: 140%;
         display: flex;
         flex-wrap: wrap;
-       justify-content: space-around;
-       
-    
+       justify-content: space-between;
        
     }
 
     header div.iconos nav ul a.carrito{
-        font-size: 30px;
-        
-        
+        font-size: 36px;
     }
 
     header div.iconos nav ul a.user{
-  margin-left: -35%;
            display: block;
            color: #fff;
-        font-size: 30px;
-       
+        font-size: 34px;
         
     }
     
@@ -177,49 +164,27 @@ align-content: center;
     header .header-principal div.img a img.logo{  /*logo*/
         width: 167px;
         height: 170px; 
-        padding-left: -22%;
-        margin-left: -40% ;
         
     }
-
-    header div.buscador input{  /*buscador solo*/
-        height: 100%;  
+    header div .buscador form input{  /*buscador solo*/
+        font-size: 18px;  
+        height: 40px;
+      
     }
-
-    header div div.buscador div.lupa{ /*caja de la lupa*/
- 
-        margin-left: -17%;
-       
+    header div .buscador form .lupa{
+        font-size: 16px;
+       justify-content: center;
     }
-
-    header div div.buscador div.lupa a.input-group-btn{
-        font-size: 100%;
-    }
-  
-    header div.iconos nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    header div.iconos nav ul div a.carrito{
-       margin-left: -20%;
+    header div.iconos nav ul a.carrito{
         font-size: 50px;
-       
         
     }
 
     header div.iconos nav ul a.user{
-           margin-left: -102%;
-        
-        font-size: 50px;
-       
-        
+        font-size: 50px;        
     }
-    header div.categorias{ /*las categotias (inicio, perros, gatos)*/
-        width: 104%;
-    }
-     
+    
+   
 }
 
 
