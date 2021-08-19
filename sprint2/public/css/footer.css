@@ -30,7 +30,7 @@ ul{
 }
 .footer-col h4{
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--colorGrisClaro);
     text-transform: capitalize;
     margin-bottom: 30px;
     font-weight: 400;
@@ -50,21 +50,21 @@ ul{
 .footer-col ul li a{
     font-size: 16px;
     text-transform: capitalize;
-    color: #FFFFFF;
+    color: var(--colorGrisClaro);
     text-decoration: none;
     font-weight: 300;
-    color: #E5E5E5;
+    color: #FFFFFF;
     display: block;
     transition: all 0.3s ease
 }
 .footer-col ul li a:hover{
-    color: #FFFFFF;
+    color: var(--colorGrisClaro);
     padding-left: 8px;
 }
 .footer-col ul li p{
     font-size: 16px;
     text-transform: capitalize;
-    color: #FFFFFF;
+    color: var(--colorGrisClaro);
     text-decoration: none;
     font-weight: 300;
 }
@@ -77,16 +77,16 @@ ul{
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #FFFFFF;
+    color: var(--colorGrisClaro);
     transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-    color: #E5E5E5;
-    background-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: var(--colorGrisClaro);
 }
 .copyright {
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--colorGrisClaro);
     padding-left: 10px;
 }
 /*responsive*/
