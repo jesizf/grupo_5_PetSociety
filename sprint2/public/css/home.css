@@ -2,25 +2,40 @@
 .home {
   background-color: #e5e5e5;
 }
+.home #carrousel1,#carrousel2, #carrousel3{
+  width:100%;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home #carrousel1{
+  background-image: url('/img/banner.png');
+  
+}
+.home #carrousel2{
+  background-image: url('/img/banner3.jpg');
+}
+.home #carrousel3{
+  background-image: url('/img/perros-banner-2.jpg');
+}
 .home main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  
   margin-bottom: 10px;
 }
 
-.home .banner img {
-  display: flex;
-  width: 100%;
-
-  padding-bottom: 15px;
-}
-/*productos*/
-.home main section {
+.home main section  {
   width: 100%;
   margin-top: 7px;
-  display: flex;
+ 
+}
+/*productos*/
+.home main section.productos{
+  width: 100%;
+  margin-top: 7px;
+ display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -42,7 +57,7 @@ h3.titulos {
 /*tarjeta*/
 .home main section.productos article .tarjeta {
   text-align: center;
-  padding: 5px;
+  margin: 5px;
 }
 /*imagen tarjeta*/
 .home main section.productos img {
@@ -64,12 +79,11 @@ h4.productos{
 
 /*tablet*/
 @media (min-width: 768px) {
-  .home .banner {
+  .home #carrousel1, #carrousel2, #carrousel3 {
     width: 100%;
-    height: 40%;
-    margin: 30px auto;
-  }
-
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 100%;}
   .home main {
     display: flex;
     flex-direction: column;
@@ -83,15 +97,47 @@ h4.productos{
     /* flex-direction: row; */
     justify-content: space-around;
   }
+  /*seccion de tarjetas*/
   .home main section.productos article {
-    width: 18%; /* achica*/
+    width: 30%; /* achica o agranda*/
     text-align: center;
     border-radius: 15%;
     /* border: 1px solid black; */
     display: inline;
-    box-shadow: 0 0 0 rgb(0, 0, 1);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: white;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
   }
 }
+
+  .home main section.productos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: space-around;
+  }
+  @media (min-width: 1024px){
+    .home main section.productos {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      /* flex-direction: row; */
+      justify-content: space-around;
+  }
+    /*seccion de tarjetas*/
+  .home main section.productos article {
+    width: 22%; /* achica o agranda*/
+    text-align: center;
+    border-radius: 15%;
+    /* border: 1px solid black; */
+    display: inline;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;}
+  .home #carrousel1, #carrousel2, #carrousel3 {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}}
