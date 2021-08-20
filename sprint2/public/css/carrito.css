@@ -1,3 +1,22 @@
-body table.carrito td{
-    width:50%;
+main{
+    background-color:var(--colorGrisClaro);
+}
+main h1{
+    font-size: 1rem;
+}
+main .section-carrito {
+    display: flex;
+    flex-direction: column;
+    margin:5px ;
+    justify-content: center;
+   
+}
+main .section-carrito .carrito-producto{
+    background-color: #ffffff;
+    margin:5px 10px;
+    padding: 10px 10px;
+    border-radius: 5%;
+}
+main .section-carrito .carrito-producto .foto-carrito img{
+    width:20%;
 }
