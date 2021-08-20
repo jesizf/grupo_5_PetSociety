@@ -10,6 +10,8 @@ app.get('/como-comprar', (req, res) => res.sendFile(path.join(__dirname, 'views'
 app.get('/cambios-y-devoluciones', (req, res) => res.sendFile(path.join(__dirname, 'views', 'cambios-devoluciones.html' )));
 app.get('/formas-de-pago', (req, res) => res.sendFile(path.join(__dirname, 'views', 'formas-pagos.html' )))
 
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
 
 
 

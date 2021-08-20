@@ -21,14 +21,8 @@ display: flex;
     font-size: 13px;
 }
 
-.cambios-devoluciones main div.inicio a:hover{
-    color: var(--colorNaranja);
-    cursor: pointer;
-}
-.formas-pago main div.inicio a{
-    color: var(--colorNaranja);
-    cursor: pointer;
-}
+
+
 
 .cambios-devoluciones main div.inicio a,
 .formas-pago main div.inicio a:hover{
@@ -36,6 +30,11 @@ display: flex;
     color: #ffad6a;
 }
 
+/*Cambios y devoluciones*/
+.cambios-devoluciones main div.inicio a:hover{
+    color: var(--colorNaranja);
+    cursor: pointer;
+}
 
 .cambios-devoluciones main div.texto{
     width: 90%;   
@@ -59,9 +58,14 @@ display: flex;
     width: 100%;
     justify-content: space-evenly;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 /* Formas de Pago*/
+.formas-pago main div.inicio a{
+    color: var(--colorNaranja);
+    cursor: pointer;
+}
 
 .formas-pago main div.texto{
     width: 100%;
@@ -83,4 +87,8 @@ display: flex;
 
 .formas-pago main div section div ul{
     margin: 20px;
+}
+
+.formas-pago main div section div ul .ultima-lista{
+margin-bottom: 50px;
 }
