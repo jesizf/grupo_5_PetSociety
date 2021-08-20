@@ -35,6 +35,7 @@ header div.buscador form{
 }
 
 header div .buscador form input{
+    
     width: 52vw;
     border-radius: 15px 0 0 15px;
     height: 30px;
