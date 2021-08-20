@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>detalle-de-producto</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body class="detail">
+        <main>
+            <div class="box-detail">
+                <div class="box-images">
+                    <div class="box-images-min">
+                        <img id="img-prev1" src="/img/alimento1.jpg" alt="">
+                        <img id="img-prev2" src="/img/alimento2.jpg" alt="">
+                        <img id="img-prev3" src="/img/alimento3.jpg" alt="">
+                    </div>
+                    <div class="img-principal">
+                        <img id="img-main" src="/img/alimento1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="box-content">
+                    <h2>Nombre del producto</h2>
+                    <p>Descripción del producto</p>
+                    <h3>$ 1.000</h3><span>10% OFF</span>
+                    <hr>
+                    <h5>Caracteristicas</h5>
+                    <div class="features">
+                        <ul>
+                            <li>Característica 1</li>
+                            <li>Característica 1</li>
+                            <li>Característica 1</li>
+                            <li>Característica 1</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-products">
+                    <h4>Productos relacionados</h4>
+                    <div class="glider-contain">
+                        <div class="glider">
+                        <div class="item-carousel"><img src="/img/alimento1.jpg" alt=""></div>
+                        <div class="item-carousel"><img src="/img/alimento2.jpg" alt=""></div>
+                        <div class="item-carousel"><img src="/img/alimento3.jpg" alt=""></div>
+                        </div
+
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>             
+                    </div>
+                </div>
+            </div>
+       </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="/js/glider.js"></script>
+        <script src="/js/productDetail.js"></script>
+</body>
+</html>
