@@ -1,22 +1,55 @@
-main{
-    background-color:var(--colorGrisClaro);
+main {
+  background-color: var(--colorGrisClaro);
 }
-main h1{
-    font-size: 1rem;
+main h1 {
+  font-size: 1rem;
 }
+/*seccion de carrito*/
+.home main section {
+  width: 100%;
+  padding: 10px;
+
+  align-items: center;
+}
+
 main .section-carrito {
-    display: flex;
-    flex-direction: column;
-    margin:5px ;
-    justify-content: center;
-   
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  justify-content: center;
 }
-main .section-carrito .carrito-producto{
-    background-color: #ffffff;
-    margin:5px 10px;
-    padding: 10px 10px;
-    border-radius: 5%;
+main .section-carrito .carrito-producto {
+  display: flex;
+  width: 90%;
+  background-color: #ffffff;
+  margin: 5px 10px;
+  padding: 10px 10px;
+  border-radius: 15px;
 }
-main .section-carrito .carrito-producto .foto-carrito img{
-    width:20%;
+main .section-carrito .carrito-producto .cierre {
+  position: relative;
+  left: -101%;
+  bottom: 16px;
+  
+  color: var(--colorNaranja);
+  font-size: 1.3rem;
+ 
+  
+}
+main .section-carrito .carrito-producto .cierre i {
+    border-radius: 14px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);}
+main .section-carrito .carrito-producto div.foto-carrito {
+  width: 80%;
+  display: flex;
+  padding-left: 15px;
+}
+
+main .section-carrito .carrito-producto div.foto-carrito img {
+  width: 50%;
+}
+main .section-carrito .carrito-descripcion {
+  width: 70%;
+  font-size: 0.9rem;
 }
