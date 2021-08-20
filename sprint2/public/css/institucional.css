@@ -34,7 +34,7 @@ display: flex;
     font-size: 14px;
     margin-bottom: 20px;
 }
-
+git che
 .terminos-condiciones main div h4{
     font-size: 12px;
 }
@@ -48,5 +48,5 @@ display: flex;
 }
 .terminos-condiciones main div.ultimo-parrafo,
 .nosotros main div.ultimo-parrafo{
-    margin-bottom: 30px;
+    height: 300px;
 }
