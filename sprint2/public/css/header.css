@@ -7,7 +7,10 @@ header .header-principal{
     align-items: center; 
     justify-content: space-around;
 }
-
+dl, ol, ul { margin-bottom: 0;
+}  
+ol, ul { padding-left: 0;
+}
 header div .burger-menu{
 
     margin-right: -5px;
@@ -32,7 +35,7 @@ header div.buscador form{
 }
 
 header div .buscador form input{
-    width: 48vw;
+    width: 52vw;
     border-radius: 15px 0 0 15px;
     height: 29px;
     padding: 5px;
@@ -48,6 +51,8 @@ header div .buscador form .lupa{
     background-color: #fff;  
 }
 
+
+
 header div.iconos nav ul a.user{
     display: none;
 }
@@ -57,10 +62,10 @@ header div.iconos nav ul a.user:hover{
 
 }
 
-header div.iconos nav ul a.carrito{
+header .header-principal .iconos nav ul .carrito{
     color: white;
+   
     font-size: 28px; 
-    padding-left: -15px;
 }
 
 header div.iconos nav ul a.carrito:hover{
@@ -118,7 +123,9 @@ header div.categorias{
        
     }
 
-    header div.iconos nav ul a.carrito{
+    .home header .header-principal .iconos nav ul .carrito{
+        margin: 0;
+        padding: 0;
         font-size: 36px;
     }
 
@@ -126,14 +133,13 @@ header div.categorias{
            display: block;
            color: #fff;
         font-size: 34px;
-        
+        margin-top: 5px;
     }
     
   
     header div.categorias{
-   
+        padding: 5px;
         width: 100%;
-
     }
     header div.categorias ul li a{  /*barra de categorias*/
         margin: 2px;
@@ -177,7 +183,7 @@ header div.categorias{
         font-size: 16px;
        justify-content: center;
     }
-    header div.iconos nav ul a.carrito{
+    .home header .header-principal .iconos nav ul .carrito{
         font-size: 50px;
         
     }
@@ -185,6 +191,8 @@ header div.categorias{
     header div.iconos nav ul a.user{
         font-size: 50px;        
     }
+    header .categorias{ /*las categotias (inicio, perros, gatos)*/
     
+    }
    
 }
