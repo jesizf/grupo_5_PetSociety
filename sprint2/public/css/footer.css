@@ -56,14 +56,19 @@ ul{
     color: var(--colorGrisClaro);
     text-decoration: none;
     font-weight: 300;
-    color: #FFFF;
+    color: (--colorGrisClaro);
     display: block;
     transition: all 0.3s ease
 }
 .footer-col ul li a:hover{
-    color: var(--colorGrisClaro);
+    color: #FFFF;
     padding-left: 8px;
 }
+dl, ol, ul { margin-bottom: 0;
+}  
+ol, ul { padding-left: 0;
+}
+
 .footer-col ul li p{
     font-size: 16px;
     text-transform: capitalize;
