@@ -3,6 +3,7 @@ main {
 }
 main h1 {
   font-size: 1rem;
+  padding:18px 25px 0px
 }
 /*seccion de carrito*/
 .home main section {
