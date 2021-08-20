@@ -58,6 +58,7 @@ h3.titulos {
 .home main section.productos article .tarjeta {
   text-align: center;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 /*imagen tarjeta*/
 .home main section.productos img {
@@ -106,6 +107,7 @@ h4.productos{
     display: inline;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: white;
+    
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
   }
