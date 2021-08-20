@@ -164,7 +164,7 @@ header div.categorias{
 
 @media (min-width:1024px) {
     header .header-principal{
-      width: 104%;
+      width: 100%;
         height: 90px;
       
     }
