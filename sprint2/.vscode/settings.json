@@ -1,4 +1,26 @@
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ff6433",
+        "activityBar.activeBorder": "#00ff3d",
+        "activityBar.background": "#ff6433",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#00ff3d",
+        "activityBarBadge.foreground": "#15202b",
+        "statusBar.background": "#ff3d00",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#ff6433",
+        "titleBar.activeBackground": "#ff3d00",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#ff3d0099",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    }
+    "peacock.color": "#ff3d00"
+=======
+>>>>>>> 42db512157fc94ff0bbc1aba0fbbe4ef895a95db
   "C_Cpp_Runner.warnings": [
     "-Wall",
     "-Wextra",
@@ -12,4 +34,8 @@
   "C_Cpp_Runner.excludeSearch": [],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false
+<<<<<<< HEAD
+=======
+>>>>>>> vistaLogin/Patri
+>>>>>>> 42db512157fc94ff0bbc1aba0fbbe4ef895a95db
 }

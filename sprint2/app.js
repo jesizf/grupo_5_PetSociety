@@ -8,6 +8,9 @@ app.use(express.static('public'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'home.html' )));
 app.get('/terminos-y-condiciones', (req, res) => res.sendFile(path.join(__dirname, 'views', 'terminos.html'))) ;
 app.get('/nosotros', (req, res) => res.sendFile(path.join(__dirname, 'views', 'nosotros.html'))) ;
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'home.html' )))
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
 
 
 
