@@ -120,7 +120,7 @@ h4.productos{
   }
   @media (min-width: 1024px){
     .home main section.productos {
-      width: 100%;
+      width: 90%;
       display: flex;
       flex-wrap: wrap;
       /* flex-direction: row; */
