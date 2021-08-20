@@ -38,7 +38,7 @@ ul{
 }
 .footer-col h4::before{
     content: '';
-    position: absolute;
+    position: absolute;vista
     left: 0;
     bottom: -10px;
     box-sizing: border-box;
