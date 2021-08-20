@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family: 'Poppins', sans-serif;
 }
 li{
     list-style: none;
@@ -10,6 +11,9 @@ a{
     text-decoration: none;
 }
 ul{
+    text-decoration: none;
+}
+a{
     text-decoration: none;
 }
 
