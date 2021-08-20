@@ -44,7 +44,7 @@
   width: 40%;
 
   text-align: center;
-  border-radius: 15%;
+  border-radius: 15px;
   /* border: 1px solid black; */
   margin-bottom: 20px;
   box-shadow: 0 0 0 rgb(0, 0, 1);
@@ -102,7 +102,7 @@ h4.productos{
   .home main section.productos article {
     width: 30%; /* achica o agranda*/
     text-align: center;
-    border-radius: 15%;
+    border-radius: 15px;
     /* border: 1px solid black; */
     display: inline;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
