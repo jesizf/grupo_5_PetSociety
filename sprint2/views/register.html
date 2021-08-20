@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Nosotros</title>
+    
+    <title>Register</title>
 </head>
-<body class="nosotros">
+<body class="register">
     <header>
         <div class="header-principal">
             <div class="burger-menu">
@@ -55,24 +56,47 @@
                 </nav>           
             </div>        
             </header>
-    <main>
-        <div class="inicio">
-            <a href="/">Inicio > </a> <a href="/nosotros">Quiénes Somos</a>
+    <main class="main-register">
+        <form action="">
+            <div class="formulario">
+                <h2>Crea una Cuenta</h2>
+                <div class="box-formulario">
+                    <div class="box-form">
+                        <label for="nombre" class="primer-label">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="box-form">
+                        <label for="aprellido">Apellido</label>
+                    <input type="text" name="aprellido" id="aprellido">
+                    </div>
+                    <div class="box-form">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="box-form">
+                        <label for="pass">Contraseña</label>
+                    <input class="ultimo-input" type="password" name="pass" id="pass">
+                    </div>
+                    
+            </div>
+             
+            <div class="box-check-box">
+                <div class="box-check">
+                    <input type="checkbox" name="tarms" id="terms">
+                    <label for="terms">Acepto términos y condiciones</label>
+                </div>
+            </div>
+            <div class="box-button">
+                <button type="submit">Ingresar</button>
+            </div>
+            <div class="box-crea-cuenta">
+                <a href="/login"><p>Ya tengo cuenta.</p></a>        
+                </div>
         </div>
-        <div class="texto">
-                <div>
-                    <p>En Pet Society sabemos lo importante que es tu mascota para vos. Vive, duerme, juega y camina a tu lado. Tu mejor compañía te acepta tal cual sos y, a cambio, te ofrece todo su amor e incondicionalidad. Tu única responsabilidad es cuidarla y quererla.</p> 
-                </div>
-                <div>
-                    <p>En Pet Society reconocemos a las mascotas como un miembro más de la familia, para ello ofrecemos la más amplia variedad en productos alimenticios, accesorios, y mucho más!</p>
-                </div>
-                <div class="ultimo-parrafo">
-                    <p>Desde catycan.com entregamos cada semana cientos de productos a hogares con perros y/o gatos. Llevamos hasta tu puerta todo para tu mascota: alimentos balanceados para perros y gatos, accesorios, golosinas, juguetes y mucho más, siendo el pet shop online más completo del país.</p>
-                </div>
-        </div>
+            
+        </form>
     </main>
-
-  <!--Footer -->
+    <!--Footer -->
 
     <footer class="footer">
         <!--contenedor -->
@@ -132,5 +156,4 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
-
 </html>
