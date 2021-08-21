@@ -7,6 +7,14 @@ const port = 3030;
 app.use(express.static('public'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'home.html' )))
 app.get('/detalle-de-producto', (req, res) => res.sendFile(path.join(__dirname, 'views', 'detail.html' )))
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
+app.get('/como-comprar', (req, res) => res.sendFile(path.join(__dirname, 'views', 'como-comprar.html' )));
+app.get('/cambios-y-devoluciones', (req, res) => res.sendFile(path.join(__dirname, 'views', 'cambios-devoluciones.html' )));
+app.get('/formas-de-pago', (req, res) => res.sendFile(path.join(__dirname, 'views', 'formas-pagos.html' )))
+app.get('/terminos-y-condiciones', (req, res) => res.sendFile(path.join(__dirname, 'views', 'terminos.html'))) ;
+app.get('/nosotros', (req, res) => res.sendFile(path.join(__dirname, 'views', 'nosotros.html'))) ;
+app.get('/detalle-del-producto', (req, res) => res.sendFile(path.join(__dirname, 'views', 'detalle.html'))) ;
 
 
 
