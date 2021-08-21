@@ -14,27 +14,72 @@
 </head>
 
 <body>
+    <header>
+        <div class="header-principal">
+            <div class="burger-menu">
+                <a href=""><i class="fas fa-bars"></i></a>
+            </div>
+            <div class="img">
+                <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
+            </div>
+            <div class="buscador">
+                <form action="">
+                    <input type="text" placeholder="¿Que estas buscando?">
+                    <a class="lupa" href="" class="input-group-btn"><i class="fa fa-search fa-lg"></i></a>
+                </form>
+            </div>
+            <div class="iconos">
+                <nav>
+                    <ul>
+                        <a href="/login" class="user"><i class="far fa-user-circle"></i></a>
+                        <a href="" class="carrito"><i class="iconify"
+                                data-icon="emojione-monotone:shopping-cart"></i></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="categorias">
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li>
+                        <a href="" class="icono-perro"><i class="fas fa-dog"></i></a>
+                        <a href="">Perros</a>
+                        <a href="" class="boton"><i class="fas fa-caret-down"></i></i></a>
+                    </li>
+                    <li>
+                        <a href="" class="icono-gato"><i class="fas fa-cat"></i></a>
+                        <a href="">Gatos</a>
+                        <a href="" class="boton"><i class="fas fa-caret-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!--Detalle del producto-->
+
     <main class="detail">
+
         <!--contenedor imagenes -->
 
-            <div class="box-detail">
-                <div class="box-products">
-                    <div class="images">
-                        <img id="img-main" src="/img/alimento1.jpg" alt="">
-                    </div>
+        <div class="box-detail">
+            <div class="box-products">
+                <div class="images">
+                    <img id="img-main" src="/img/alimento1.jpg" alt="">
                 </div>
             </div>
-            
-            <div class="box-content">
-                <!--informacion del producto -->
-                <div class="box-info">
-                    <div>
-                        <h2>Nombre del producto</h2>
-                        <h3> $ 1.000 </h3>
-                    </div>
+        </div>
+
+        <div class="box-content">
+            <!--informacion del producto -->
+            <div class="box-info">
+                <div>
+                    <h2>Nombre del producto</h2>
+                    <h3> $ 1.000 </h3>
                 </div>
-            
+            </div>
+
 
 
             <hr>
@@ -86,23 +131,85 @@
                 </div>
             </div>
         </div>
-            <!---Caracteristicas del prodcuto-->
+        <!---Caracteristicas del prodcuto-->
 
         <div class="caracteristicas">
-        <li> 
-            Descripción breve 
-        </li>
+            <li>
+                Descripción breve
+            </li>
         </div>
 
-        
 
-    </main>
+        <!--Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
-    <script src="/js/glider.js"></script>
-    <script src="/js/productDetail.js"></script>
+        <footer class="footer">
+            <!--contenedor -->
+            <div class="container">
+
+                <!--info pagina-->
+
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Institucional</h4>
+                        <ul>
+                            <li><a href="/nosotros">Quiénes somos</a></li>
+                            <li><a href="#">politica de calidad</a></li>
+                            <li><a href="/terminos-y-condiciones">Terminos y condiciones</a></li>
+                        </ul>
+                    </div>
+
+                    <!--dudas -->
+
+                    <div class="footer-col">
+                        <h4>Dudas</h4>
+                        <ul>
+                            <li><a href="/como-comprar">Cómo compar</a></li>
+                            <li><a href="/cambios-y-devoluciones">Cambios y devoluciones</a></li>
+                            <li><a href="/formas-de-pago">Formas de pago</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Info contacto-->
+
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li>
+                                <p>Info@petsociety.com</p>
+                            </li>
+                            <li>
+                                <p>Atención telfónica: 0800-petsociety</p>
+                            </li>
+                            <li>
+                                <p>Atención Whatsapp: (11)-xxxxxxx</p>
+                            </li>
+                            <li>
+                                <p>lunes a sabados de 10 a 20hs</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Redes -->
+
+                    <div class="footer-col">
+                        <h4>Seguinos en:</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© Pet Society 2021</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
 </body>
+
 
 </html>
