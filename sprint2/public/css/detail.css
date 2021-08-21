@@ -1,10 +1,15 @@
+.detail{
+    width: 1170;
+    background-color: var(--colorGrisClaro);
+}
+
 .detail .box-detail{
     width: 100%;
     background-color: var(--colorGrisClaro);
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 0 40px;
     align-items: center;
 }
 .detail .img-principal{
@@ -12,29 +17,17 @@
     box-shadow: 5px 5px 5px gray;
     border-radius: 25px;
 }
-.detail .img-principal .img-main{
-    border-radius: 25px;
+.detail .img-principal #img-main{
+    border-radius: 30px;
 }
 .detail img{
-    width: 100%;
-}
-
-.detail .box-images{
     width: 100%;
 }
 
 .detail .box-content{
     width: 100%;
     padding: 0 20px;
-}
-
-.detail .box-images-min{
-    display: flex;
-    justify-content: space-between;
-}
-
-.detail .box-images-min img{
-    width: 30%;
+    
 }
 
 .detail .box-products{
