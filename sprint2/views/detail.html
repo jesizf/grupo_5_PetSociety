@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>detalle-de-producto</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/styles.css">
-    </head>
 
-    <body>
+<head>
+    <title>detalle-de-producto</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
     <!--Detalle del producto-->
 
-        <main class="detail">
-            <!--contenedor imagenes -->
-            <div class="box-detail">
-                <div class="img-principal">
-                    <img id="img-main" src="/img/alimento1.jpg" alt="">
-                </div>
-            <!--informacion del producto -->
+    <main class="detail">
 
-                <div class="box-content">
-                    <div class="name-price">
-                        <h2>Nombre del producto</h2>
-                        <h3>$ 1.000</h3>
-                    </div>
-                    <span class="descuenta">10% OFF</span> <hr>
-                </div>
-            </div>
-                    <!--caracteristicas del produco -->
-                <div class="contrato">
-                        <ul>
-                            <button></button>
-                            <li>Característica 1</li>
-                            <li>Característica 1</li>
-                            <li>Característica 1</li>
-                        </ul>
-                    </div>
-            
-            
+        <!--contenedor imagenes -->
 
-            <!--Productos relacionados -->
-
-                <div class="box-products">
-                    <h4>Productos relacionados</h4>
-                    <div class="glider-contain">
-                        <div class="glider">
-                        <div class="item-carousel"><img src="/img/alimento1.jpg" alt=""></div>
-                        <div class="item-carousel"><img src="/img/alimento2.jpg" alt=""></div>
-                        <div class="item-carousel"><img src="/img/alimento3.jpg" alt=""></div>
+        <div class="box-detail">
+            <div class=".box-products">
+                <div class="glider-contain">
+                    <div class="glider">
+                        <div class="img-principal">
+                            <img id="img-main" src="/img/alimento1.jpg" alt="">
                         </div>
-
-                        <button aria-label="Previous" class="glider-prev">«</button>
-                        <button aria-label="Next" class="glider-next">»</button>             
                     </div>
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
                 </div>
             </div>
+        </div>
+        <!--informacion del producto -->
+
+        <div class="box-content">
+            <div>
+                <h2>Nombre del producto</h2>
+                <h3>$ 1.000</h3>
+            </div>
+            <span class="descuenta">10% OFF</span>
+            <hr>
+        </div>
+
+        <!--Contrato compra venta -->
+        <div class="contrato">
+            <!--Seleccionar cantidda-->
+                <h4>Cantidad</h4>
+                <div class="box-form">
+                    <select name="cantidad" id="cantidad">
+                        <option value="1" selected hidden>1</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">5</option>
+                        <option value="6">7</option>
+                    </select>
+                </div>
+                <!-- Boton agregar al carrito-->
+                <div class="btn-carrito">
+                    <button>
+                        <li><a href="#"><i class="fas fa-cart-plus"> Agregar al carrito  </i></a></li>
+                    </button>
+
+                </div>
+                <!--Metorods de pago-->
+                <div>
+                    <ul>
+                        <li><a href="/creatucuenta">Métodos de pagos<i class="far fa-address-card"></i>
+                                <i class="fas fa-sign-in-alt"></i>
+                            </a><i class="fas fa-shopping-basket"></i></a></li>
+                    </ul>
+                </div>
+
+                <!---Caracteristicas del prodcuto-->
+
+            </div class="caracteristicas">
+            <li>Características</li>
+
+        </div>
+
+        <!--Productos relacionados -->
+
     </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-        <script src="/js/glider.js"></script>
-        <script src="/js/productDetail.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="/js/glider.js"></script>
+    <script src="/js/productDetail.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* Detalle del producto */
 .detail{
     width: 1170;
     background-color: var(--colorGrisClaro);
 }
-
-.detail .box-detail{
+/* Contenedor general  */
+.detail .box-detail {
     width: 100%;
     background-color: var(--colorGrisClaro);
     margin: 0 auto;
@@ -12,6 +14,15 @@
     padding: 0 40px;
     align-items: center;
 }
+
+/* caja producto */
+
+.detail .box-products{
+    width: 100%;
+}
+
+/*  imagenes */
+
 .detail .img-principal{
     margin: 20px 0;
     box-shadow: 5px 5px 5px gray;
@@ -24,25 +35,63 @@
     width: 100%;
 }
 
+/*Informacion del producto*/
 .detail .box-content{
     width: 100%;
     padding: 0 20px;
-    
+}
+.detail .box-content h2{
+    text-align: center;
+    font-weight: bold;
+}
+.detail .box-content h3{
+    text-align: center;
+    font-weight: bold;
+    color: var(--colorNaranja);
+}
+/*Contrato compra venta*/
+.contrato {
+    width: 90%;
+}
+.contrato  h4{
+    font-size: 12px;
+    font-weight: bold;
+}
+.contrato div .box-form { 
+    width: 120px;
+}
+/* Boton agregar carrito*/
+
+.btn-carrito button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 5px;
+    }
+}
+.btn-carrito button{
+    width: 120px;
+    height: 40px;
+    border-radius: 28px;
+    border: none;box-shadow: 5px 5px 5px gray;
+    background-color: var(--colorNaranja);
+    text-align: center;
 }
 
-.detail .box-products{
-    width: 100%;
+.btn-carrito button:hover{
+    background-color: var(--colorNaranja);
+    cursor: pointer;
 }
 
 .detail .item-carousel{
     padding: 5px;
 }
 
-.detail .glider-prev:hover{
+.detail .box-products .glider-prev:hover{
     background-color: grey;
 }
 
-.detail .glider-next:hover{
+.detail ..box-products .glider-next:hover{
     background-color: grey;
 }
 
