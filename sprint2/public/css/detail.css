@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /* Detalle del producto */
 .detail{
-    width: 1170;
+    width: 100%;
+    height: 100%;
     background-color: var(--colorGrisClaro);
 }
 /* Contenedor general  */
@@ -14,93 +15,170 @@
     padding: 0 40px;
     align-items: center;
 }
-
 /* caja producto */
-
 .detail .box-products{
     width: 100%;
 }
 
 /*  imagenes */
 
-.detail .img-principal{
+.detail .images{
     margin: 20px 0;
     box-shadow: 5px 5px 5px gray;
     border-radius: 25px;
 }
-.detail .img-principal #img-main{
+.detail .images #img-main{
     border-radius: 30px;
 }
 .detail img{
     width: 100%;
 }
+/* BOX_CONTENT*/
+.box-content{
+    width: 100%;
+    padding: 0 30px;
+}
+.box-content{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around
+}
+.box-content ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--colorNegro);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.box-content ul li a:hover{
+    color: var(--colorNaranja);
+    padding-left: 8px;
+}
 
 /*Informacion del producto*/
-.detail .box-content{
-    width: 100%;
-    padding: 0 20px;
-}
-.detail .box-content h2{
+
+.detail .box-info h2{
     text-align: center;
     font-weight: bold;
+    font-size: 30px;
 }
-.detail .box-content h3{
+.detail .box-info h3{
     text-align: center;
     font-weight: bold;
     color: var(--colorNaranja);
+    font-size: 25px;
 }
-/*Contrato compra venta*/
-.contrato {
-    width: 90%;
+
+/*contrato compra venta*/
+.detail .box-contrato {
+    width: 100%;
+    display: flex;
+    display:inline-block;
+    flex-wrap: wrap;
 }
-.contrato  h4{
-    font-size: 12px;
-    font-weight: bold;
+.box-contrato .box-form #cantidad{ 
+    width: 60px;
+    border-radius: 8px;
 }
-.contrato div .box-form { 
-    width: 120px;
+.box-contrato .box-form h4{
+    font-size: 14px;
 }
 /* Boton agregar carrito*/
-
-.btn-carrito button {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 5px;
-    }
+.detail  .btn-carrito button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
 }
-.btn-carrito button{
+.detail .btn-carrito button{
     width: 120px;
     height: 40px;
     border-radius: 28px;
-    border: none;box-shadow: 5px 5px 5px gray;
+    border: none;
     background-color: var(--colorNaranja);
     text-align: center;
 }
-
 .btn-carrito button:hover{
-    background-color: var(--colorNaranja);
+    background-color: var(--colorAzul);
     cursor: pointer;
 }
+.btn-carrito button li a{
+    color: var(--colorGrisClaro);
+    text-decoration: none;
+    text-align: center;
+}
+.btn-carrito button li i.fas.fa-cart-plus {
+    padding-top: 5px;
+    font-size: 15px;
+    color: var(--colorNegro);
+}
+/*Metodos de pago*/
 
-.detail .item-carousel{
-    padding: 5px;
+.box-content .pagos ul li div{
+    font-size: 10px;
+    color: var(--colorNaranja);
+    text-decoration: none;
 }
 
 .detail .box-products .glider-prev:hover{
+    background-color: var(--colorAzul);
+    border: solid 1px var(--colorNaranja);
+}
+
+.detail .box-products .glider-next:hover{
     background-color: grey;
 }
 
-.detail ..box-products .glider-next:hover{
-    background-color: grey;
-}
 
-@media (min-width:1024px) {
-    .detail .box-images{
-        width: 40%;
+/* Responsive */
+
+
+@media (min-width:361px) {
+    .detail{
+        display:flex;
+        justify-content: space-between;
     }
-    
+    .detail .box-detail{
+        width: 45%;
+        padding: 0;
+    }
     .detail .box-content{
-        width: 60%;
+        display:flex;
+        justify-content: space-between;
+    }
+    .detail .box-content div ul li {
+        display: flex;
+    }
+    .detail .box-content div ul li{
+        margin:0 10px;
+    }
+    .detail .box-content div ul li a {
+        display:inline-block;
+    }
+}
+    @media (min-width:768px){
+    .detail{
+        display:flex;
+        justify-content: space-between;
+    }
+    .detail .box-detail{
+        width: 50%;
+        padding: 0;
+    }
+    .detail .box-content{
+        display:flex;
+        justify-content: space-between;
+    }
+    .detail .box-content div ul li {
+        display: flex;
+    }
+    .detail .box-content div ul li{
+        margin:0 10px;
+    }
+    .detail .box-content div ul li a {
+        display:inline-block;
     }
 }

@@ -15,73 +15,86 @@
 
 <body>
     <!--Detalle del producto-->
-
     <main class="detail">
-
         <!--contenedor imagenes -->
 
-        <div class="box-detail">
-            <div class=".box-products">
-                <div class="glider-contain">
-                    <div class="glider">
-                        <div class="img-principal">
-                            <img id="img-main" src="/img/alimento1.jpg" alt="">
-                        </div>
+            <div class="box-detail">
+                <div class="box-products">
+                    <div class="images">
+                        <img id="img-main" src="/img/alimento1.jpg" alt="">
                     </div>
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
                 </div>
             </div>
-        </div>
-        <!--informacion del producto -->
+            
+            <div class="box-content">
+                <!--informacion del producto -->
+                <div class="box-info">
+                    <div>
+                        <h2>Nombre del producto</h2>
+                        <h3> $ 1.000 </h3>
+                    </div>
+                </div>
+            
 
-        <div class="box-content">
-            <div>
-                <h2>Nombre del producto</h2>
-                <h3>$ 1.000</h3>
-            </div>
-            <span class="descuenta">10% OFF</span>
+
             <hr>
-        </div>
+            <!-- Contrato compra venta-->
 
-        <!--Contrato compra venta -->
-        <div class="contrato">
-            <!--Seleccionar cantidda-->
-                <h4>Cantidad</h4>
+            <div class="box-contrato">
+                <!--Seleccionar cantidda-->
                 <div class="box-form">
+                    <h4>Cantidad</h4>
                     <select name="cantidad" id="cantidad">
                         <option value="1" selected hidden>1</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">5</option>
-                        <option value="6">7</option>
+                        <option value="6">6</option>
                     </select>
                 </div>
                 <!-- Boton agregar al carrito-->
                 <div class="btn-carrito">
                     <button>
-                        <li><a href="#"><i class="fas fa-cart-plus"> Agregar al carrito  </i></a></li>
+                        <li>
+                            <i class="fas fa-cart-plus"></i> <a href="/carrito"> Agregar al carrito </a>
+                        </li>
                     </button>
-
                 </div>
-                <!--Metorods de pago-->
-                <div>
+
+                <!-- Envio-->
+
+                <div class="envio">
                     <ul>
-                        <li><a href="/creatucuenta">Métodos de pagos<i class="far fa-address-card"></i>
-                                <i class="fas fa-sign-in-alt"></i>
-                            </a><i class="fas fa-shopping-basket"></i></a></li>
+                        <li>
+                            <a href="/envio"><i class="fas fa-truck"></i>Envío</a>
+                        </li>
                     </ul>
                 </div>
 
-                <!---Caracteristicas del prodcuto-->
+                <!--Metorods de pago-->
 
-            </div class="caracteristicas">
-            <li>Características</li>
+                <div class="pagos">
+                    <ul>
+                        <li><a href="/creatucuenta">Métodos de pagos </a>
+                            <i class="far fa-address-card"></i>
+                            <i class="fas fa-sign-in-alt"></i>
+                            <i class="fas fa-shopping-basket"></i>
+                            <div class="mas-detalle"><a href="/mas-detalle"> más detalle</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <!---Caracteristicas del prodcuto-->
 
+        <div class="caracteristicas">
+        <li> 
+            Descripción breve 
+        </li>
         </div>
 
-        <!--Productos relacionados -->
+        
 
     </main>
 
