@@ -205,6 +205,15 @@
 .envio .calcular input:hover{
     background-color: var(--colorNaranja);
 }
+.descripcion{
+    width: 100%;
+    height: 20%;
+    background-color: var(--colorGrisClaro);
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Responsive */
 
 
@@ -213,7 +222,7 @@
         width: 100%;
         padding: auto;
         display:flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .detail .box-detail{
         width: 45%;
@@ -223,7 +232,7 @@
         padding: 30px;
     }
     .box-contrato .cantidad-carrito{
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .box-contrato .box-form{
         padding: 10px;
@@ -248,11 +257,18 @@
         justify-content: space-around;
         flex-direction: row;
     }
+    .descripcion{
+        width: 100%;
+        height: 20%;
+        background-color: var(--colorGrisClaro);
+        display: flex;
+        justify-content: start;
+    }
 }
     @media (min-width:768px){
     .detail{
         display:flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .detail .box-detail{
         width: 50%;
@@ -262,7 +278,9 @@
         display: flex;
         justify-content: space-around;
     }
-
+    .box-contrato .cantidad-carrito{
+        justify-content: space-evenly;
+    }
     .detail .box-content{
         display:flex;
         justify-content: space-between;
@@ -275,5 +293,13 @@
     }
     .detail .box-content div ul li a {
         display:inline-block;
+    }
+    .descripcion{
+        width: 100%;
+        height: 20%;
+        padding: 20px;
+        background-color: var(--colorGrisClaro);
+        display: flex;
+        justify-content: start;
     }
 }
