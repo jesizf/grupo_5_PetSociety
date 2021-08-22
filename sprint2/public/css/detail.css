@@ -36,6 +36,7 @@
 
 .box-content{
     width: 100%;
+    padding: 20px;
 }
 .box-content{
     display: flex;
@@ -82,13 +83,19 @@
     margin: 0;
 }
 .box-contrato .cantidad-carrito{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 0 20px 0 30px;
+    justify-content:center;
+    
 }
 .box-contrato .box-form #cantidad{ 
     width: 60px;
     border-radius: 8px;
+    margin-right: 25px;
+}
+.box-contrato .box-form{
+    margin: 10px;
 }
 .box-contrato .box-form h4{
     font-size: 14px;
@@ -96,11 +103,14 @@
     flex-direction: column;
 }
 /* Boton agregar carrito*/
+.detail  .btn-carrito{
+    margin: 10px;
+    padding-left: 50px;
+}
 .detail  .btn-carrito button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px;
 }
 .detail .btn-carrito button{
     width: 120px;
@@ -125,9 +135,10 @@
     color: var(--colorNegro);
 }
 /*Metodos de pago*/
-.box-contrato .pagos-envios{
+.box-content .pagos{
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     margin: 10px;
 }
 .box-content .pagos a{
@@ -141,40 +152,63 @@
     justify-content: flex-end;
     padding-left: 15px;
 }
-.box-content .envio .box-form{
+
+/*Envios*/
+
+.box-content .envio{
+    width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+}
+.box-contrato .envio .truck{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.box-content .envio .codigo{
+    display: flex;
 }
 .box-content .envio li h4{
     color: var(--colorAzul) ;
-
 }
 .box-contrato .envio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.envio .box-form{
+    width: 100%;
+    margin: 5px;
     display: flex;
     flex-direction: row;
-    
+
 }
-.box-contrato .box-form input{
+.envio .calcular-costo{
+    display: flex;
+    flex-direction: column;
+}
+.envio .codigo input{
     width: 120px;
     height: 40px;
-    border-radius: 28px;
-    border: none;
     text-align: center;
     text-decoration: none;
     border: none;
     border-radius: 28px 0 0 28px;
 }
-
-.box-content .calcular input{
+.envio .calcular input{
     width: 120px;
     height: 40px;
     border-radius: 0 28px  28px 0;
-    border: none;
+    border: solid 1px var(--colorNaranja);
     text-align: center;
     text-decoration: none;
-    text-align: center;
+    background-color: var(--colorGrisClaro);
 }
-
+.envio .calcular input:hover{
+    background-color: var(--colorNaranja);
+}
 /* Responsive */
 
 
@@ -201,6 +235,13 @@
     }
     .detail .box-content div ul li a {
         display:inline-block;
+    }
+    .box-content .envio{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
     }
 }
     @media (min-width:768px){

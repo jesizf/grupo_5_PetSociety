@@ -94,18 +94,17 @@
                             <option value="6">6</option>
                         </select>
                     </div>
-                </div>
-                <!-- Boton agregar al carrito-->
-                <div class="btn-carrito">
-                    <button>
-                        <li>
-                            <i class="fas fa-cart-plus"></i> <a href="/carrito"> Agregar al carrito </a>
-                        </li>
-                    </button>
-                </div>
-            
 
-            <div class="pagos-envios">
+                    <!-- Boton agregar al carrito-->
+                    <div class="btn-carrito">
+                        <button>
+                            <li>
+                                <i class="fas fa-cart-plus"></i> <a href="/carrito"> Agregar al carrito </a>
+                            </li>
+                        </button>
+                    </div>
+                </div>
+
                 <!--Metorodos de pago-->
                 <div class="pagos">
                     <ul>
@@ -119,26 +118,35 @@
                         </div>
                     </ul>
                 </div>
-            </div>
-            <!-- Envio-->
-            <div class="envio">
-                <li>
-                    <h4><i class="fas fa-truck"></i>Envío</h4>
-                </li>
-                <label for="text">Calcular costo de envío</label>
-                <div class="box-form">
-                    <input type="text" placeholder="tu codigo postal" id="codigo-postal" name="odigo-Postal">
+
+                <!-- Envio-->
+
+                <div class="envio">
+                    <div class="truck">
+                        <h4><i class="fas fa-truck"></i>Envío</h4>
+                    </div>
+                    <!--calcular costo de envio -->
+                    <div class="calcular-costo">
+                        <li>
+                            <p>
+                                Calcular costo de envío
+                            </p>
+                        </li>
+                        <div class="box-form">
+                            <div class="codigo">
+                                <input type="text" placeholder="tu codigo postal" id="codigo-postal" name="odigo-Postal">
+                            </div>
+                            <div class="calcular">
+                                <input type="submit" value="calcular">
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="calcular">
-                    <input type="submit" value="calcular">
-                </div>
             </div>
-
         </div>
-
         </div>
-
-    </main>
+</main>
 
 
     <!--Footer -->
