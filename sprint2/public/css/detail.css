@@ -87,7 +87,6 @@
     display: flex;
     flex-direction: row;
     justify-content:center;
-    
 }
 .box-contrato .box-form #cantidad{ 
     width: 60px;
@@ -95,7 +94,7 @@
     margin-right: 25px;
 }
 .box-contrato .box-form{
-    margin: 10px;
+    margin: 0;
 }
 .box-contrato .box-form h4{
     font-size: 14px;
@@ -104,13 +103,10 @@
 }
 /* Boton agregar carrito*/
 .detail  .btn-carrito{
-    margin: 10px;
-    padding-left: 50px;
-}
-.detail  .btn-carrito button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .detail .btn-carrito button{
     width: 120px;
@@ -165,13 +161,12 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+    color: var(--colorAzul);
 }
 .box-content .envio .codigo{
     display: flex;
 }
-.box-content .envio li h4{
-    color: var(--colorAzul) ;
-}
+
 .box-contrato .envio{
     width: 100%;
     display: flex;
@@ -188,6 +183,7 @@
 .envio .calcular-costo{
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 .envio .codigo input{
     width: 120px;
@@ -215,13 +211,22 @@
 @media (min-width:361px) {
     .detail{
         width: 100%;
-        padding: 0;
+        padding: auto;
         display:flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .detail .box-detail{
         width: 45%;
         padding: 40px 20px;
+    }
+    .detail .box-contrato{
+        padding: 30px;
+    }
+    .box-contrato .cantidad-carrito{
+        justify-content: space-around;
+    }
+    .box-contrato .box-form{
+        padding: 10px;
     }
     .detail .box-content{
         display:flex;
@@ -255,7 +260,7 @@
     }
     .detail .box-content .box-contrato{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .detail .box-content{
