@@ -2,18 +2,15 @@
 /* Detalle del producto */
 .detail{
     width: 100%;
-    height: 100%;
-    padding: 30px;
     background-color: var(--colorGrisClaro);
 }
 /* Contenedor general  */
 .detail .box-detail {
     width: 100%;
     background-color: var(--colorGrisClaro);
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 40px;
+    padding: 40px 20px;
     align-items: center;
 }
 /* caja producto */
@@ -33,16 +30,18 @@
 }
 .detail img{
     width: 100%;
+
 }
 /* BOX_CONTENT*/
+
 .box-content{
     width: 100%;
-    padding: 0 30px;
 }
 .box-content{
     display: flex;
     flex-flow: column wrap;
-    align-content: space-around
+    align-content: space-around;
+    margin: 0;
 }
 .box-content ul li a{
     font-size: 16px;
@@ -60,12 +59,11 @@
 }
 
 /*Informacion del producto*/
-
 .detail .box-info h2{
     text-align: center;
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 .detail .box-info h3{
     text-align: center;
@@ -79,12 +77,14 @@
 .detail .box-contrato {
     width: 100%;
     display: flex;
-    display:inline-block;
     flex-wrap: wrap;
+    padding-bottom: 40px ;
+    margin: 0;
 }
 .box-contrato .cantidad-carrito{
     display: flex;
     flex-direction: row;
+    padding: 0 20px 0 30px;
 }
 .box-contrato .box-form #cantidad{ 
     width: 60px;
@@ -128,6 +128,7 @@
 .box-contrato .pagos-envios{
     display: flex;
     flex-direction: row;
+    margin: 10px;
 }
 .box-content .pagos a{
     color: var(--colorAzul) ;
@@ -140,14 +141,39 @@
     justify-content: flex-end;
     padding-left: 15px;
 }
-.box-content .envio .cp-form{
+.box-content .envio .box-form{
+    display: flex;
+    flex-direction: column;
+}
+.box-content .envio li h4{
+    color: var(--colorAzul) ;
+
+}
+.box-contrato .envio{
     display: flex;
     flex-direction: row;
+    
 }
-.box-content .envio ul li h4{
-    color: var(--colorAzul) ;
+.box-contrato .box-form input{
+    width: 120px;
+    height: 40px;
+    border-radius: 28px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 28px 0 0 28px;
 }
 
+.box-content .calcular input{
+    width: 120px;
+    height: 40px;
+    border-radius: 0 28px  28px 0;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+}
 
 /* Responsive */
 
@@ -161,7 +187,7 @@
     }
     .detail .box-detail{
         width: 45%;
-        padding: 0;
+        padding: 40px 20px;
     }
     .detail .box-content{
         display:flex;
@@ -186,6 +212,11 @@
         width: 50%;
         padding: 0;
     }
+    .detail .box-content .box-contrato{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .detail .box-content{
         display:flex;
         justify-content: space-between;
@@ -194,7 +225,7 @@
         display: flex;
     }
     .detail .box-content div ul li{
-        margin:10px 10px;
+        margin: 10px 10px;
     }
     .detail .box-content div ul li a {
         display:inline-block;
