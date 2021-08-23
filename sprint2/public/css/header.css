@@ -59,7 +59,8 @@ header div.iconos nav ul a.user{
 }
 header div.iconos nav ul a.user:hover{
     cursor: pointer;
-    padding-top: 8px;
+    color: var(--colorAzul);
+    padding-top: 6px;
 
 }
 
@@ -72,8 +73,8 @@ header .header-principal .iconos nav ul .carrito{
 
 header div.iconos nav ul a.carrito:hover{
     cursor: pointer;
-    
-        padding-top: 8px;
+    color: var(--colorAzul);
+        padding-top: 6px;
     }
 
 
