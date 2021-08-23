@@ -60,7 +60,7 @@
     <!--Detalle del producto-->
 
     <main class="detail">
-        
+
         <!--contenedor imagenes -->
         <div class="box-detail">
             <div class="box-products">
@@ -84,17 +84,13 @@
                 <!--Seleccionar cantidda-->
                 <div class="cantidad-carrito">
                     <div class="box-form">
-                        <h4>Cantidad</h4>
-                        <select name="cantidad" id="cantidad">
-                            <option value="1" selected hidden>1</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">5</option>
-                            <option value="6">6</option>
-                        </select>
+                    <h4>Cantidad</h4>
+                        <div class="botones">
+                            <input type="submit" value="-" id="menos">
+                            <input type="number" value="1" id="cantidad">
+                            <input type="submit" value="+" id="mas">
+                        </div>
                     </div>
-
                     <!-- Boton agregar al carrito-->
                     <div class="btn-carrito">
                         <button>
@@ -109,14 +105,14 @@
                 <div class="pagos">
                     <ul>
                         <li><a href="/login.html">Métodos de pagos <i class="far fa-address-card"></i>
-                                <i class="fas fa-sign-in-alt"></i>
-                                <i class="fas fa-university"></i>
+                            <i class="fas fa-sign-in-alt"></i>
+                            <i class="fas fa-university"></i>
                             </a>
                         </li>
-                        <div class="mas-detalle">
-                            <a href="/mas-detalle"> más detalle</a>
-                        </div>
                     </ul>
+                        <div class="mas-detalle">
+                            <a href="/mas-detalle">más detalle</a>
+                        </div>
                 </div>
 
                 <!-- Envio-->
@@ -127,14 +123,13 @@
                     </div>
                     <!--calcular costo de envio -->
                     <div class="calcular-costo">
-                        <li>
+                        
                             <p>
                                 Calcular costo de envío
                             </p>
-                        </li>
                         <div class="box-form">
                             <div class="codigo">
-                                <input type="text" placeholder="tu codigo postal" id="codigo-postal" name="odigo-Postal">
+                                <input type="number" placeholder="tu codigo postal" id="codigo-postal" name="odigo-Postal">
                             </div>
                             <div class="calcular">
                                 <input type="submit" value="calcular">
@@ -148,7 +143,9 @@
         </div>
 </main>
 <main class="descripcion">
-        <p>Una breve descripción del producto</p>
+        <p>Una breve descripción del producto <br>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi ratione illum quibusdam atque expedita consectetur illo optio dolor nemo cum nostrum harum placeat ipsa dolore repellendus mollitia, itaque sequi magnam.
+        </p>
 </main>
 
     <!--Footer -->
