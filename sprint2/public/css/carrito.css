@@ -1,25 +1,31 @@
-main {
+main.carrito {
   background-color: var(--colorGrisClaro);
 }
-main h1 {
+main.carrito h1 {
   font-size: 1rem;
   padding:18px 25px 0px;
  
 }
+main.carrito div.detalles{
+  display:none;
+}
 /*seccion de carrito*/
-.home main section {
+.home main.carrito section {
   width: 100%;
   
 
   align-items: center;
 }
 
-main .section-carrito {
+main.carrito .section-carrito {
   position: relative;
   display: flex;
   flex-direction: column;
   
   justify-content: center;
+}
+main .section-carrito .carrito-producto .detalles{
+  display:none;
 }
 main .section-carrito .carrito-producto {
   display: flex;
@@ -196,13 +202,97 @@ aside.total-compra div.boton-pagar button:hover{
   background-color:var(--colorAzul);
   
 }
+
+
+/*tablet*/
+
 @media (min-width: 768px){
-main h1{
+main.carrito h1{
   display:none;
 }
-.home main {
+main.carrito div.detalles{
+  display:none;
+}
+main.carrito{
+  display:flex;
+  flex-direction: row;
+  width:100%
+}
+main.carrito section{
+  width:50%;
+}
+main.carrito section.section-carrito {
+  position: relative;
+  display: flex;
+  padding-top:20px;
+  
+  justify-content: center;
+}
+main .section-carrito .carrito-producto .detalles{
   display:flex;
   flex-direction: row;
 }
+main .section-carrito .carrito-producto {
+  display: flex;
+ width:90%;
+  background-color: #ffffff;
+  margin: 10px 35px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  height: 110px;
+  
+ 
+}
+main .section-carrito .carrito-producto div.foto-carrito img{
+  width:41%;
+padding:0px;
+}
+main section article div.foto-carrito .botones{
+   
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    top: -38%;
+    left: 167%;
+}
+
+main aside.total-compra {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin-right: 20px;
 
 }
+main aside.total-compra .total{
+  padding-top:20px;
+}
+}
+/*escritorio*/
+@media (min-width: 1024px){
+main.carrito h1{
+  display:none;
+}
+main.carrito div.detalles{
+  display:none;
+}
+main.carrito{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+}
+main .section-carrito .carrito-producto div.foto-carrito img{
+  width:35%;
+padding:0px;
+}
+main section article div.foto-carrito .botones{
+   
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+  top: -50%;
+  left: 160%;
+}}
