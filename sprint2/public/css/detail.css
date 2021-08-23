@@ -246,6 +246,13 @@
         display: flex;
         flex-direction: row;
     }
+    .cantidad-carrito .btn-carrito button{
+        width: 200px;
+        height: 50px;
+    }
+    .cantidad-carrito .btn-carrito a{
+        font-size: 18px;
+    }
     .detail .box-content h4{
         font-size: 20px;
     }
@@ -303,9 +310,11 @@
         text-align: end;
     }
     .calcular-costo .box-form{
+        width: 200px;
         display: flex;
     justify-content: end;
     }
+    .calcular-costo .calcular 
     .descripcion{
         width: 100%;
         height: 20%;
