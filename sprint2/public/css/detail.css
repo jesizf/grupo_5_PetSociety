@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /* Detalle del producto */
 .detail{
-    width: 100%;
     background-color: var(--colorGrisClaro);
 }
 /* Contenedor general  */
 .detail .box-detail {
-    width: 1120;
+    width: 100%;
     background-color: var(--colorGrisClaro);
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +16,6 @@
 .detail .box-products{
     width: 100%;
 }
-
 /*  imagenes */
 
 .detail .images{
@@ -230,27 +228,23 @@
 /* Responsive */
     /*tabet*/
 
-@media (min-width:361px) {
+@media (min-width:720px) {
     .detail{
-        width: 100%;
         display:flex;
         justify-content: space-evenly;
-    }
-    .box-detail{
-        width: 50%;
-    }
-    .detail .box-content{
-        width: 90%;
+        display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     }
     .box-contrato .cantidad-carrito{
         display: flex;
         flex-direction: row;
     }
     .cantidad-carrito .btn-carrito button{
-        width: 200px;
+        width: 90%;
         height: 50px;
     }
-    .cantidad-carrito .btn-carrito a{
+    .btn-carrito button a{
         font-size: 18px;
     }
     .detail .box-content h4{
@@ -296,24 +290,18 @@
     }
     .calcular-costo .box-form{
         width: 100%;
+        margin-right: 20%;
         display: flex;
         flex-direction: row;   
         justify-content: center;
     }
-    .envio .calcular-costo li p{
-        width: 100%;        
-    }
     .calcular-costo li p{
         font-size: 10;
-        display: flex;
-        text-align: end;
     }
     .calcular-costo .box-form{
-        width: 200px;
         display: flex;
     justify-content: end;
     }
-    .calcular-costo .calcular 
     .descripcion{
         width: 100%;
         height: 20%;
@@ -325,18 +313,13 @@
 
 /*laptop*/
 
-    @media (min-width:768px){
+    @media (min-width:1020px){
     .detail{
         display:flex;
         justify-content: space-evenly;
     }
     .detail .box-detail{
-        width: 30%;
-        height: 30%;
-    }
-    .detail .box-content{
-        width: 70%;
-        height: 40%;
+        width: 50%;
     }
     .detail .box-content .box-contrato{
         width: 100%;
