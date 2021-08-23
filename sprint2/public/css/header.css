@@ -41,7 +41,7 @@ header div .buscador form input{
     height: 30px;
     padding: 5px;
     font-size: 12px; 
-    border: none;
+    border: 1px solid var(--colorGrisClaro);
     box-shadow: 3px 3px  10px #888;
 }
 header div .buscador form .lupa{
