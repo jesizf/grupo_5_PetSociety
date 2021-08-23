@@ -14,6 +14,7 @@ app.get('/como-comprar', (req, res) => res.sendFile(path.join(__dirname, 'views'
 app.get('/cambios-y-devoluciones', (req, res) => res.sendFile(path.join(__dirname, 'views', 'cambios-devoluciones.html' )));
 app.get('/formas-de-pago', (req, res) => res.sendFile(path.join(__dirname, 'views', 'formas-pagos.html' )))
 app.get('/terminos-y-condiciones', (req, res) => res.sendFile(path.join(__dirname, 'views', 'terminos.html'))) ;
+app.get('/politicas-de-calidad', (req, res) => res.sendFile(path.join(__dirname, 'views', 'politicas-calidad.html'))) ;
 app.get('/nosotros', (req, res) => res.sendFile(path.join(__dirname, 'views', 'nosotros.html'))) ;
 
 
