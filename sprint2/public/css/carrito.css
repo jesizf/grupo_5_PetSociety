@@ -283,6 +283,7 @@ main.carrito{
   display:flex;
   flex-direction: row;
   width:100%;
+  padding: 50px;
 }
 main .section-carrito .carrito-producto div.foto-carrito img{
   width:35%;
