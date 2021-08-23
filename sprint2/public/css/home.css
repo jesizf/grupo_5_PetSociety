@@ -29,13 +29,13 @@
 
 .home main section  {
   width: 100%;
-  margin-top: 7px;
+ 
  
 }
 /*productos*/
 .home main section.productos{
   width: 100%;
-  margin-top: 7px;
+  
  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -58,6 +58,7 @@ h3.titulos {
   text-align: center;
   padding: 5px;
 }
+
 /*tarjeta*/
 
 .home main section.productos article .tarjeta {
@@ -135,7 +136,7 @@ h4.productos{
       justify-content: space-around;
   }
     /*seccion de tarjetas*/
-  article:hover{
+ .productos article:hover{
       transform: scale(1.05);
     }
   .home main section.productos article {
