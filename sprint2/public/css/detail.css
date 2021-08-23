@@ -228,7 +228,7 @@
 
 
 /* Responsive */
- /*tabet*/
+    /*tabet*/
 
 @media (min-width:361px) {
     .detail{
@@ -296,7 +296,6 @@
     }
     .calcular-costo .box-form{
         width: 100%;
-        margin-right: 20%;
         display: flex;
         flex-direction: row;   
         justify-content: center;
@@ -332,7 +331,12 @@
         justify-content: space-evenly;
     }
     .detail .box-detail{
-        width: 50%;
+        width: 30%;
+        height: 30%;
+    }
+    .detail .box-content{
+        width: 70%;
+        height: 40%;
     }
     .detail .box-content .box-contrato{
         width: 100%;
