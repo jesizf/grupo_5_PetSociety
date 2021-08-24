@@ -75,7 +75,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 40px ;
+    padding: 18px 0;
 }
 .box-form{
     margin: 10px;
@@ -143,12 +143,15 @@
     font-size: 15px;
     color: var(--colorNegro);
 }
+
 /*Metodos de pago*/
+
 .box-content .pagos{
     width: 100%;
+    padding: 18px 0;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 .pagos ul li a{
     color: var(--colorAzul) ;
@@ -158,7 +161,6 @@
     font-size: 10px;
     color: var(--colorNaranja);
     display: flex;
-    justify-content: flex-end;
     align-items: baseline;
     order: 0;
 }
@@ -235,23 +237,22 @@
 /* Responsive */
     /*tabet*/
 
-@media (min-width:720px) {
+@media (min-width:760px) {
     .detail{
         display: flex;
     }
     .box-contrato .cantidad-carrito{
+        padding-top:30px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
         justify-content: space-around;
-        padding: 0 30px;
     }
     .cantidad-carrito .btn-carrito button{
-        width: 180%;
-        height: 50px;
+        width: 108%;
+        height: 45px;
     }
     .btn-carrito button a{
-        font-size: 18px;
+        font-size: 15px;
     }
     .detail .box-content h4{
         font-size: 18px;
@@ -267,7 +268,8 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        padding: 18px 0;
     }
     .box-content .pagos .mas-detalle{
         display: flex;
