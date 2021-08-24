@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"
@@ -100,19 +101,56 @@
                 </div>
 
                 <!--Metorodos de pago-->
+
                 <div class="pagos">
-                    <ul>
-                        <li><a href="/formas-de-pago">Métodos de pagos <i class="far fa-address-card"></i>
-                            <i class="fas fa-sign-in-alt"></i>
-                            <i class="fas fa-university"></i>
-                            </a>
-                            <div class="mas-detalle">
-                                <a href="/mas-detalle">más detalle</a>
+                    
+                    <input type="checkbox" id="btn-modal">
+                    <label for="btn-modal" class="lbl-modal">Métodos de pagos<i class="far fa-address-card"></i><i class="fas fa-sign-in-alt"></i><i class="fas fa-university"></i></label>
+                <!-- Ventana de pagos -->
+                <div class="modal">
+                    <div class="cont">
+                        <header><h2><i class="far fa-credit-card"></i> Elegí como pagar</h2></header>
+                        <label for="btn-modal">X</label>
+                        <div class="contenido">
+                            <div class="pagar">
+                                <h4>
+                                    Descuento con transferencias
+                                </h4>
+                                <img src="/img/mercado-pago.png" alt="">
                             </div>
+                            <div class="pagar">
+                                <h4>
+                                    12 cuotas sin interes con
+                                </h4>
+                                <img src="/img/visa.png" alt="">
+                                <img src="/img/mastercard.png" alt="">
+                                <img src="/img/naranja.png" alt="">
                             </div>
-                        </li>
-                    </ul>
-                        
+                            <div class="pagar">
+                                <h4>
+                                    Pagos con débito
+                                </h4>
+                                <img src="/img/visa-debito.png" alt="">
+                                <img src="/img/mastercard-debito.png" alt="">
+                                <img src="/img/cabal-debito.png" alt="">
+                            </div>
+                            <div class="pagar">
+                                <h4>
+                                    Pagos en efectivo
+                                </h4>
+                                <img src="/img/pagofacil.png" alt="">
+                                <img src="/img/rapipago.png" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mas-detalle">
+                    <li><a href="/formas-de-pago">más detalle</a></li>
+                </div>
+
+                </div>
 
                 <!-- Envio-->
 
