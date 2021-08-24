@@ -2,7 +2,7 @@
 /* Detalle del producto */
 .detail{
     background-color: var(--colorGrisClaro);
-    max-width: 1170;
+    max-width: 1700;
 }
 /* Contenedor general  */
 .detail .box-detail {
@@ -32,22 +32,9 @@
     display: flex;
     flex-flow: column wrap;
     align-content: space-around;
-    margin: 0;
+    margin: auto;
 }
-.box-content ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: var(--colorNegro);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 300;
-    display: block;
-    transition: all 0.3s ease;
-}
-.box-content ul li a:hover{
-    color: var(--colorNaranja);
-    padding-left: 8px;
-}
+
 
 /*Informacion del producto*/
 .detail .box-info h2{
@@ -172,7 +159,7 @@
     cursor: pointer;
     padding-left: 8px;
 }
-.pagos .mas-detalle a{
+.pagos .mas-detalle li a{
     font-size: 10px;
     color: var(--colorNaranja);
     display: flex;
@@ -222,6 +209,14 @@
     background: var(--colorNaranja);
     border-radius:  18px 18px 0 0;
     color: #FFFF;
+    text-align: center;
+    font-weight: bold;
+}
+.cont .pagar{
+    padding: 10px;
+}
+.pagar img{
+    padding-left: 7px;
 }
 .cont label{
     position: absolute;
@@ -343,6 +338,24 @@
         display: flex;
         align-items: flex-end;
     }
+    .pagos{
+        padding-left: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        font-size: 18px;
+    }
+    .cont{
+        width: 500px;
+        height: 500px;
+        margin: auto;
+    }
+    .cont .pagar{
+        padding: 20px;
+        margin: auto;
+        box-sizing: border-box;
+        
+    }
     .envio{
         display: flex;
         justify-content: center;
@@ -418,6 +431,7 @@
         display: flex;
         justify-content: start;
         align-items: flex-start;
+        font-size: 20px;
     }
 /*Envio*/
 
