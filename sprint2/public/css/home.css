@@ -134,7 +134,7 @@ h4.productos{
   }
     /*seccion de tarjetas*/
  .productos article:hover{
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
   .home main section.productos article {
     width: 22%; /* achica o agranda*/
