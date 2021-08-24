@@ -25,6 +25,11 @@ header div.burger-menu a i{
 header .header-principal .logo{
     width: 65px;
     height: 68px;
+    transition: all 300ms ease;
+}
+
+header .header-principal .logo:hover{
+    transform: scale(1.08);
 }
 
 header div.buscador form{
