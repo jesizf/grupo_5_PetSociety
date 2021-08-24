@@ -2,6 +2,7 @@
 /* Detalle del producto */
 .detail{
     background-color: var(--colorGrisClaro);
+    max-width: 1170;
 }
 /* Contenedor general  */
 .detail .box-detail {
@@ -10,16 +11,10 @@
     display: flex;
     flex-wrap: wrap;
     padding: 40px 20px;
-    align-items: center;
 }
 /* caja producto */
-.detail .box-products{
-    width: 100%;
-}
 /*  imagenes */
-
 .detail .images{
-    margin: 10px 0;
     box-shadow: 5px 5px 5px gray;
     border-radius: 30px;
 }
@@ -138,12 +133,12 @@
     background-color: var(--colorAzul);
     cursor: pointer;
 }
-.btn-carrito button li a{
+.btn-carrito button a{
     color: var(--colorGrisClaro);
     text-decoration: none;
     text-align: center;
 }
-.btn-carrito button li i.fas.fa-cart-plus {
+.btn-carrito button i.fas.fa-cart-plus {
     padding-top: 5px;
     font-size: 15px;
     color: var(--colorNegro);
@@ -152,20 +147,20 @@
 .box-content .pagos{
     width: 100%;
     display: flex;
-    margin: 10px;
     justify-content: center;
     flex-direction: column;
 }
-.box-content .pagos a{
+.pagos ul li a{
     color: var(--colorAzul) ;
+    order: -1;
 }
-.box-content .pagos .mas-detalle a{
+.pagos .mas-detalle a{
     font-size: 10px;
     color: var(--colorNaranja);
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    padding-right: 70px;
+    align-items: baseline;
+    order: 0;
 }
 
 /*Envios*/
@@ -177,17 +172,29 @@
     justify-content: center;
     
 }
-.box-contrato .envio .truck{
+.envio .truck{
     display: flex;
     justify-content: left;
     color: var(--colorAzul);
-    
+}
+.envio .truck{
+    order: -1;
 }
 .envio .box-form{
     width: 50%;
     margin: 5px;
     display: flex;
     flex-direction: row;
+}
+.envio p{
+    order: 1
+}
+.envio .box-form{
+    order: 0;
+}
+.calcular-costo p{
+    align-items: center;
+    justify-content: center;
 }
 .envio .calcular-costo{
     display: flex;
@@ -230,25 +237,24 @@
 
 @media (min-width:720px) {
     .detail{
-        display:flex;
-        justify-content: space-evenly;
         display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     }
     .box-contrato .cantidad-carrito{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 0 30px;
     }
     .cantidad-carrito .btn-carrito button{
-        width: 90%;
+        width: 180%;
         height: 50px;
     }
     .btn-carrito button a{
         font-size: 18px;
     }
     .detail .box-content h4{
-        font-size: 20px;
+        font-size: 18px;
     }
     .detail .box-content div ul li{
         font-size: 18px;
@@ -281,7 +287,6 @@
         justify-content: center; 
     }
     .envio .calcular-costo p{
-        margin-left: 10%;
         width: 100%;
         font-size: 10;
         display: flex;
@@ -290,7 +295,6 @@
     }
     .calcular-costo .box-form{
         width: 100%;
-        margin-right: 20%;
         display: flex;
         flex-direction: row;   
         justify-content: center;
@@ -314,25 +318,14 @@
 /*laptop*/
 
     @media (min-width:1020px){
-    .detail{
-        display:flex;
-        justify-content: space-evenly;
-    }
-    .detail .box-detail{
-        width: 50%;
-    }
+        .detail{
+            display: flex;
+            justify-content: center;
+        }
     .detail .box-content .box-contrato{
         width: 100%;
         padding-bottom: 30px;
         display: flex;
-        justify-content: space-around;
-    }
-    .box-contrato .cantidad-carrito{
-        justify-content: space-evenly;
-    }
-    .detail .box-content{
-        display:flex;
-        justify-content: space-between;
     }
     .detail .box-content div ul li {
         display: flex;
@@ -369,9 +362,7 @@
         display: flex;
         justify-content: center; 
     }
-    .envio .calcular-costo p{
-        margin-left: 10%;
-        width: 100%;
+    .envio .calcular p{
         font-size: 10;
         display: flex;
         justify-content: center;   
