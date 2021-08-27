@@ -42,7 +42,7 @@
 }
 /*seccion de tarjetas*/
 .home main section.productos article {
-  width: 80%;
+  width: 70%;
 
   text-align: center;
   border-radius: 15px;
@@ -80,6 +80,7 @@ h4.productos{
 .home main section.productos article div.detalle-producto span{
   font-weight:bold;
   color:var(--colorNaranja);
+  font-size: 1.5rem;
 }
 /*detalle tarjeta*/
 .home main section.productos article div.detalle-producto {
