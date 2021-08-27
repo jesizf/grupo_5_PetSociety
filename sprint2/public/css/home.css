@@ -38,11 +38,11 @@
   display: flex;
   flex-wrap: wrap;
   
-  justify-content: space-around;
+  justify-content: center;
 }
 /*seccion de tarjetas*/
 .home main section.productos article {
-  width: 40%;
+  width: 80%;
 
   text-align: center;
   border-radius: 15px;
@@ -70,11 +70,16 @@ h3.titulos {
 }
 /*imagen tarjeta*/
 .home main section.productos img {
-  width: 80%;
+  width: 70%;
 }
 /*nombre producto*/
 h4.productos{
   font-size: 16px;
+}
+/*Precio producto*/
+.home main section.productos article div.detalle-producto span{
+  font-weight:bold;
+  color:var(--colorNaranja);
 }
 /*detalle tarjeta*/
 .home main section.productos article div.detalle-producto {
@@ -110,7 +115,7 @@ h4.productos{
   /*seccion de tarjetas*/
   
   .home main section.productos article {
-    width: 21%; /* achica o agranda*/
+    width: 30%; /* achica o agranda*/
     text-align: center;
     border-radius: 15px;
     /* border: 1px solid black; */
@@ -126,7 +131,7 @@ h4.productos{
   
   @media (min-width: 1024px){
     .home main section.productos {
-      width: 95%;
+      width: 90%;
       display: flex;
       flex-wrap: wrap;
       /* flex-direction: row; */
