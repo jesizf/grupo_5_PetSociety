@@ -261,7 +261,7 @@
     order: 0;
 }
 .calcular-costo p{
-    font-size: 16px;
+    font-size: 14px;
     align-items: center;
     justify-content: center;
 }
@@ -371,13 +371,13 @@
         display: flex;
         justify-content: baseline;
     }
-    .envio .calcular-costo{
+    .envio .calcular-costo {
         display: flex;
-        justify-content: center; 
+        flex-direction: row-reverse;
     }
     .envio .calcular-costo p{
         width: 100%;
-        font-size: 10;
+        font-size: 11px;
         display: flex;
         justify-content: center;   
         align-items: center;
@@ -461,8 +461,8 @@
         display: flex;
         flex-direction: row-reverse;
     }
-    .envio .calcular p{
-        font-size: 18;
+    .envio .calcular-costo p{
+        font-size: 18px;
         display: flex;
         align-items: center;
     }
