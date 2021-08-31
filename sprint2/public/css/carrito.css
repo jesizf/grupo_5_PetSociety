@@ -125,7 +125,7 @@ main aside.total-compra {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  max-width: 250px;
+  
 }
 
 main aside.total-compra section.detalle-total {
@@ -252,6 +252,7 @@ aside.total-compra div.boton-pagar button:hover {
     background-color: #ffffff;
     border-radius: 25px;
     margin-right: 20px;
+    max-width: 250px;
   }
   main aside.total-compra .total {
     padding-top: 20px;
