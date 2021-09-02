@@ -38,14 +38,14 @@
   display: flex;
   flex-wrap: wrap;
   
-  justify-content: space-around;
+  justify-content: center;
 }
 /*seccion de tarjetas*/
 .home main section.productos article {
-  width: 40%;
+  width: 70%;
 
   text-align: center;
-  border-radius: 20px;
+  border-radius: 15px;
   /* border: 1px solid black; */
   margin-bottom: 20px;
   box-shadow: 0 0 0 rgb(0, 0, 1);
@@ -66,16 +66,21 @@ h3.titulos {
 .home main section.productos article .tarjeta {
   text-align: center;
   margin: 5px;
-  
-  
+  transition: all 0.3s ease;
 }
 /*imagen tarjeta*/
 .home main section.productos img {
-  width: 80%;
+  width: 70%;
 }
 /*nombre producto*/
 h4.productos{
   font-size: 16px;
+}
+/*Precio producto*/
+.home main section.productos article div.detalle-producto span{
+  font-weight:bold;
+  color:var(--colorNaranja);
+  font-size: 1.5rem;
 }
 /*detalle tarjeta*/
 .home main section.productos article div.detalle-producto {
@@ -111,13 +116,14 @@ h4.productos{
   /*seccion de tarjetas*/
   
   .home main section.productos article {
-    width: 21%; /* achica o agranda*/
+    width: 30%; /* achica o agranda*/
     text-align: center;
-    border-radius: 20px;
+    border-radius: 15px;
     /* border: 1px solid black; */
     display: inline;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: white;
+    
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
   }
@@ -126,7 +132,7 @@ h4.productos{
   
   @media (min-width: 1024px){
     .home main section.productos {
-      width: 95%;
+      width: 90%;
       display: flex;
       flex-wrap: wrap;
       /* flex-direction: row; */
