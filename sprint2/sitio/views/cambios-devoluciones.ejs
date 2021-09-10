@@ -1,60 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Cambios y Devoluciones</title>
-</head>
+    <%-include('./partials/head')%>
 <body class="cambios-devoluciones">
-    <header>
-        <div class="header-principal">
-            <div class="burger-menu">
-                <a href=""><i class="fas fa-bars"></i></a>
-                </div>
-                <div class="img">
-                    <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
-                </div>                
-                <div class="buscador">
-                    <form action="">
-                        <input type="text" placeholder="¿Que estas buscando?">
-                        <a class="lupa" href="" class="input-group-btn"><i class="fa fa-search fa-lg"></i></a>
-                    </form>
-                </div>
-            <div class="iconos">
-                <nav>
-                    <ul>
-                            <a href="/login" class="user"><i class="far fa-user-circle"></i></a>
-                            <a href="/carrito" class="carrito-header"><i class="iconify" data-icon="emojione-monotone:shopping-cart"></i></a>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-            <div class="categorias">
-                <nav>
-                    <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li>
-                            <a href="" class="icono-perro"><i class="fas fa-dog"></i></a>
-                            <a href="">Perros</a>
-                            <a href="" class="boton"><i class="fas fa-caret-down"></i></i></a>
-                        </li>
-                        <li>
-                            <a href="" class="icono-gato"><i class="fas fa-cat"></i></a>
-                            <a href="">Gatos</a>
-                            <a href="" class="boton"><i class="fas fa-caret-down"></i></a>
-                        </li>
-                    </ul> 
-                </nav>           
-            </div>        
-            </header>
+    <%-include('./partials/header')%>
     <main>
         <div class="inicio">
             <a href="/">Inicio > </a> <a href="/cambios-devoluciones"> Cambios y Devoluciones</a>
@@ -84,65 +32,8 @@
         
                 
     </main>
-    <!--Footer -->
-
-    <footer class="footer">
-        <!--contenedor -->
-        <div class="container">
-
-            <!--info pagina-->
-
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Institucional</h4>
-                    <ul>
-                        <li><a href="/nosotros">Quiénes somos</a></li>
-                        <li><a href="/politicas-de-calidad">politica de calidad</a></li>
-                        <li><a href="/terminos-y-condiciones">Terminos y condiciones</a></li>
-                    </ul>
-                </div>
-
-                <!--dudas -->
-
-                <div class="footer-col">
-                    <h4>Dudas</h4>
-                    <ul>
-                        <li><a href="/como-comprar">Cómo compar</a></li>
-                        <li><a href="/cambios-y-devoluciones">Cambios y devoluciones</a></li>
-                        <li><a href="/formas-de-pago">Formas de pago</a></li>
-                    </ul>
-                </div>
-
-                <!--Info contacto-->
-
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><p>Info@petsociety.com</p></li>
-                        <li><p>Atención telfónica: 0800-petsociety</p></li>
-                        <li><p>Atención Whatsapp: (11)-xxxxxxx</p></li>
-                        <li><p>lunes a sabados de 10 a 20hs</p></li>
-                    </ul>
-                </div>
-
-                <!--Redes -->
-
-                <div class="footer-col">
-                    <h4>Seguinos en:</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© Pet Society 2021</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <%-include('./partials/footer')%>
+    <%-include('./partials/scripts')%>
 </body>
 </html>
 
