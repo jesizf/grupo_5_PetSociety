@@ -33,141 +33,21 @@
         <h3 id= "perros" class="titulos">Perros</h3>
         <!--Productos-->
         <section class="productos">
-        <!--Tarjetas 1-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="./img/alimento1.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <!--Tarjetas 2-->
-        <article>
-            <div class="tarjeta">
-                <a href="/detalle-de-producto"><img src="/img/alimento2.jpg" alt=""></a>
-                <div class="detalle-producto">
-                    <h4>Producto</h4>
-                    <span>$250 </span>
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
-            </div>
-        </article>
-        <!--Tarjetas 3-->
-        <article>
-            <div class="tarjeta">
-                <a href="/detalle-de-producto"><img src="/img/alimento3.jpg" alt=""></a>
-                <div class="detalle-producto">
-                    <h4>Excellent Dog Adult</h4>
-                    <span>$250 </span>
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
-            </div>
-        </article>
-            </article>
-            <!--Tarjetas 4-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/alimento4.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 5-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/alimento5.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Prodcuto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 6-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snack4.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 7-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snack1.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 8-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snack2.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 9-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snack3.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 10-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/alimento5.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 11-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/royal.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 12-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/pedigree.webp" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-        </section> 
+            <% products.forEach(product  => { %>
+         
+                <article>
+                      <div class="tarjeta">
+                          <a href="/detalle-de-producto"><img src="./img/<%= product.image %> " alt="foto"></a>
+                          <div class="detalle-producto">
+                              <h4><%= product.name %></h4>
+                              <span>$<%= product.price %></span>
+                              <p><%= product.description %> </p>
+                          </div>
+                      </div>
+                  </div>
+              </article>
+              <% }) %>
+            </section> 
         <h3 id="gatos" class="titulos">Gatos</h3>
         <section class="productos">
             <!--Tarjetas 1-->
