@@ -32,111 +32,39 @@
         </section>
         <h3 id= "perros" class="titulos">Perros</h3>
         <!--Productos-->
+        
         <section class="productos">
-            <% products.forEach(product  => { %>
-         
-                <article>
-                      <div class="tarjeta">
-                          <a href="/detalle-de-producto"><img src="./img/<%= product.image %> " alt="foto"></a>
-                          <div class="detalle-producto">
-                              <h4><%= product.name %></h4>
-                              <span>$<%= product.price %></span>
-                              <p><%= product.description %> </p>
-                          </div>
-                      </div>
-                  </div>
-              </article>
-              <% }) %>
+<% productsPerros.forEach(productsPerros => { %>
+    <article>
+        <div class="tarjeta">
+        <a href="/detalle-de-producto"><img src="./img/<%= productsPerros.image %>" alt="foto"></a> 
+            <div class="detalle-producto">
+                <h4><%= productsPerros.name %></h4>
+                <span>$<%= productsPerros.price %></span>
+                <p><%= productsPerros.description %></p>
+            </div>
+        </div>
+</article>
+
+<% }) %>
             </section> 
         <h3 id="gatos" class="titulos">Gatos</h3>
         <section class="productos">
-            <!--Tarjetas 1-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snack-gato.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
+            <!--Tarjetas-->
+            <% productsGatos.forEach(productsGatos => { %>
+                <article>
+                    <div class="tarjeta">
+                    <a href="/detalle-de-producto"><img src="./img/<%= productsGatos.image %>" alt="foto"></a> 
+                        <div class="detalle-producto">
+                            <h4><%= productsGatos.name %></h4>
+                            <span>$<%= productsGatos.price %></span>
+                            <p><%= productsGatos.description %></p>
+                        </div>
                     </div>
-                </div>
             </article>
-            <!--Tarjetas 2-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/salsa.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 2-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/gatos.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 3-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/imggato.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 4-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snacks.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 5-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/gatos4.webp" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 6-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/snacks.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </article>
-            <!--Tarjetas 7-->
-            <article>
-                <div class="tarjeta">
-                    <a href="/detalle-de-producto"><img src="/img/salsa.jpg" alt="foto"></a>
-                    <div class="detalle-producto">
-                        <h4>Producto</h4>
-                        <span>$250 </span>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </article>
+            
+            <% }) %>
+                        
             </section>
         </main>
         <%-include('./partials/footer')%>
