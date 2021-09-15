@@ -20,7 +20,7 @@
     "image": "snack4.jpg",
     "description": "orci mauris lacinia sapien",
     "price": 3,
-    "category": "gato"
+    "category": "perro"
 },
 {
     "id": 4,
@@ -140,7 +140,7 @@
     "image": "snack3.jpg",
     "description": "nisi eu orci mauris lacinia sapi",
     "price": 18,
-    "category": "gato"
+    "category": "perro"
 },
 {
     "id": 19,

@@ -11,4 +11,11 @@ module.exports = {
             firstLetter
         })
     },
+    detail : (req, res) =>{
+        return res.render('detail',{
+            title: 'Detalles de productos',
+            products : products.find(product => product.id === +req.params.id)
+            
+        })
+    }
 }
