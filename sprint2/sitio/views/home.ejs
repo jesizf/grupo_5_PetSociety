@@ -32,22 +32,21 @@
         </section>
         <h3 id= "perros" class="titulos">Perros</h3>
         <!--Productos-->
-        
-        <section class="productos">
-<% productsPerros.forEach(productsPerros => { %>
-    <article>
-        <div class="tarjeta">
-        <a href="/detalle-de-producto"><img src="./img/<%= productsPerros.image %>" alt="foto"></a> 
-            <div class="detalle-producto">
-                <h4><%= productsPerros.name %></h4>
-                <span>$<%= productsPerros.price %></span>
-                <p><%= productsPerros.description %></p>
-            </div>
-        </div>
-</article>
-
-<% }) %>
+         <section class="productos">
+            <% productsPerros.forEach(productsPerros =>{ %>
+                <article>
+                    <div class="tarjeta">
+                    <a href="/detalle-de-producto"><img src="./img/<%= productsPerros.image %>" alt="foto"></a> 
+                        <div class="detalle-producto">
+                            <h4><%= productsPerros.name %></h4>
+                            <span>$<%= productsPerros.price %></span>
+                            <p><%= productsPerros.description %></p>
+                        </div>
+                    </div>
+            </article>
+            <% }) %>
             </section> 
+            
         <h3 id="gatos" class="titulos">Gatos</h3>
         <section class="productos">
             <!--Tarjetas-->

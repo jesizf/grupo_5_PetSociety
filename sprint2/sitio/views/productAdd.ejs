@@ -2,14 +2,14 @@
 <html lang="es">
 
 <%-include('./partials/head')%>
-    <body>
+    <body id="body-add">
         <%-include('./partials/header')%>
         <!--cuerpo-->
-        <main class="container">
+        <main class="container" >
          <div class="row">
-             <div class="ccol-12 col-md-10 col-lg-7 mt-5 mx-auto">
+             <div class="ccol-12 col-md-10 col-lg-8 mt-5 mx-auto" >
                 <div class="card">
-                    <div class="card-header text-light bg-dark">
+                    <div class="card-header text-light" style="background-color: #fb9d5a;">
                         <h5>Agregar Producto</h5>
                     </div>
                     <div class="car-body">
@@ -21,13 +21,27 @@
                                        </div>
                                 </div>
                                 
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-6">
                                  <div class="form-floating mb-3">
                                      <input type="number" class="form-control" id="price" placeholder=" Precio">
                                      <label for="price">Precio</label>
                                     </div>
                                 </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating  mb-3">
+                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="category">
+                                          <option selected hidden>Seleccionar Categoría</option>
+                                          <% categories.forEach(category => { %>
+                                            <option value="<%= category %>"><%= firstLetter(category) %></option>
+                                          <% }) %>                                          
+                                        </select>
+                                        <label for="floatingSelect">Categorías</label>
+                                      </div>
+                                     </div>
                                 
+
+
+                            
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" id="description"></textarea>
