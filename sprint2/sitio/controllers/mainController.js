@@ -20,5 +20,7 @@
     },
     cart: (req,res)=> {
         return res.render('carrito',{title: 'carrito'})
-    }
+    },
+    admin: (req,res)=>{
+    return res.render('admin', {title: 'admin'})}
  }
