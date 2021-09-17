@@ -19,5 +19,22 @@ module.exports = {
             products : products.find(product => product.id === +req.params.id)
             
         })
-    }
+    },
+    edit : (req,res) => {
+        return res.render('productEdit',{
+            product : products.find(product => product.id === +req.params.id),
+            categories,
+            firstLetter,
+        })
+    },
+    search : (req,res) => res.render('admin',{
+        title : 'Resultado de la búsqueda',
+        categories,
+        products : products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase()))
+    }),
+    filter : (req,res) => res.render('admin',{
+        title : 'Categoría: ' + req.query.category,
+        categories,
+        products : products.filter(product => product.category === req.query.category)
+    }),
 }
