@@ -13,31 +13,31 @@
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">imagen</th>
+                    <th scope="col">Imagen</th>
                     <th scope="col">Producto</th>
-                    <th scope="col">precio</th>
-                    <th scope="col">categoria</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    
-                    <td>@twitter</td>
-                  </tr>
+                  <% products.forEach((product,home) => { %>
+                    <tr>
+                      <th scope="row"><%= home + 1 %> </th>
+                      <td><img width="50" src="/img/<%= product.image %>" alt="imagen"></td>
+                      <td><%= product.name %></td>
+                      <td><%= product.price %></td>
+                      <td><%= product.category %></td>
+                      <td class="d-flex justify-content-around">
+                        <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                        <div>
+                          <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                  <% }) %>
                 </tbody>
               </table>
             </div>
