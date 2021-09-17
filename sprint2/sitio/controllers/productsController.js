@@ -43,11 +43,13 @@ module.exports = {
             
         })
     },
-    edit : (req,res) => {
+    edit : (req, res) =>{
         return res.render('productEdit',{
+            title: 'Editar productos',
             product : products.find(product => product.id === +req.params.id),
             categories,
             firstLetter,
+            pesoProducts,
         })
     },
     search : (req,res) => res.render('admin',{
