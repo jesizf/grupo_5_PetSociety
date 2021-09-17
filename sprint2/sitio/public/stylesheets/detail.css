@@ -103,26 +103,26 @@
 }
 /* Boton agregar carrito*/
 .detail  .btn-carrito{
-    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 .detail .btn-carrito button{
-    width: 160px;
-    height: 50px;
+    width: 121px;
+    height: 40px;
+    font-size: 14px;
     border-radius: 28px;
     border: none;
     background-color: var(--colorNaranja);
     text-align: center;
-    font-size: 14px;
 }
 .btn-carrito button:hover{
     background-color: var(--colorAzul);
     cursor: pointer;
 }
 .btn-carrito button a{
+    padding: 10px;
     color: var(--colorGrisClaro);
     text-decoration: none;
     text-align: center;
@@ -313,15 +313,15 @@
     .box-contrato .cantidad-carrito{
         padding-top:30px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-wrap: nowrap;
     }
     .cantidad-carrito .btn-carrito button{
-        width: 108%;
+        width: 100%;
         height: 45px;
+        margin: auto;
     }
-    .btn-carrito button a{
-        font-size: 15px;
+    .btn-carrito button .boton-carrito-a{
+        padding: 6px;
     }
     .detail .box-content h4{
         font-size: 18px;
@@ -415,6 +415,8 @@
         width: 100%;
         padding-bottom: 30px;
         display: flex;
+        flex-direction: column;
+        
     }
     .detail .box-content div ul li {
         display: flex;
@@ -425,6 +427,26 @@
     .detail .box-content div ul li a {
         display:inline-block;
     }
+/* boton carrito */
+.box-contrato .cantidad-carrito{
+    padding-top:30px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.box-contrato .cantidad-carrito {
+    padding-top: 30px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.box-content .pagos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 0;
+}
 /*Descripcion del producto */
     .descripcion{
         width: 100%;
@@ -453,9 +475,7 @@
     }
     .envio .truck {
         padding-bottom: 32px;
-        display: flex;
-        flex-flow: column-reverse;
-        float: left;
+        margin: 0;
     }
     .envio .calcular-costo {
         display: flex;
