@@ -6,9 +6,16 @@
         <%-include('./partials/header')%>
         <!--cuerpo-->
         <main class="container">
-            
+          <div class="col-12 col-lg-11 mx auto">
+            <form class="row justify-content-center" action="/products/search" method="GET">
+              <div class="col-5">
+               <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
+              </div>
+              <button class="col-3 btn btn-outline-primary" type="submit">Buscar</button>
+            </form>
+            </div>
         <div class="row" >
-            <div class="col 12 col-lg-8 mx auto">
+            <div class="col-12 col-lg-8 mx auto">
               
             <table class="table">
                 <thead>
@@ -30,10 +37,10 @@
                       <td><%= product.price %></td>
                       <td><%= product.category %></td>
                       <td class="d-flex justify-content-around">
-                        <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                        <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 30px;background-color: #383e56"><i class="fas fa-edit"></i></a>
                         <div>
                           <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
+                            <button type="submit" class="btn btn-sm btn-danger" style="width: 35px; background-color: #fb9d5a;"><i class="fas fa-trash"></i></button>
                           </form>
                         </div>
                       </td>
