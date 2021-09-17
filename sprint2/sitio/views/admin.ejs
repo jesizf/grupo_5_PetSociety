@@ -2,60 +2,68 @@
 <html lang="es">
 
 <%-include('./partials/head')%>
-    <body class="bg-light">
+    <body class="body-admin">
         <%-include('./partials/header')%>
         <!--cuerpo-->
-        <main class="container">
-          <div class="col-12 col-lg-11 mx auto">
-            <form class="row justify-content-center" action="/products/search" method="GET">
-              <div class="col-5">
-               <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
-              </div>
-              <button class="col-3 btn btn-outline-primary" type="submit">Buscar</button>
-            </form>
-            <div class="d-flex justify-content-around">
-                <a class="btn btn-primary color: #fb9d5a" href="/products/add">Agregar</a>
+        <main class="main-admin">
+          <div class="card-header" id="header-admin">
+            <div class="row" style=" justify-content: space-between;">
+             
+              <div class="col-12 col-md-6">
+                <form class="row" action="/products/search" method="GET">
+                 <div class="col-8">
+                  <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
+                 </div>
+                 <button class="col-4 btn btn-outline-primary" type="submit">Buscar</button>
+               </form>
+               </div>
+               
+              <div class="col-1 col-md-2">
+                <div>
+                  <a class="btn btn-primary" id="button-add" href="/products/add">Agregar</a>
+                </div>
               </div>
             </div>
-            <div class="col-12 col-md-2 text-end">
-              
-        <div class="row" >
-            <div class=" col-sm-1 col-md-10 col-lg-15  mx auto">
-              
-            <table class="table">
+          </div>
+          
+            <div class="admin-box">
+              <table class="tabla">
                 <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Imagen</th>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Acciones</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
                 </thead>
                 <tbody>
                   <% products.forEach((product,home) => { %>
-                    <tr>
-                      <th scope="row"><%= home + 1 %> </th>
-                      <td><img width="50" src="/img/<%= product.image %>" alt="imagen"></td>
-                      <td><%= product.name %></td>
-                      <td><%= product.price %></td>
-                      <td><%= product.category %></td>
-                      <td class="d-flex justify-content-around">
-                        <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 30px;background-color: #383e56"><i class="fas fa-edit"></i></a>
-                        <div>
-                          <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn btn-sm btn-danger" style="width: 35px; background-color: #fb9d5a;"><i class="fas fa-trash"></i></button>
-                          </form>
-                        </div>
-                      </td>
+                      <tr>
+                          <td data-titulo="ID"><%= home + 1 %> </td>
+                        <td data-titulo="Imagen"><img width="50" src="/img/<%= product.image %>" alt="imagen"></td>
+                          <td data-titulo="Nombre"><%= product.name %></td>
+                          <td  data-titulo="Precio"><%= product.price %></td>
+                          <td  data-titulo="Categoria"><%= product.category %></td>
+                          
+                            <td class="button" data-titulo="Acciones"><div class="box-button"><a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 30px;background-color: #383e56"><i class="fas fa-edit"></i></a>
+                            </div>
+                              <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="admin-destroy" ><i class="fas fa-trash"></i></button>
+                              </form>
+                            
+                          </td>
+                          </div>
+                          
                     </tr>
                   <% }) %>
                 </tbody>
-              </table>
-            </div>
-        </div>
-        
+            </table>
+           
+            
+        </main>
+       
         <%-include('./partials/scripts')%>
       
     </body>

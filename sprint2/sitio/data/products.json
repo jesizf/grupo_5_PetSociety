@@ -118,44 +118,13 @@
     "price": 15,
     "category": "gato"
 },
-{
-    "id": 16,
-    "name": "Karasuk",
-    "image": "alimento4.jpg",
-    "description": "sagittis sapien cum sociis",
-    "price": 16,
-    "category": "perro"
-},
+
 {
     "id": 17,
     "name": "Wanzu",
     "image": "alimento4.jpg",
     "description": "orci mauris lacinia sapien",
     "price": 17,
-    "category": "perro"
-},
-{
-    "id": 18,
-    "name": "Kulia Village",
-    "image": "snack3.jpg",
-    "description": "nisi eu orci mauris lacinia sapi",
-    "price": 18,
-    "category": "perro"
-},
-{
-    "id": 19,
-    "name": "San Mateo",
-    "image": "salsa.jpg",
-    "description": "pellentesque volutpat dui",
-    "price": 19,
-    "category": "gato"
-},
-{
-    "id": 20,
-    "name": "Strömstad",
-    "image": "royal.jpg",
-    "description": "luctus rutrum nulla tellus",
-    "price": 20,
     "category": "perro"
 }
 ]
