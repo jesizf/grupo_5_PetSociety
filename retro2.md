@@ -1,4 +1,4 @@
-# Retroespectiva del Sprint 1:
+# Retroespectiva:
 ## -Qué deberíamos seguir haciendo?
 ## -Qué deberíamos hacer más?
 ## -Qué deberíamos empezar a hacer? 
