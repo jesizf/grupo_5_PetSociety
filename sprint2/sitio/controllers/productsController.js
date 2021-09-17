@@ -12,7 +12,30 @@ module.exports = {
             firstLetter,
             pesoProducts
         })
+        
     },
+    store : (req,res) => {
+        
+        const {name,description,price,category} = req.body;
+
+        let product = {
+            id : products[products.length - 1].id + 1,
+            name : name.trim(),
+            description : description.trim(),
+            price : +price,
+            category,
+            
+            image : req.file ? req.file.filename : 'default.jpg',
+            
+        }
+
+        products.push(product);
+
+        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
+
+        return res.redirect('/admin')
+    }
+,
     detail : (req, res) =>{
         return res.render('detail',{
             title: 'Detalles de productos',
@@ -29,7 +52,9 @@ module.exports = {
     },
     search : (req,res) => res.render('admin',{
         title : 'Resultado de la búsqueda',
+        products,
         categories,
+        firstLetter,
         products : products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase()))
     }),
     filter : (req,res) => res.render('admin',{
