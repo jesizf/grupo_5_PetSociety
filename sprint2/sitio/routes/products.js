@@ -5,5 +5,6 @@ var router = express.Router();
 const {detail, add} = require('../controllers/productsController');
 router.get('/detail/:id', detail)
 router.get('/add', add)
+router.get('/edit', edit)
 
 module.exports = router;

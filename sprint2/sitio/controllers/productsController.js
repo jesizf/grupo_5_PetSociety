@@ -20,4 +20,11 @@ module.exports = {
             
         })
     }
+},
+    edit : (req, res) =>{
+    return res.render('productEdit',{
+        product : products.find(product => product.id === +req.params.id),
+        categories,
+        firstLetter,
+    })
 }
