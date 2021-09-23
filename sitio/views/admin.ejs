@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include('./partials/head')%>
+    <body class="body-admin">
+        <%-include('./partials/header')%>
+        <!--cuerpo-->
+        <main class="main-admin">
+          <div class="card-header" id="header-admin">
+            <div class="row" style=" justify-content: space-between;">
+             
+              <div class="col-12 col-md-6">
+                <form class="row" action="/products/search" method="GET">
+                 <div class="col-8">
+                  <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
+                 </div>
+                 <button class="col-4 btn btn-outline-primary" type="submit">Buscar</button>
+               </form>
+               </div>
+               
+              <div class="col-1 col-md-2">
+                <div>
+                  <a class="btn btn-primary" id="button-add" href="/products/add">Agregar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            <div class="admin-box">
+              <table class="tabla">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% products.forEach((product,home) => { %>
+                      <tr>
+                          <td data-titulo="ID"><%= home + 1 %> </td>
+                        <td data-titulo="Imagen"><img width="50" src="/img/<%= product.image %>" alt="imagen"></td>
+                          <td data-titulo="Nombre"><%= product.name %></td>
+                          <td  data-titulo="Precio"><%= product.price %></td>
+                          <td  data-titulo="Categoria"><%= product.category %></td>
+                          
+                            <td class="button" data-titulo="Acciones"><div class="box-button"><a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 30px;background-color: #383e56"><i class="fas fa-edit"></i></a>
+                            </div>
+                              <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="admin-destroy" ><i class="fas fa-trash"></i></button>
+                              </form>
+                            
+                          </td>
+                          </div>
+                          
+                    </tr>
+                  <% }) %>
+                </tbody>
+            </table>
+           
+            
+        </main>
+       
+        <%-include('./partials/scripts')%>
+      
+    </body>
+
+</html>
