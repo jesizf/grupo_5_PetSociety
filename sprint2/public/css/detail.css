@@ -100,6 +100,7 @@
     font-size: 14px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 /* Boton agregar carrito*/
 .detail  .btn-carrito{
@@ -110,8 +111,8 @@
     align-items: center;
 }
 .detail .btn-carrito button{
-    width: 160px;
-    height: 50px;
+    width: 110px;
+    height: 30px;
     border-radius: 28px;
     border: none;
     background-color: var(--colorNaranja);
@@ -122,13 +123,15 @@
     background-color: var(--colorAzul);
     cursor: pointer;
 }
-.btn-carrito button a{
+
+.btn-carrito button .boton-carrito-a{
+    padding: 10px;
     color: var(--colorGrisClaro);
     text-decoration: none;
     text-align: center;
 }
 .btn-carrito button i.fas.fa-cart-plus {
-    padding-top: 5px;
+    margin: 2px;
     font-size: 15px;
     color: var(--colorNegro);
 }
@@ -317,11 +320,11 @@
         justify-content: space-around;
     }
     .cantidad-carrito .btn-carrito button{
-        width: 108%;
+        width: 110%;
         height: 45px;
     }
-    .btn-carrito button a{
-        font-size: 15px;
+    .btn-carrito .boton-carrito-a{
+        padding: 10px;
     }
     .detail .box-content h4{
         font-size: 18px;
@@ -415,6 +418,10 @@
         width: 100%;
         padding-bottom: 30px;
         display: flex;
+    }
+    .btn-carrito button a {
+        font-size: 15px;
+        padding: 10px;
     }
     .detail .box-content div ul li {
         display: flex;
