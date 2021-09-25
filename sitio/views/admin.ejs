@@ -42,7 +42,7 @@
                   <% products.forEach((product,home) => { %>
                       <tr>
                           <td data-titulo="ID"><%= home + 1 %> </td>
-                        <td data-titulo="Imagen"><img width="50" src="/img/<%= product.image %>" alt="imagen"></td>
+                        <td data-titulo="Imagen"><img width="50" src="/img/products/<%= product.image %>" alt="imagen"></td>
                           <td data-titulo="Nombre"><%= product.name %></td>
                           <td  data-titulo="Precio"><%= product.price %></td>
                           <td  data-titulo="Categoria"><%= product.category %></td>

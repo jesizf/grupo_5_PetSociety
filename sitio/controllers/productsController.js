@@ -17,6 +17,7 @@ module.exports = {
     store : (req,res) => {
         
         const {name,description,price,category} = req.body;
+        let images = req.files.map(image => image.filename)
 
         let product = {
             id : products[products.length - 1].id + 1,
@@ -25,7 +26,7 @@ module.exports = {
             price : +price,
             category,
             
-            image : req.file ? req.file.filename : 'default.jpg',
+            image : req.files.length != 0 ? images : ['default.jpg'],
             
         }
 
