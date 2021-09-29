@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%-include('./partials/head')%>
+<%-include('./partials/head', {title: 'Agregar Producto'})%>
     <body id="body-add">
         <%-include('./partials/header')%>
         <!--cuerpo-->
         <main class="container" style="margin-bottom: 50px;" >
          <div class="row">
              <div class="ccol-12 col-md-10 col-lg-8 mt-5 mx-auto">
-                <div class="card"  >
+                <div class="card">
                     <div style="background-color: #fb9d5a" class="card-header text-light">
                         <h5>Agregar Producto</h5>
                     </div>
@@ -16,16 +16,18 @@
                             <form class="row m-1" method="POST" enctype="multipart/form-data" >
                                 <div class="col-12">
                                     <div class="form-floating mb-3 pt-2">
-                                        <input type="text" class="form-control" id="nombre" placeholder=" Nombre del Producto">
-                                        <label for="nombre">Nombre del Producto</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder=" Nombre del Producto" name="name">
+                                        <label for="name">Nombre del Producto</label>
                                        </div>
+                                       <span class="validator-msg"><%= locals.errors && errors.name ? errors.name.msg : null%></span>
                                 </div>
                                 
                                 <div class="col-12 col-md-6">
                                  <div class="form-floating mb-3">
-                                     <input type="number" class="form-control" id="price" placeholder=" Precio">
+                                     <input type="number" class="form-control" id="price" placeholder=" Precio" name="price">
                                      <label for="price">Precio</label>
                                     </div>
+                                    <span class="validator-msg"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-floating  mb-3">
@@ -37,6 +39,7 @@
                                         </select>
                                         <label for="floatingSelect">Categorías</label>
                                       </div>
+                                      <span class="validator-msg"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
                                      </div>
 
 
@@ -50,12 +53,13 @@
                                             </select>
                                             <label for="floatingSelect">Peso</label>
                                           </div>
+                                          <span class="validator-msg"><%= locals.errors && errors.pesoProducts ? errors.pesoProducts.msg : null%> </span>
                                          </div>
                                      <div class="col-12 col-md-6">
 
                                          <div class="mb-3">
                                             <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
-                                            <input hidden class="form-control" type="file" id="image" name="image">
+                                            <input hidden class="form-control" type="file" id="image" name="image" multiple>
                                           </div>
                                        </div>
                                     </div>
@@ -65,6 +69,7 @@
                                         <textarea style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" id="description"></textarea>
                                         <label for="description">Descripción del producto</label>
                                       </div>
+                                      <span class="validator-msg"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                                 </div>
                              
                                 

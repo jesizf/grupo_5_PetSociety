@@ -14,7 +14,7 @@
         return res.render('home', {title: 'Pet Society', 
        products : JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
        productsPerros,
-       productsGatos
+       productsGatos,
     })
     
     },

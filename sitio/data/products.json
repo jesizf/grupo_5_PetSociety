@@ -1,130 +1,198 @@
-[{
-    "id": 1,
-    "name": "Vạn Giã",
-    "image": ["pedigree.webp"],
-    "description": "orci mauris lacinia sapien",
-    "price": 1,
-    "category": "perro"
-},
-{
-    "id": 2,
-    "name": "Ōme",
-    "image": ["alimento3.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 2,
-    "category": "perro"
-},
-{
-    "id": 3,
-    "name": "Arāk",
-    "image": ["snack4.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 3,
-    "category": "perro"
-},
-{
-    "id": 4,
-    "name": "Yaozhuang",
-    "image": ["snacks.jpg"],
-    "description": "mi nulla ac enim in tempor",
-    "price": 4,
-    "category": "gato"
-},
-{
-    "id": 5,
-    "name": "Galūgāh",
-    "image": ["snack-gato.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 5,
-    "category": "gato"
-},
-{
-    "id": 6,
-    "name": "Shkodër",
-    "image": ["gatos.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 6,
-    "category": "gato"
-},
-{
-    "id": 7,
-    "name": "Battaramulla South",
-    "image": ["royal.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 7,
-    "category": "perro"
-},
-{
-    "id": 8,
-    "name": "Ordem",
-    "image": ["royal.jpg"],
-    "description": "venenatis tristique fusce",
-    "price": 8,
-    "category": "perro"
-},
-{
-    "id": 9,
-    "name": "Montaigu",
-    "image": ["snack-gato.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 9,
-    "category": "gato"
-},
-{
-    "id": 10,
-    "name": "Yingcheng",
-    "image": ["salsa.jpg"],
-    "description": "in libero ut massa volutpat",
-    "price": 10,
-    "category": "gato"
-},
-{
-    "id": 11,
-    "name": "Mchinji",
-    "image": ["gatos4.webp"],
-    "description": "sagittis sapien cum sociis",
-    "price": 11,
-    "category": "gato"
-},
-{
-    "id": 12,
-    "name": "Zhufo",
-    "image": ["snack2.jpg"],
-    "description": "cursus urna ut tellus nulla ut",
-    "price": 12,
-    "category": "perro"
-},
-{
-    "id": 13,
-    "name": "Avellaneda",
-    "image": ["alimento2.jpg"],
-    "description": "vulputate luctus cum sociis",
-    "price": 13,
-    "category": "perro"
-},
-{
-    "id": 14,
-    "name": "Gozdowo",
-    "image": ["gatos.jpg"],
-    "description": "adipiscing molestie hendrerit",
-    "price": 14,
-    "category": "gato"
-},
-{
-    "id": 15,
-    "name": "Strängnäs",
-    "image": ["snack-gato.jpg"],
-    "description": "sapien sapien non mi integer ",
-    "price": 15,
-    "category": "gato"
-},
-
-{
-    "id": 17,
-    "name": "Wanzu",
-    "image": ["alimento4.jpg"],
-    "description": "orci mauris lacinia sapien",
-    "price": 17,
-    "category": "perro"
-}
+[
+   {
+      "id": 1,
+      "name": "Vạn Giã",
+      "image": [
+         "pedigree.webp"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 1,
+      "category": "perro"
+   },
+   {
+      "id": 2,
+      "name": "Ōme",
+      "image": [
+         "alimento3.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 2,
+      "category": "perro"
+   },
+   {
+      "id": 3,
+      "name": "Arāk",
+      "image": [
+         "snack4.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 3,
+      "category": "perro"
+   },
+   {
+      "id": 4,
+      "name": "Yaozhuang",
+      "image": [
+         "snacks.jpg"
+      ],
+      "description": "mi nulla ac enim in tempor",
+      "price": 4,
+      "category": "gato"
+   },
+   {
+      "id": 5,
+      "name": "Galūgāh",
+      "image": [
+         "snack-gato.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 5,
+      "category": "gato"
+   },
+   {
+      "id": 6,
+      "name": "Shkodër",
+      "image": [
+         "gatos.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 6,
+      "category": "gato"
+   },
+   {
+      "id": 7,
+      "name": "Battaramulla South",
+      "image": [
+         "royal.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 7,
+      "category": "perro"
+   },
+   {
+      "id": 8,
+      "name": "Ordem",
+      "image": [
+         "royal.jpg"
+      ],
+      "description": "venenatis tristique fusce",
+      "price": 8,
+      "category": "perro"
+   },
+   {
+      "id": 9,
+      "name": "Montaigu",
+      "image": [
+         "snack-gato.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 9,
+      "category": "gato"
+   },
+   {
+      "id": 10,
+      "name": "Yingcheng",
+      "image": [
+         "salsa.jpg"
+      ],
+      "description": "in libero ut massa volutpat",
+      "price": 10,
+      "category": "gato"
+   },
+   {
+      "id": 11,
+      "name": "Mchinji",
+      "image": [
+         "gatos4.webp"
+      ],
+      "description": "sagittis sapien cum sociis",
+      "price": 11,
+      "category": "gato"
+   },
+   {
+      "id": 12,
+      "name": "Zhufo",
+      "image": [
+         "snack2.jpg"
+      ],
+      "description": "cursus urna ut tellus nulla ut",
+      "price": 12,
+      "category": "perro"
+   },
+   {
+      "id": 13,
+      "name": "Avellaneda",
+      "image": [
+         "alimento2.jpg"
+      ],
+      "description": "vulputate luctus cum sociis",
+      "price": 13,
+      "category": "perro"
+   },
+   {
+      "id": 14,
+      "name": "Gozdowo",
+      "image": [
+         "gatos.jpg"
+      ],
+      "description": "adipiscing molestie hendrerit",
+      "price": 14,
+      "category": "gato"
+   },
+   {
+      "id": 15,
+      "name": "Strängnäs",
+      "image": [
+         "snack-gato.jpg"
+      ],
+      "description": "sapien sapien non mi integer ",
+      "price": 15,
+      "category": "gato"
+   },
+   {
+      "id": 17,
+      "name": "Wanzu",
+      "image": [
+         "alimento4.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 17,
+      "category": "perro"
+   },
+   {
+      "id": 18,
+      "name": "HOLA",
+      "price": 123,
+      "category": "perros",
+      "image": [
+         "img-producto1632598523223.png"
+      ]
+   },
+   {
+      "id": 19,
+      "name": "",
+      "price": 0,
+      "category": "Seleccionar Categoría",
+      "image": [
+         "default.jpg"
+      ]
+   },
+   {
+      "id": 20,
+      "name": "",
+      "price": 0,
+      "category": "Seleccionar Categoría",
+      "image": [
+         "default.jpg"
+      ]
+   },
+   {
+      "id": 21,
+      "name": "",
+      "price": 0,
+      "category": "Seleccionar Categoría",
+      "image": [
+         "default.jpg"
+      ]
+   }
 ]

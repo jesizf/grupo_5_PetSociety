@@ -1,9 +1,13 @@
 const fs = require('fs');
 const path = require('path');
+
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 const firstLetter = require('../utils/firstLetter');
-const pesoProducts = require('../data/pesoProducts.json')
+const {validationResult} = require('express-validator')
+
+const pesoProducts = require('../data/pesoProducts.json');
+
 module.exports = {
     add : (req,res) => {
         return res.render('productAdd',{ title: 'Agregar Productos',
@@ -15,28 +19,41 @@ module.exports = {
         
     },
     store : (req,res) => {
+        let errors = validationResult(req);
         
         const {name,description,price,category} = req.body;
+
         let images = req.files.map(image => image.filename)
 
-        let product = {
-            id : products[products.length - 1].id + 1,
-            name : name.trim(),
-            description : description.trim(),
-            price : +price,
-            category,
-            
-            image : req.files.length != 0 ? images : ['default.jpg'],
-            
+        if (errors.isEmpty()) {
+            let product = {
+                id : products[products.length - 1].id + 1,
+                name : name,
+                description : description,
+                price : +price,
+                category,
+                image : req.files.length != 0 ? images : ['default.jpg'],
+                
+            }
+    
+            products.push(product);
+    
+            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
+    
+            return res.redirect('/admin')
+        }else{
+            return res.render('productAdd',{
+            products,
+            categories,
+            firstLetter,
+            pesoProducts,
+            errors : errors.mapped(),
+          
+            })
         }
+        
+    },
 
-        products.push(product);
-
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
-
-        return res.redirect('/admin')
-    }
-,
     detail : (req, res) =>{
         return res.render('detail',{
             title: 'Detalles de productos',
