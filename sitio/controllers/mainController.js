@@ -3,10 +3,6 @@
 
  let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
  
- 
-
- 
- 
  module.exports = {
     index: (req,res)=>{
         let productsPerros = products.filter(products => products.category === 'perro');

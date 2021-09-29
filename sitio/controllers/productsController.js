@@ -21,17 +21,19 @@ module.exports = {
     store : (req,res) => {
         let errors = validationResult(req);
         
-        const {name,description,price,category} = req.body;
+        
 
         let images = req.files.map(image => image.filename)
 
         if (errors.isEmpty()) {
+            const {name,description,price,category} = req.body;
             let product = {
                 id : products[products.length - 1].id + 1,
                 name : name,
                 description : description,
                 price : +price,
                 category,
+                pesoProducts,
                 image : req.files.length != 0 ? images : ['default.jpg'],
                 
             }
@@ -48,6 +50,7 @@ module.exports = {
             firstLetter,
             pesoProducts,
             errors : errors.mapped(),
+            old : req.body
           
             })
         }

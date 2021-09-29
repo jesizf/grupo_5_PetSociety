@@ -10,17 +10,15 @@ module.exports = [
     .withMessage('Ingrese un número válido'),
 
     check('category')
-    .notEmpty()
-    .withMessage('Indicá la categoría'),
+.notEmpty().withMessage('indicá la categoría'),
 
     check('pesoProducts')
-    .notEmpty()
-    .withMessage('Indicá el peso'),
+    .notEmpty().withMessage('Indicá el peso'),
 
     check('description')
     .notEmpty()
     .withMessage('La descripcion es obligatoria')
-    .bail() .isLength({min: 15})
+    .bail() .isLength({ min: 10})
     .withMessage('La descripcion debe tener mímino 15 caracteres'),
     
 ]

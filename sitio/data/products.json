@@ -158,41 +158,5 @@
       "description": "orci mauris lacinia sapien",
       "price": 17,
       "category": "perro"
-   },
-   {
-      "id": 18,
-      "name": "HOLA",
-      "price": 123,
-      "category": "perros",
-      "image": [
-         "img-producto1632598523223.png"
-      ]
-   },
-   {
-      "id": 19,
-      "name": "",
-      "price": 0,
-      "category": "Seleccionar Categoría",
-      "image": [
-         "default.jpg"
-      ]
-   },
-   {
-      "id": 20,
-      "name": "",
-      "price": 0,
-      "category": "Seleccionar Categoría",
-      "image": [
-         "default.jpg"
-      ]
-   },
-   {
-      "id": 21,
-      "name": "",
-      "price": 0,
-      "category": "Seleccionar Categoría",
-      "image": [
-         "default.jpg"
-      ]
    }
 ]
