@@ -5,7 +5,7 @@
 
     <body id="body-add">
         <%-include('./partials/header')%>
-            <!--cuerpo-->
+            <!--Cuerpo-->
             <main class="container" style="margin-bottom: 50px;">
                 <div class="row">
                     <div class="ccol-12 col-md-10 col-lg-8 mt-5 mx-auto">
@@ -14,78 +14,84 @@
                                 <h5>Editar Producto</h5>
                             </div>
                             <div class="car-body">
-                                <form class="row m-1">
+
+                                <!--Formulario-->
+                                <form action="/produc/update/<%- product.id %>?_method.PUT" class="row m-1" method="POST">
+
+                                    <!--Nombrar producto-->
                                     <div class="col-12">
-                                        <div class="form-floating mb-3 pt-2">
-                                            <input type="text" class="form-control" id="nombre"
-                                                placeholder=" Nombre del Producto">
-                                            <label for="nombre">Nombre del Producto</label>
-                                        </div>
+                                        <div class="form-floating pt-2">
+                                            <input type="text" class="form-control" id="nombre" placeholder=" Nombre del Producto" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                                            <label for="name">Nombre del Producto</label>
+                                            </div>
+                                        <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
                                     </div>
 
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="price" placeholder=" Precio">
+                                    <!--$ Precio -->
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <div class="form-floating pt-2">
+                                            <input type="number" class="form-control" id="price" value="<%= locals.old && old.price ? old.price : null %>" placeholder=" Precio" name="price">
                                             <label for="price">Precio</label>
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-floating  mb-3">
-                                            <select class="form-select" id="floatingSelect"
-                                                aria-label="Floating label select example" name="category">
-                                                <option selected hidden>Seleccioná una categoría</option>
-                                                <% categories.forEach(category=> { %>
-                                                    <option value="<%= category %>">
-                                                        <%= firstLetter(category) %>
-                                                    </option>
-                                                    <% }) %>
+                                    <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                                </div>
+
+                                    <!-- seleccionar categoria -->
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <div class="form-floating pt-2">
+                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="category">
+                                                <option value="" selected hidden>Selecciona la categoría</option>
+                                                <% categories.forEach(category => { %>
+                                                <option value="<%= category %>" <%= locals.old && old.category === category  ? 'selected' : null%> ><%= firstLetter(category)%></option>
+                                            <% }) %>                                          
                                             </select>
                                             <label for="floatingSelect">Categorías</label>
                                         </div>
-                                    </div>
+                                            <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.category ? errors.category.msg : null%></span>
+                                        </div>
 
-
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-floating  mb-3">
-                                            <select class="form-select" id="floatingSelect"
-                                                aria-label="Floating label select example" name="pesoProducts">
-                                                <option selected hidden>Seleccioná el Peso</option>
-                                                <% pesoProducts.forEach(pesoProducts=> { %>
-                                                    <option value="<%= pesoProducts %>">
-                                                        <%= pesoProducts %>
-                                                    </option>
-                                                    <% }) %>
+                                    <!--Seleccionar el peso-->
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <div class="form-floating pt-2">
+                                            <select class="form-select" id="pesoProducts" name="pesoProducts">
+                                                <option value="<%= pesoProducts %> " selected hidden>Seleccionar Peso</option>
+                                                <% pesoProducts.forEach(pesoProducts => { %>
+                                                <option value="<%= pesoProducts %>"<%= locals.old && old.pesoProducts === pesoProducts  ? 'selected' : null%>><%= pesoProducts %></option>
+                                            <% }) %>                                     
                                             </select>
-                                            <label for="floatingSelect">Peso</label>
+                                        <label for="pesoProducts">Peso</label>
                                         </div>
-                                    </div>
+                                            <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.pesoProducts ? errors.pesoProducts.msg : null%></span>
+                                        </div>
+
+                                    <!--Subir una imagen-->
                                     <div class="col-12 col-md-6">
 
-                                        <div class="mb-3">
-                                            <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subí una
-                                                imagen</label>
-                                            <input hidden class="form-control" type="file" id="image" name="image">
+                                        <div class="mb-3 mt-3">
+                                            <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
+                                            <input hidden class="form-control" type="file" id="image" name="image" multiple>
                                         </div>
                                     </div>
-                            </div>
+                                    </div>
 
-                            <div class="col-12 p-3">
+                            <!-- Descripción del producto -->
+                            <div class="col-12 p-3 mt-3">
                                 <div class="form-floating">
-                                    <textarea style="resize: none; height: 90px;" class="form-control"
-                                        placeholder="Descripción del producto" id="description"></textarea>
+                                    <textarea style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" id="description" name="description"></textarea>
                                     <label for="description">Descripción del producto</label>
+                                    </div>
+                                    <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
                                 </div>
-                            </div>
 
-
+                            <!--Guardar-->
                             <div class="d-flex justify-content-center col-12 mt-5">
                                 <button type="submit"
                                     style="height: 60px; width: 180px; border-radius: 30px; background-color: #fb9d5a; border: none; margin-bottom: 20px; "
                                     class="btn btn-primary">Guardar</button>
                             </div>
 
-
                             </form>
+
                         </div>
                     </div>
 

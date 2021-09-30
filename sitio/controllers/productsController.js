@@ -51,7 +51,6 @@ module.exports = {
             pesoProducts,
             errors : errors.mapped(),
             old : req.body
-          
             })
         }
         
@@ -72,6 +71,23 @@ module.exports = {
             firstLetter,
             pesoProducts,
         })
+    },
+    update :(req, res) =>{
+        const {name,description,price,category} = req.body;
+        let product = products.find(product => product.id === +req.params.id);
+
+            let product = {
+                id : +req.params.id,
+                name : name,
+                description : description,
+                price : +price,
+                category,
+                pesoProducts,
+                image : req.files.length != 0 ? images : ['default.jpg'],
+            }
+            let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
+            
+            
     },
     search : (req,res) => res.render('admin',{
         title : 'Resultado de la búsqueda',
