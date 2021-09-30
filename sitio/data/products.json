@@ -1,13 +1,23 @@
 [
    {
       "id": 1,
-      "name": "Vạn Giã",
+      "name": "comidita",
+      "description": "una descripción",
+      "price": 100,
+      "pesoProducts": [
+         "0.85 g",
+         "250 g",
+         "1 kg",
+         "2 kg",
+         "3 kg",
+         "5 kg",
+         "10 kg",
+         "15 kg"
+      ],
+      "category": "perro",
       "image": [
          "pedigree.webp"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 1,
-      "category": "perro"
+      ]
    },
    {
       "id": 2,

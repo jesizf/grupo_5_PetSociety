@@ -65,7 +65,6 @@ module.exports = {
     },
     edit : (req, res) =>{
         return res.render('productEdit',{
-            title: 'Editar productos',
             product : products.find(product => product.id === +req.params.id),
             categories,
             firstLetter,
@@ -73,25 +72,34 @@ module.exports = {
         })
     },
     update :(req, res) =>{
-        const {name, description, price, category} = req.body;
-        
-        let products = products.find(product => product.id === +req.params.id);
-
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const {name,description,price,category} = req.body;
+            let product = products.find(product => product.id === +req.params.id);
+    
             let productModified = {
-                id : req.params.id,
+                id : +req.params.id,
                 name : name.trim(),
                 description : description.trim(),
                 price : +price,
-                category,
                 pesoProducts,
-                image : req.files.length != 0 ? images : ['default.jpg'],
+                category,
+                image : product.image,
             }
+    
             let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
-            
-            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
+    
+            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
     
             return res.redirect('/admin')
-
+        }else{
+            return res.render('productEdit',{
+                product : products.find(product => product.id === +req.params.id),
+                categories,
+                firstLetter,
+                errors : errors.mapped(),
+            })
+        }
     },
     search : (req,res) => res.render('admin',{
         title : 'Resultado de la búsqueda',
