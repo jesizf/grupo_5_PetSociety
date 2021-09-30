@@ -73,13 +73,14 @@ module.exports = {
         })
     },
     update :(req, res) =>{
-        const {name,description,price,category} = req.body;
-        let product = products.find(product => product.id === +req.params.id);
+        const {name, description, price, category} = req.body;
+        
+        let products = products.find(product => product.id === +req.params.id);
 
-            let product = {
-                id : +req.params.id,
-                name : name,
-                description : description,
+            let productModified = {
+                id : req.params.id,
+                name : name.trim(),
+                description : description.trim(),
                 price : +price,
                 category,
                 pesoProducts,
@@ -87,7 +88,10 @@ module.exports = {
             }
             let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
             
-            
+            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
+    
+            return res.redirect('/admin')
+
     },
     search : (req,res) => res.render('admin',{
         title : 'Resultado de la búsqueda',
