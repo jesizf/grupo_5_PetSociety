@@ -3,7 +3,7 @@ var router = express.Router();
 const upload = require('../middlewares/multerImageProduct');
 
 /* GET products page. */
-const {detail, add,edit, search, store} = require('../controllers/productsController');
+const {detail, add,edit, search, store, destroy} = require('../controllers/productsController');
 
 
 const productValidator = require('../validations/productsValidator')
@@ -14,6 +14,7 @@ router.post('/add',upload.array('image'), productValidator ,store)
 router.get('/edit/:id', edit)
 router.get('/update/:id', edit)
 router.get('/search',search)
+router.delete('/destroy/:id', destroy);
 
 
 module.exports = router;

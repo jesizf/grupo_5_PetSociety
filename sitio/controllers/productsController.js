@@ -85,4 +85,12 @@ module.exports = {
         categories,
         products : products.filter(product => product.category === req.query.category)
     }),
+    destroy : (req, res) => {
+		
+		let productsModified = products.filter(product => product.id !== +req.params.id);
+		fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsModified, null,3),'utf-8');
+		res.redirect('/');
+
+	}
+
 }

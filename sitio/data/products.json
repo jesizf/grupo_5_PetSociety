@@ -120,16 +120,6 @@
       "category": "perro"
    },
    {
-      "id": 13,
-      "name": "Avellaneda",
-      "image": [
-         "alimento2.jpg"
-      ],
-      "description": "vulputate luctus cum sociis",
-      "price": 13,
-      "category": "perro"
-   },
-   {
       "id": 14,
       "name": "Gozdowo",
       "image": [
