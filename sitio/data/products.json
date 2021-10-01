@@ -2,8 +2,8 @@
    {
       "id": 1,
       "name": "comidita",
-      "description": "una descripción",
-      "price": 100,
+      "description": "una descripción del producto",
+      "price": 200,
       "pesoProducts": [
          "0.85 g",
          "250 g",
