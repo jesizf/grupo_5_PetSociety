@@ -30,16 +30,6 @@
       "category": "perro"
    },
    {
-      "id": 18,
-      "name": "Battaramulla South",
-      "image": [
-         "alimento3.jpg"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 18,
-      "category": "perro"
-   },
-   {
       "id": 4,
       "name": "Yaozhuang",
       "image": [

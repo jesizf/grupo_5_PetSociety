@@ -29,8 +29,8 @@ module.exports = {
             const {name,description,price,category} = req.body;
             let product = {
                 id : products[products.length - 1].id + 1,
-                name : name,
-                description : description,
+                name : name.trim(),
+                description : description.trim(),
                 price : +price,
                 category,
                 pesoProducts,
