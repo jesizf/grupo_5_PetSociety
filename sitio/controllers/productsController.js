@@ -94,10 +94,12 @@ module.exports = {
             return res.redirect('/admin')
         }else{
             return res.render('productEdit',{
-                product : products.find(product => product.id === +req.params.id),
+                products,
                 categories,
                 firstLetter,
+                pesoProducts,
                 errors : errors.mapped(),
+                old : req.body,
             })
         }
     },
