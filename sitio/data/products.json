@@ -17,7 +17,10 @@
       "category": "perro",
       "image": [
          "pedigree.webp"
-      ]
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 1,
+      "category": "perro"
    },
    {
       "id": 2,
@@ -127,16 +130,6 @@
       ],
       "description": "cursus urna ut tellus nulla ut",
       "price": 12,
-      "category": "perro"
-   },
-   {
-      "id": 13,
-      "name": "Avellaneda",
-      "image": [
-         "alimento2.jpg"
-      ],
-      "description": "vulputate luctus cum sociis",
-      "price": 13,
       "category": "perro"
    },
    {
