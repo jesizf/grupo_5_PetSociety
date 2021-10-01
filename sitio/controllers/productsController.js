@@ -88,16 +88,18 @@ module.exports = {
                 image : product.image,
             }
             let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
+    
             fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
+    
             return res.redirect('/admin')
         }else{
             return res.render('productEdit',{
-                products,
+                product : products.find(product => product.id === +req.params.id),
                 categories,
                 firstLetter,
                 pesoProducts,
                 errors : errors.mapped(),
-                old : req.body,
+                
             })
         }
     },

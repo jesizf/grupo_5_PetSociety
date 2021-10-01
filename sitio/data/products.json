@@ -2,22 +2,42 @@
    {
       "id": 1,
       "name": "Vạn Giã",
-      "image": [
-         "alimento1.jpg"
-      ],
       "description": "orci mauris lacinia sapien",
       "price": 1,
-      "category": "perro"
+      "pesoProducts": [
+         "0.85 g",
+         "250 g",
+         "1 kg",
+         "2 kg",
+         "3 kg",
+         "5 kg",
+         "10 kg",
+         "15 kg"
+      ],
+      "category": "perro",
+      "image": [
+         "alimento1.jpg"
+      ]
    },
    {
       "id": 2,
-      "name": "Ōme",
-      "image": [
-         "alimento2.jpg"
-      ],
+      "name": "comidita",
       "description": "orci mauris lacinia sapien",
       "price": 2,
-      "category": "perro"
+      "pesoProducts": [
+         "0.85 g",
+         "250 g",
+         "1 kg",
+         "2 kg",
+         "3 kg",
+         "5 kg",
+         "10 kg",
+         "15 kg"
+      ],
+      "category": "perro",
+      "image": [
+         "alimento2.jpg"
+      ]
    },
    {
       "id": 3,
