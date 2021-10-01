@@ -49,8 +49,10 @@
                           
                             <td class="button" data-titulo="Acciones"><div class="box-button"><a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 30px;background-color: #383e56"><i class="fas fa-edit"></i></a>
                             </div>
+                              
                               <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="admin-destroy" ><i class="fas fa-trash"></i></button>
+                              </form>
                               </form>
                             
                           </td>
