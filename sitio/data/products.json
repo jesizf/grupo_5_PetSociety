@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Vạn Giã",
       "image": [
-         "pedigree.webp"
+         "snack2.jpg"
       ],
       "description": "orci mauris lacinia sapien",
       "price": 1,
@@ -27,6 +27,16 @@
       ],
       "description": "orci mauris lacinia sapien",
       "price": 3,
+      "category": "perro"
+   },
+   {
+      "id": 18,
+      "name": "Battaramulla South",
+      "image": [
+         "alimento3.jpg"
+      ],
+      "description": "orci mauris lacinia sapien",
+      "price": 18,
       "category": "perro"
    },
    {

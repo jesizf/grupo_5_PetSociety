@@ -71,8 +71,27 @@ module.exports = {
             categories,
             firstLetter,
             pesoProducts,
-        })
+        })  ;
     },
+    
+    update: (req, res) => 
+    {
+		const {name, price, category, description} = req.body
+		let productModified = {
+			id: +req.params.id,
+			name: name.trim(),
+			price: +price,
+			category,
+			description: description.trim(),
+			image: 'default-image.png'
+		}
+		let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
+
+		fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsModified, null,3),'utf-8');
+		res.redirect('/products/detail/' + req.params.id);
+		
+		
+	},
     search : (req,res) => res.render('admin',{
         title : 'Resultado de la búsqueda',
         products,
@@ -85,11 +104,21 @@ module.exports = {
         categories,
         products : products.filter(product => product.category === req.query.category)
     }),
-    destroy : (req, res) => {
-		
+    destroy : (req, res) => 
+    
+    {
+        let product = products.find(product => product.id === +req.params.id);
+
+        product.image.forEach(img => {
+            fs.existsSync(path.join(__dirname,'../public/img/products',img)) ? fs.unlinkSync(path.join(__dirname,'../public/img/products',img)) : null
+            
+        });
+
 		let productsModified = products.filter(product => product.id !== +req.params.id);
+		
 		fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsModified, null,3),'utf-8');
-		res.redirect('/');
+        res.redirect('/admin');
+        
 
 	}
 

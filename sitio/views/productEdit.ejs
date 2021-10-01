@@ -14,7 +14,7 @@
                                 <h5>Editar Producto</h5>
                             </div>
                             <div class="car-body">
-                                <form class="row m-1">
+                                <form class="row m-1" action="/products/edit/<%= product.id %>?_method=PUT" method="POST">>
                                     <div class="col-12">
                                         <div class="form-floating mb-3 pt-2">
                                             <input type="text" class="form-control" id="nombre"
@@ -34,11 +34,9 @@
                                             <select class="form-select" id="floatingSelect"
                                                 aria-label="Floating label select example" name="category" >
                                                 <option value="" selected hidden>Seleccioná una categoría</option>
-                                                <% categories.forEach(category=> { %>
-                                                    <option value="<%= category %>">
-                                                        <%= firstLetter(category) %>
-                                                    </option>
-                                                    <% }) %>
+                                                <option value="perro" <%= product.category === "perro" ? 'selected' : null %> >perro</option>
+							
+							<option value="gato" <%= product.category === "gato" ? 'selected' :null %>  >gato</option>
                                             </select>
                                             <label for="floatingSelect">Categorías</label>
                                         </div>
@@ -72,8 +70,8 @@
                             <div class="col-12 p-3">
                                 <div class="form-floating">
                                     <textarea style="resize: none; height: 90px;" class="form-control"
-                                        placeholder="Descripción del producto" id="description"></textarea>
-                                    <label for="description"><%= product.description %></label>
+                                        placeholder="Descripción del producto" id="description"><%= product.description %></textarea>
+                                    <label for="description">Descripción</label>
                                 </div>
                             </div>
 
