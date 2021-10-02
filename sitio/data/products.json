@@ -1,9 +1,9 @@
 [
    {
       "id": 1,
-      "name": "Vạn Giã",
+      "name": "Vạn Giã2",
       "description": "orci mauris lacinia sapien",
-      "price": 1,
+      "price": 3,
       "pesoProducts": [
          "0.85 g",
          "250 g",
@@ -171,12 +171,12 @@
    },
    {
       "id": 17,
-      "name": "Wanzu",
-      "image": [
-         "alimento4.jpg"
-      ],
+      "name": "Wanzu2",
       "description": "orci mauris lacinia sapien",
       "price": 17,
-      "category": "perro"
+      "category": "perro",
+      "image": [
+         "alimento4.jpg"
+      ]
    }
 ]

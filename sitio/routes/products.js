@@ -13,7 +13,7 @@ router.get('/add', add)
 router.post('/add',upload.array('image'), productValidator ,store)
 router.get('/edit/:id', edit)
 router.put('/update/:id',upload.array('image'), productValidator ,update)
-router.get('/update/:id', edit)
+
 router.get('/search',search)
 router.delete('/destroy/:id', destroy);
 

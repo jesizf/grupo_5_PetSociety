@@ -33,7 +33,7 @@ module.exports = {
                 description : description.trim(),
                 price : +price,
                 category,
-                pesoProducts,
+                pesoProducts:[],
                 image : req.files.length != 0 ? images : ['default.jpg'],
                 
             }
@@ -48,7 +48,7 @@ module.exports = {
             products,
             categories,
             firstLetter,
-            pesoProducts,
+            pesoProducts:[],
             errors : errors.mapped(),
             old : req.body
             })
@@ -83,9 +83,9 @@ module.exports = {
                 name : name.trim(),
                 description : description.trim(),
                 price : +price,
-                pesoProducts,
+                pesoProducts:product.pesoProducts,
                 category,
-                image : product.image,
+                image :product.image
             }
             let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
     
