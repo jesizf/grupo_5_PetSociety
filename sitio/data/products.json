@@ -110,16 +110,6 @@
       "category": "gato"
    },
    {
-      "id": 10,
-      "name": "Yingcheng",
-      "image": [
-         "salsa.jpg"
-      ],
-      "description": "in libero ut massa volutpat",
-      "price": 10,
-      "category": "gato"
-   },
-   {
       "id": 11,
       "name": "Mchinji",
       "image": [
@@ -170,13 +160,14 @@
       "category": "gato"
    },
    {
-      "id": 17,
-      "name": "Wanzu2",
-      "description": "orci mauris lacinia sapien",
-      "price": 17,
+      "id": 16,
+      "name": "Alimento",
+      "description": "Alimento para perros",
+      "price": 200,
       "category": "perro",
+      "pesoProducts": [],
       "image": [
-         "alimento4.jpg"
+         "img-producto1633214485311.webp"
       ]
    }
 ]

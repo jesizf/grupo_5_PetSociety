@@ -45,16 +45,18 @@
 
                                      <div class="col-12 col-md-6 mt-3">
                                         <div class="form-floating pt-2">
-                                            <select class="form-select" id="pesoProducts" name="pesoProducts">
-                                              <option value="<%= pesoProducts %> " selected hidden>Seleccionar Peso</option>
+                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="pesoProducts">
+                                             <option value="" selected hidden>Selecciona el peso</option>
                                               <% pesoProducts.forEach(pesoProducts => { %>
-                                                <option value="<%= pesoProducts %>"<%= locals.old && old.pesoProducts === pesoProducts  ? 'selected' : null%>><%= pesoProducts %></option>
-                                              <% }) %>                                     
+                                                <option value="<%= pesoProducts %>" <%= locals.old && old.pesoProducts === pesoProducts  ? 'selected' : null%> ><%= firstLetter(pesoProducts)%></option>
+                                              <% }) %>                                          
                                             </select>
-                                            <label for="pesoProducts">Peso</label>
+                                            <label for="floatingSelect">Peso de los prodúctos</label>
                                           </div>
-                                          <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.pesoProducts ? errors.pesoProducts.msg : null%></span>
+                                          <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.pesoProducts ? errors.pesoProducts.msg : null%></span>
                                          </div>
+
+
                                      <div class="col-12 col-md-6">
 
                                          <div class="mb-3 mt-3">

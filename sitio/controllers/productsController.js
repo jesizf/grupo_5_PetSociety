@@ -26,14 +26,14 @@ module.exports = {
         let images = req.files.map(image => image.filename)
 
         if (errors.isEmpty()) {
-            const {name,description,price,category} = req.body;
+            const {name,description,price,category, pesoProducts} = req.body;
             let product = {
                 id : products[products.length - 1].id + 1,
                 name : name.trim(),
                 description : description.trim(),
                 price : +price,
                 category,
-                pesoProducts:[],
+                pesoProducts,
                 image : req.files.length != 0 ? images : ['default.jpg'],
                 
             }
@@ -48,7 +48,7 @@ module.exports = {
             products,
             categories,
             firstLetter,
-            pesoProducts:[],
+            pesoProducts,
             errors : errors.mapped(),
             old : req.body
             })
