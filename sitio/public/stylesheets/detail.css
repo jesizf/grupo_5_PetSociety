@@ -11,13 +11,41 @@
     display: flex;
     flex-wrap: wrap;
     padding: 40px 20px;
+
+}
+.detail .box-products{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  
+ 
 }
 /* caja producto */
 /*  imagenes */
 .detail .images{
+    width: 100%;
     box-shadow: 5px 5px 5px gray;
     border-radius: 30px;
+    margin-right: 4%;
+   
+
+   
+    
 }
+.detail .images-min{
+width: 30%;
+}
+
+
+.img-mini {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 21px;
+    padding: 12px 5px;
+    
+}
+
 .detail .images #img-main{
     border-radius: 30px;
     width: 100%;
@@ -25,7 +53,7 @@
 /* BOX_CONTENT*/
 
 .box-content{
-    width: 100%;
+    width: 90%;
     padding: 20px;
 }
 .box-content{

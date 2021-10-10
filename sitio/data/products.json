@@ -1,173 +1,226 @@
 [
    {
-      "id": 1,
-      "name": "Vạn Giã2",
-      "description": "orci mauris lacinia sapien",
-      "price": 3,
-      "pesoProducts": [
-         "0.85 g",
-         "250 g",
-         "1 kg",
-         "2 kg",
-         "3 kg",
-         "5 kg",
-         "10 kg",
-         "15 kg"
-      ],
+      "id": 17,
+      "name": "PRO PLAN PUPPY MEDIANO 15+3 KG BONUS",
+      "description": "Durante la “brecha inmunológica” y provee nutrición completa que ayuda a los cachorros a crecer fuertes y sanos.\r\nFormulado con carne fresca de pollo como ingrediente principal, además de vitaminas y minerales esenciales, PRO PLAN® Puppy Razas Medianas ofrece una óptima nutrición para cachorros en crecimiento.",
+      "price": 7340,
       "category": "perro",
+      "pesoProducts": "18 kg",
       "image": [
-         "alimento1.jpg"
+         "img-producto1633610759495.jpg",
+         "img-producto1633610759498.jpg",
+         "img-producto1633610759501.jpg",
+         "img-producto1633610759504.jpg"
       ]
    },
    {
-      "id": 2,
-      "name": "comidita",
-      "description": "orci mauris lacinia sapien",
-      "price": 2,
-      "pesoProducts": [
-         "0.85 g",
-         "250 g",
-         "1 kg",
-         "2 kg",
-         "3 kg",
-         "5 kg",
-         "10 kg",
-         "15 kg"
-      ],
+      "id": 18,
+      "name": "MON AMI DENTAL STICK",
+      "description": "¿Sabés lo importante que es la salud dental de tu perro? ¿Le das el cuidado que requiere? La higiene dental ayuda a prevenir enfermedades y mejora el aliento de tu mascota. Como sabemos lo tedioso que es realizar cotidianamente la limpieza dental de tu perro, desarrollamos Mon Ami Dental Stick, una solución para este problema. El uso diario y continuado de Mon Ami Dental ayudará a que tu mascota mantenga su salud bucal de manera práctica, fácil y segura.",
+      "price": 835,
       "category": "perro",
+      "pesoProducts": "400 g",
       "image": [
-         "alimento2.jpg"
+         "img-producto1633611293174.png",
+         "img-producto1633611293175.png",
+         "img-producto1633611293178.png",
+         "img-producto1633611293179.png"
       ]
    },
    {
-      "id": 3,
-      "name": "Arāk",
-      "image": [
-         "snack4.jpg"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 3,
-      "category": "perro"
-   },
-   {
-      "id": 4,
-      "name": "Yaozhuang",
-      "image": [
-         "snacks.jpg"
-      ],
-      "description": "mi nulla ac enim in tempor",
-      "price": 4,
-      "category": "gato"
-   },
-   {
-      "id": 5,
-      "name": "Galūgāh",
-      "image": [
-         "snack-gato.jpg"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 5,
-      "category": "gato"
-   },
-   {
-      "id": 6,
-      "name": "Shkodër",
-      "image": [
-         "gatos.jpg"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 6,
-      "category": "gato"
-   },
-   {
-      "id": 7,
-      "name": "Battaramulla South",
-      "image": [
-         "royal.jpg"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 7,
-      "category": "perro"
-   },
-   {
-      "id": 8,
-      "name": "Ordem",
-      "image": [
-         "royal.jpg"
-      ],
-      "description": "venenatis tristique fusce",
-      "price": 8,
-      "category": "perro"
-   },
-   {
-      "id": 9,
-      "name": "Montaigu",
-      "image": [
-         "snack-gato.jpg"
-      ],
-      "description": "orci mauris lacinia sapien",
-      "price": 9,
-      "category": "gato"
-   },
-   {
-      "id": 11,
-      "name": "Mchinji",
-      "image": [
-         "gatos4.webp"
-      ],
-      "description": "sagittis sapien cum sociis",
-      "price": 11,
-      "category": "gato"
-   },
-   {
-      "id": 12,
-      "name": "Zhufo",
-      "image": [
-         "snack2.jpg"
-      ],
-      "description": "cursus urna ut tellus nulla ut",
-      "price": 12,
-      "category": "perro"
-   },
-   {
-      "id": 13,
-      "name": "Avellaneda",
-      "image": [
-         "alimento2.jpg"
-      ],
-      "description": "vulputate luctus cum sociis",
-      "price": 13,
-      "category": "perro"
-   },
-   {
-      "id": 14,
-      "name": "Gozdowo",
-      "image": [
-         "gatos.jpg"
-      ],
-      "description": "adipiscing molestie hendrerit",
-      "price": 14,
-      "category": "gato"
-   },
-   {
-      "id": 15,
-      "name": "Strängnäs",
-      "image": [
-         "snack-gato.jpg"
-      ],
-      "description": "sapien sapien non mi integer ",
-      "price": 15,
-      "category": "gato"
-   },
-   {
-      "id": 16,
-      "name": "Alimento",
-      "description": "Alimento para perros",
-      "price": 200,
+      "id": 19,
+      "name": "MON AMI TRAINEE",
+      "description": "Los Snacks Mon Ami Trainee, han sido diseñados especialmente para entrenadores profesionales y para aquellos que disfrutan de educar a su mascota. Su tamaño y calidad permiten la entrega de varias unidades a lo largo de una sesión de entrenamiento. Además, están fabricados con ingredientes 100% naturales para asegurar que tu perro tenga una dieta de alta calidad y saludable.",
+      "price": 775,
       "category": "perro",
-      "pesoProducts": [],
+      "pesoProducts": "400 g",
       "image": [
-         "img-producto1633214485311.webp"
+         "img-producto1633611435406.png",
+         "img-producto1633611435408.png",
+         "img-producto1633611435409.png",
+         "img-producto1633611435410.png"
+      ]
+   },
+   {
+      "id": 20,
+      "name": "Huesos de cuero",
+      "description": "Suplemento alimenticio que es utilizado como premio para las mascotas, tiene un buen aporte de vitaminas y minerales importantes para el desarollo de los huesos y dientes sanos y fuertes.\r\nAdemás, ayudan a remover las partículas presentes en los dientes del animal que provocan el mal aliento y la formación de sarro. Actúa sobre las placas bacterianas, evitando la acumulación de residuos de alimentos, contribuyendo así a la limpieza e higiene bucal.",
+      "price": 65,
+      "pesoProducts": "-",
+      "category": "perro",
+      "image": [
+         "img-producto1633611825905.webp",
+         "img-producto1633611825906.jpg",
+         "img-producto1633611825909.jpg",
+         "img-producto1633611825910.jpg"
+      ]
+   },
+   {
+      "id": 22,
+      "name": "CAT CHOW ADULTO PESCADO",
+      "description": "Defense Plus®, una combinación exclusiva de prebiótico natural, antioxidantes, vitaminas, y minerales que ayudan a fortalecer las defensas naturales de tu gato. Esto ayudará a promover un sistema inmune fuerte para proteger su estilo de vida único.",
+      "price": 5095,
+      "category": "gato",
+      "pesoProducts": "18 kg",
+      "image": [
+         "img-producto1633892695039.jpg",
+         "img-producto1633892695075.jpg",
+         "img-producto1633892695080.jpg",
+         "img-producto1633892695083.jpg"
+      ]
+   },
+   {
+      "id": 23,
+      "name": "CAT CHOW GATITO",
+      "description": "Una nueva nutrición es fundamental para proteger la salud de los gatos . Es por eso que desarrollamos PURINA® CAT CHOW® GATITOS PESCADO, CARNE Y LECHE, desde el destete hasta 12 meses con DEFENSE PLUS, hecho con todos los nutrientes que tu gatito necesita para favorecer un crecimiento sano, y mejorado con la inclusión de un prebiótico natural.",
+      "price": 500,
+      "category": "gato",
+      "pesoProducts": "1 kg",
+      "image": [
+         "img-producto1633892826163.jpg",
+         "img-producto1633892826166.jpg",
+         "img-producto1633892826167.jpg",
+         "img-producto1633892826990.jpg"
+      ]
+   },
+   {
+      "id": 24,
+      "name": "PEDIGREE DENTASTIX X 7 RAZAS MEDIANAS",
+      "description": "Pedigree® DENTASTIX™ es una barra de cuidado oral diario que ayuda a prevenir enfermedades de las encías y mal aliento en los perros. Gracias a su forma exclusiva y combinación de ingredientes activos, es una efectiva solución para ayudar a mantener sus dientes limpios y encías saludables de forma fácil y divertida.",
+      "price": 255,
+      "category": "perro",
+      "pesoProducts": "179.9 g",
+      "image": [
+         "img-producto1633893299069.webp",
+         "img-producto1633893299071.webp",
+         "img-producto1633893299072.webp",
+         "img-producto1633893299073.webp"
+      ]
+   },
+   {
+      "id": 26,
+      "name": "Iams Alimento Seco Perro",
+      "description": "IAMS® PROACTIVE HEALTH - ADULT SMALL & MEDIUM BREED es alimento seco 100% completo y balanceado, desarrollado especialmente para perros adultos de razas pequeñas y medianas, mayores a 12 meses de edad, sabor pollo.",
+      "price": 4400,
+      "category": "perro",
+      "pesoProducts": "15 kg",
+      "image": [
+         "img-producto1633893800580.webp",
+         "img-producto1633893800581.webp",
+         "img-producto1633893800582.webp",
+         "img-producto1633893800579.webp"
+      ]
+   },
+   {
+      "id": 28,
+      "name": "Alimento Perros Adultos Infinity Premium",
+      "description": "Infinity Perros Adultos aporta el 100 % de los nutrientes necesarios para que su perro goce de una vida sana y placentera. Aporta óptimos niveles energéticos, proteínas de alta digestabilidad, grasas de alto valor biológico, hidratos de carbono perfectamente dextrinizados, vitaminas, minerales, fibras adecuadas para una mejor salud intestinal y una excelente palatabilidad. Infinity Perros Adultos está formulado contemplando los niveles y perfiles nutricionales establecidos por AAFCO (Asociación Americana de Oficiales en Control de Alimentos) para un adecuado mantenimiento de su perro adulto.",
+      "price": 3500,
+      "category": "perro",
+      "pesoProducts": "23 kg",
+      "image": [
+         "img-producto1633894139746.webp",
+         "img-producto1633894139743.webp",
+         "img-producto1633894139744.webp",
+         "img-producto1633894139747.webp"
+      ]
+   },
+   {
+      "id": 29,
+      "name": "EUKANUBA PERRO CACHORRO GRANDE",
+      "description": "Alimento balanceado recomendado para perros de razas grandes de 1 a 12 meses y gigantes de 1 a 24 meses. Fomenta la formación de huesos y articulaciones fuertes, característica esencial para perros de gran tamaño. Además, potencia las defensas naturales y el funcionamiento de su sistema nervioso.",
+      "price": 2042,
+      "category": "perro",
+      "pesoProducts": "3 kg",
+      "image": [
+         "img-producto1633894971354.jpg",
+         "img-producto1633894971345.jpg",
+         "img-producto1633894971347.jpg",
+         "img-producto1633894971353.jpg"
+      ]
+   },
+   {
+      "id": 30,
+      "name": "CAT CHOW ADULTO CARNE",
+      "description": "Defense Plus®, una combinación exclusiva de prebiótico natural, antioxidantes, vitaminas, y minerales que ayudan a fortalecer las defensas naturales de tu gato. Esto ayudará a promover un sistema inmune fuerte para proteger su estilo de vida único.",
+      "price": 1180,
+      "category": "gato",
+      "pesoProducts": "3 kg",
+      "image": [
+         "img-producto1633895135178.jpg",
+         "img-producto1633895135443.jpg",
+         "img-producto1633895135447.jpg",
+         "img-producto1633895135450.jpg"
+      ]
+   },
+   {
+      "id": 31,
+      "name": "Alimento Excellent Pollo Y Arroz para Gato",
+      "description": "La selección de un alimento adecuado para tu mascota es muy importante para garantizar su crecimiento, desarrollo y salud. Con esta opción de Excellent podrás cubrir las necesidades nutricionales y energéticas de tu gato.\r\n\r\nTu mascota siempre saludable\r\nUna alimentación equilibrada es esencial para que tu fiel compañero se mantenga sano y fuerte. La dieta de tu gato se refleja en su pelaje, por eso es de vital importancia que contenga todos los nutrientes necesarios para su crecimiento. Asegurá la energía y vitalidad de tu amigo para que pueda correr, saltar y jugar todo el día.",
+      "price": 1940,
+      "category": "gato",
+      "pesoProducts": "3 kg",
+      "image": [
+         "img-producto1633895451241.webp",
+         "img-producto1633895451243.webp",
+         "img-producto1633895451243.webp",
+         "img-producto1633895451245.webp"
+      ]
+   },
+   {
+      "id": 32,
+      "name": "Cat Chow Gatos Adultos Sabor Pollo",
+      "description": "Proteína para una nutrición completa\r\nAlimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales. Estos nutrientes favorecen el fortalecimiento del sistema inmunológico de tu mascota y el correcto funcionamiento de sus sistemas vitales. Además, contribuyen a la salud de su pelo, piel y uñas y al mantenimiento de sus tendones, músculos y huesos.",
+      "price": 60,
+      "category": "gato",
+      "pesoProducts": "0.85 g",
+      "image": [
+         "img-producto1633895625056.webp",
+         "img-producto1633895625058.webp",
+         "img-producto1633895625060.webp",
+         "img-producto1633895625057.webp"
+      ]
+   },
+   {
+      "id": 33,
+      "name": "Pouch Para Gato Royal Canin Intense Beauty En Salsa.",
+      "description": "Proteína para una nutrición completa Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales. Estos nutrientes favorecen el fortalecimiento del sistema inmunológico de tu mascota y el correcto funcionamiento de sus sistemas vitales. Además, contribuyen a la salud de su pelo, piel y uñas y al mantenimiento de sus tendones, músculos y huesos.",
+      "price": 185,
+      "category": "gato",
+      "pesoProducts": "0.85 g",
+      "image": [
+         "img-producto1633895784864.webp",
+         "img-producto1633895784865.webp",
+         "img-producto1633895784866.webp",
+         "img-producto1633895784867.webp"
+      ]
+   },
+   {
+      "id": 34,
+      "name": "Alimento Excellent Reduced Calorie para Gato",
+      "description": "Proteína para una nutrición completa\r\nAlimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales. Estos nutrientes favorecen el fortalecimiento del sistema inmunológico de tu mascota y el correcto funcionamiento de sus sistemas vitales. Además, contribuyen a la salud de su pelo, piel y uñas y al mantenimiento de sus tendones, músculos y huesos.",
+      "price": 839,
+      "category": "gato",
+      "pesoProducts": "1 kg",
+      "image": [
+         "img-producto1633895905755.webp",
+         "img-producto1633895905756.webp",
+         "img-producto1633895905760.webp",
+         "img-producto1633895905761.webp"
+      ]
+   },
+   {
+      "id": 35,
+      "name": "Alimento Royal Canin CatVet Kitten 36",
+      "description": "Beneficios del alimento seco\r\nLa mayor ventaja de la comida seca para mascotas es que se puede almacenar por mucho más tiempo sin que se deteriore, y evita la aparición de hongos o bacterias. Además, este tipo de alimento ayuda a eliminar el sarro y a retrasar la formación de la placa dental con el proceso de masticación y trituración.",
+      "price": 2330,
+      "category": "gato",
+      "pesoProducts": "1,5 kg",
+      "image": [
+         "img-producto1633896160460.webp",
+         "img-producto1633896160461.webp",
+         "img-producto1633896160463.jpg",
+         "img-producto1633896160464.jpg"
       ]
    }
 ]
