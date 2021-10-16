@@ -13,6 +13,16 @@
             </form>
         </div>
         <div class="iconos">
+            <% if (locals.userLogin) { %> 
+                <li>
+                    <a href="/users/profile" class="user"><p><%= locals.userLogin.name %></p></a>
+                    <a href="/carrito" class="carrito-header"><i class="iconify"
+                        data-icon="emojione-monotone:shopping-cart"></i></a>
+                </li>
+                <% if (locals.userLogin.rol === 'admin') { %>
+                    <li><a class="dropdown-item" href="/admin">Administración</a></li>
+                    <% } %>
+                <% }else{ %>
             <nav>
                 <ul>
                     <a href="/users/login" class="user"><i class="far fa-user-circle"></i></a>
@@ -20,6 +30,7 @@
                             data-icon="emojione-monotone:shopping-cart"></i></a>
                 </ul>
             </nav>
+            <% } %>
         </div>
     </div>
     <div class="categorias">

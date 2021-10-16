@@ -9,5 +9,8 @@ module.exports = {
         },
         register: (req, res) => {
             return res.render('register',{title: 'register'})
-        } 
+        },
+        profile: (req, res) => {
+            return res.render('profile',{title: 'profile'})
+        }
     }
