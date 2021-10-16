@@ -1,3 +1,4 @@
+const { profile } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -12,5 +13,5 @@ module.exports = {
         },
         profile: (req, res) => {
             return res.render('profile',{title: 'profile'})
-        }
+        } 
     }
