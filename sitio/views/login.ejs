@@ -4,7 +4,7 @@
 <body class="login">
    <%- include('./partials/header')  %> 
     <main class="main-login">
-        <form action="">
+        <form action="" method="POST" >
             <div class="formulario">
                 <h2>Iniciar sesión</h2>
                 <div class="box-formulario">
@@ -13,8 +13,8 @@
                         <input type="email" name="email" id="email">
                     </div>
                     <div class="box-form">
-                        <label for="pass">Contraseña</label>
-                    <input type="password" name="pass" id="pass">
+                        <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password">
                     </div>
                     
                 <div class="box-error">
@@ -24,6 +24,9 @@
             <div class="box-crea-cuenta">
             <a href="/users/register"><p>No tengo cuenta. Crea una.</p></a>        
             </div>
+            <div class="box-error">
+                <span><%= locals.errores && errores.email ? errores.email.msg : null %> </span>       
+                </div>
             <div class="box-button">
                 <button type="submit">Ingresar</button>
             </div>
