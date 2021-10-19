@@ -4,32 +4,36 @@
 <body class="register">
     <%-include('./partials/header')%>
     <main class="main-register">
-        <form action="">
+        <form action="" method="POST">
             <div class="formulario">
                 <h2>Crea una Cuenta</h2>
                 <div class="box-formulario">
                     <div class="box-form">
                         <label for="nombre" class="primer-label">Nombre</label>
                         <input type="text" name="nombre" id="nombre">
+                        <span class="error"></span>
                     </div>
                     <div class="box-form">
                         <label for="aprellido">Apellido</label>
-                    <input type="text" name="aprellido" id="aprellido">
+                    <input type="text" name="apellido" id="apellido">
+                    <span class="error"></span>
                     </div>
                     <div class="box-form">
                         <label for="email">Correo electrónico</label>
                         <input type="email" name="email" id="email">
+                        <span class="error"></span>
                     </div>
                     <div class="box-form">
                         <label for="pass">Contraseña</label>
                     <input class="ultimo-input" type="password" name="pass" id="pass">
+                    <span class="error"></span>
                     </div>
                     
             </div>
              
             <div class="box-check-box">
                 <div class="box-check">
-                    <input type="checkbox" name="tarms" id="terms">
+                    <input type="checkbox" name="terms" id="terms">
                     <label for="terms">Acepto términos y condiciones</label>
                 </div>
             </div>
