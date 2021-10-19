@@ -16,11 +16,11 @@ module.exports = {
                 let user = {
                     id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
                     name : nombre.trim(),
-                    apellido : apellido.trim(),
+                    last_name : apellido.trim(),
                     email : email.trim(),
                     password : bcrypt.hashSync(pass,10),
                     avatar : 'default.png',
-                    rol : "user"
+                    category : "user"
                 }
                 users.push(user);
                 fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
