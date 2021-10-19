@@ -1,92 +1,101 @@
 [
-  {
-    "id": 1,
-    "first_name": "Montague",
-    "last_name": "Cannavan",
-    "email": "mcannavan0@a8.net",
-    "password": "SnuhNoN6ONo",
-    "category": "user",
-    "image": "user_1.jpg"
-  },
-  {
-    "id": 2,
-    "first_name": "Waldon",
-    "last_name": "Hazeldene",
-    "email": "whazeldene1@hexun.com",
-    "password": "M0B2xm9cWx",
-    "category": "user",
-    "image": "user_2.jpg"
-  },
-  {
-    "id": 3,
-    "first_name": "Betti",
-    "last_name": "Pierson",
-    "email": "bpierson2@ox.ac.uk",
-    "password": "qNm68BV",
-    "category": "user",
-    "image": "user_3.jpg"
-  },
-  {
-    "id": 4,
-    "first_name": "Dewie",
-    "last_name": "Andover",
-    "email": "dandover3@princeton.edu",
-    "password": "okovsoHKG",
-    "category": "user",
-    "image": "user_4.jpg"
-  },
-  {
-    "id": 5,
-    "first_name": "Curtice",
-    "last_name": "Brimelow",
-    "email": "cbrimelow4@guardian.co.uk",
-    "password": "z4ITAf",
-    "category": "user",
-    "image": "user_5.jpg"
-  },
-  {
-    "id": 6,
-    "first_name": "Wesley",
-    "last_name": "Campany",
-    "email": "wcampany5@biblegateway.com",
-    "password": "jbmWIR",
-    "category": "user",
-    "image": "user_6.jpg"
-  },
-  {
-    "id": 7,
-    "first_name": "Trudie",
-    "last_name": "Reame",
-    "email": "treame6@prweb.com",
-    "password": "YhGUbxkc",
-    "category": "user",
-    "image": "user_7.jpg"
-  },
-  {
-    "id": 8,
-    "first_name": "Pattin",
-    "last_name": "Hallaways",
-    "email": "phallaways7@home.pl",
-    "password": "nX88G0We8P4",
-    "category": "user",
-    "image": "user_8.jpg"
-  },
-  {
-    "id": 9,
-    "first_name": "Maxy",
-    "last_name": "Hawkswell",
-    "email": "mhawkswell8@surveymonkey.com",
-    "password": "yn6B0I",
-    "category": "user",
-    "image": "user_9.jpg"
-  },
-  {
-    "id": 10,
-    "first_name": "Myrtice",
-    "last_name": "Vaneschi",
-    "email": "mvaneschi9@jigsy.com",
-    "password": "eJVSwWp",
-    "category": "user",
-    "image": "user_10.jpg"
-  }
+   {
+      "id": 1,
+      "first_name": "Montague",
+      "last_name": "Cannavan",
+      "email": "mcannavan0@a8.net",
+      "password": "SnuhNoN6ONo",
+      "category": "user",
+      "image": "user_1.jpg"
+   },
+   {
+      "id": 2,
+      "first_name": "Waldon",
+      "last_name": "Hazeldene",
+      "email": "whazeldene1@hexun.com",
+      "password": "M0B2xm9cWx",
+      "category": "user",
+      "image": "user_2.jpg"
+   },
+   {
+      "id": 3,
+      "first_name": "Betti",
+      "last_name": "Pierson",
+      "email": "bpierson2@ox.ac.uk",
+      "password": "qNm68BV",
+      "category": "user",
+      "image": "user_3.jpg"
+   },
+   {
+      "id": 4,
+      "first_name": "Dewie",
+      "last_name": "Andover",
+      "email": "dandover3@princeton.edu",
+      "password": "okovsoHKG",
+      "category": "user",
+      "image": "user_4.jpg"
+   },
+   {
+      "id": 5,
+      "first_name": "Curtice",
+      "last_name": "Brimelow",
+      "email": "cbrimelow4@guardian.co.uk",
+      "password": "z4ITAf",
+      "category": "user",
+      "image": "user_5.jpg"
+   },
+   {
+      "id": 6,
+      "first_name": "Wesley",
+      "last_name": "Campany",
+      "email": "wcampany5@biblegateway.com",
+      "password": "jbmWIR",
+      "category": "user",
+      "image": "user_6.jpg"
+   },
+   {
+      "id": 7,
+      "first_name": "Trudie",
+      "last_name": "Reame",
+      "email": "treame6@prweb.com",
+      "password": "YhGUbxkc",
+      "category": "user",
+      "image": "user_7.jpg"
+   },
+   {
+      "id": 8,
+      "first_name": "Pattin",
+      "last_name": "Hallaways",
+      "email": "phallaways7@home.pl",
+      "password": "nX88G0We8P4",
+      "category": "user",
+      "image": "user_8.jpg"
+   },
+   {
+      "id": 9,
+      "first_name": "Maxy",
+      "last_name": "Hawkswell",
+      "email": "mhawkswell8@surveymonkey.com",
+      "password": "yn6B0I",
+      "category": "user",
+      "image": "user_9.jpg"
+   },
+   {
+      "id": 10,
+      "first_name": "Myrtice",
+      "last_name": "Vaneschi",
+      "email": "mvaneschi9@jigsy.com",
+      "password": "eJVSwWp",
+      "category": "user",
+      "image": "user_10.jpg"
+   },
+   {
+      "id": 11,
+      "name": "Jesica",
+      "apellido": "Guerrero",
+      "email": "guerrero191094@gmail.com",
+      "password": "$2a$10$Lm58RqklYhKDAr8ETjLZlu5cPUdsUWFWCZSDbiyxdDTFm.bqbkRni",
+      "avatar": "default.png",
+      "rol": "user"
+   }
 ]
