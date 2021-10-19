@@ -32,6 +32,7 @@ app.use(session({
   secret:'petsociety',
   resave : false,
   saveUninitialized : true}))
+app.use(localUserCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

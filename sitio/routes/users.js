@@ -7,6 +7,6 @@ const {register,processRegister, login} = require ('../controllers/usersControll
 router.get('/register', register);
 router.get('/login', login);
 /*router.get('/register',notEntry, register)*/
-router.post('/register',/*registerValidator,*/ processRegister)
+router.post('/register',registerValidator,processRegister)
 
 module.exports = router;

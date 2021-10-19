@@ -106,5 +106,21 @@
       "password": "$2a$10$kUUBNXLydFntpPBK6YlXK.kQFuOsNlFM/5.Fm7w4l2ohbt8DBtzJ6",
       "avatar": "default.png",
       "category": "user"
+   },
+   {
+      "id": 13,
+      "name": "jesica",
+      "email": "jesicaguerrerof@gmail.com",
+      "password": "$2a$10$BDVhNTBbW3ObztYgwR6djeOeLwnOJMZr6TVr/iGxn/O9Fa97foiQy",
+      "avatar": "default.png",
+      "category": "user"
+   },
+   {
+      "id": 14,
+      "name": "Jesica Daniela Guerrero",
+      "email": "guerrero191094123@gmail.com",
+      "pass": "$2a$10$UkiNbkpujocedAgu6m61YeUkbAtMt7lcJoJX8AZBsyxrNcbY6GGYe",
+      "avatar": "default.png",
+      "category": "user"
    }
 ]

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <%-include('./partials/head')%>
+    
 <body class="register">
     <%-include('./partials/header')%>
     <main class="main-register">
@@ -10,32 +11,32 @@
                 <div class="box-formulario">
                     <div class="box-form">
                         <label for="nombre" class="primer-label">Nombre</label>
-                        <input type="text" name="nombre" id="nombre">
-                        <span class="error"></span>
-                    </div>
-                    <div class="box-form">
-                        <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido">
-                    <span class="error"></span>
+                        <input type="text" name="name" id="nombre" value="<%= locals.old && old.name ? old.name : null %>">
+                        <span class="error"><%= locals.errores && errores.name ? errores.name.msg : null %></span>
                     </div>
                     <div class="box-form">
                         <label for="email">Correo electrónico</label>
                         <input type="email" name="email" id="email">
-                        <span class="error"></span>
+                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                     </div>
                     <div class="box-form">
                         <label for="pass">Contraseña</label>
-                    <input class="ultimo-input" type="password" name="pass" id="pass">
-                    <span class="error"></span>
+                        <input class="ultimo-input" type="password" name="pass" id="pass">
+                    <span class="error"><%= locals.errores && errores.pass ? errores.pass.msg : null %></span>
                     </div>
-                    
+                    <div class="box-form">
+                        <label for="pass2">Reingrese contraseña</label>
+                        <input class="ultimo-input" type="password" name="pass2" id="pass2">
+                    <span class="error"><%= locals.errores && errores.pass2 ? errores.pass2.msg : null %></span>
+                    </div>
             </div>
              
             <div class="box-check-box">
                 <div class="box-check">
                     <input type="checkbox" name="terms" id="terms">
                     <label for="terms">Acepto términos y condiciones</label>
-                </div>
+                   
+                </div> <span class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %></span>
             </div>
             <div class="box-button">
                 <button type="submit">Registrarse</button>

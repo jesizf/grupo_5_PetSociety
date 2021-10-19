@@ -6,6 +6,7 @@ module.exports = [
     check('name')
         .notEmpty().withMessage('El nombre es requerido'),
 
+
     check('email')
         .notEmpty().withMessage('Debes ingresar tu email').bail()
         .isEmail().withMessage('Email inválido'),
@@ -20,15 +21,15 @@ module.exports = [
             }
         }).withMessage('el email ya se encuentra registrado'),
 
-    check('password')
+    check('pass')
         .isLength({
-            min : 6,
+            min : 8,
             max : 12
-        }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
+        }).withMessage('La contraseña debe tener un mínimo de 8 y un máximo de 12 caracteres'),
     
-    body('password2')
+    body('pass2')
         .custom((value,{req}) => {
-            if(value !== req.body.password){
+            if(value !== req.body.pass){
                 return false
             }else{
                 return true
