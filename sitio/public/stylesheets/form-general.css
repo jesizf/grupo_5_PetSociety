@@ -68,6 +68,11 @@
     color: var(--colorNaranja);
     font-size: 12px;
 }
+.main-login  div.formulario div.box-formulario div.box-error .box-remember{
+    margin-bottom: 20px;
+}
+
+
 .main-login  div.formulario div.box-formulario div.box-error a p,
 .main-register div.formulario div.box-formulario div.box-error a p{
     padding-bottom: 20px;
@@ -200,6 +205,10 @@ span.error{
     margin-top: -20px;
     font-size: 16px;
 }
+.main-login  div.formulario div.box-formulario div.box-error .box-remember{
+    margin-right: -100%;
+}
+
 .main-login  form button,
 .main-register form button{
     width: 220px;
