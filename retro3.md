@@ -4,4 +4,4 @@
 ## -Qué deberíamos empezar a hacer? 
 ## -Qué debemos hacer menos? 
 ## -Qué debemos dejar de hacer?
-![imgretro](\imgretro\sprint3.png)
+![imgretro](3.png)
