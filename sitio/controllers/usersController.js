@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt=require('bcryptjs');
 const users=require(path.join(__dirname,'../data/users.json'))
+
 const {validationResult} = require('express-validator');
 
 
@@ -20,7 +21,7 @@ module.exports = {
                     id : user.id,
                     name : user.name,
                     avatar : user.avatar,
-                    rol : user.category
+                    rol : user.rol
                 }
                 if (req.body.remember) {
                     res.cookie('petsociety', req.session.userLogin,{maxAge : 1000 * 60})

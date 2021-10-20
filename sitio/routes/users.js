@@ -5,6 +5,9 @@ const registerValidator = require('../validations/registerValidator');
 
 const {register,processRegister, login, processLogin, logout} = require('../controllers/usersController');
 
+
+
+
 /* /users */
 router.get('/register', register);
 router.get('/login', login);
