@@ -1,2 +1,0 @@
-                                    //devuelve el caracter indicado lo convierte en mayuscula y al resto en minúscula
-module.exports = firstLetter = str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();

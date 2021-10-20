@@ -1,26 +1,9 @@
 [
    {
-<<<<<<< HEAD
-      "id": 1,
-      "name": "Vạn Giã1",
-      "description": "orci mauris lacinia sapien",
-      "price": 3,
-      "pesoProducts": [
-         "0.85 g",
-         "250 g",
-         "1 kg",
-         "2 kg",
-         "3 kg",
-         "5 kg",
-         "10 kg",
-         "15 kg"
-      ],
-=======
       "id": 17,
       "name": "PRO PLAN PUPPY MEDIANO 15+3 KG BONUS",
       "description": "Durante la “brecha inmunológica” y provee nutrición completa que ayuda a los cachorros a crecer fuertes y sanos.\r\nFormulado con carne fresca de pollo como ingrediente principal, además de vitaminas y minerales esenciales, PRO PLAN® Puppy Razas Medianas ofrece una óptima nutrición para cachorros en crecimiento.",
       "price": 7340,
->>>>>>> 3f1abf8be4d8d0e9ae41d3b9722cb6cbf717fa72
       "category": "perro",
       "pesoProducts": "18 kg",
       "image": [
