@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs')
 module.exports = [
     body('email')
     .custom((value,{req})=>{
-        let user = users.find(user => user.email === value && bcrypt.compareSync(req.body.password, user.password));
+        let user = users.find(user => user.email === value && bcrypt.compareSync(req.body.pass, user.pass));
         if(user){
             return true
         }else{
@@ -13,3 +13,4 @@ module.exports = [
     }
     ).withMessage('Credenciales inválidas')    
 ]
+

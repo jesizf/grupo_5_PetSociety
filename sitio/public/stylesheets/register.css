@@ -1,9 +1,7 @@
 .main-register div.formulario div.box-formulario{
-    height: 310px;
+    height: 280px;
 }
-.main-register div.formulario div.box-formulario div.box-form input.ultimo-input{
-    margin-bottom: 40px;
-}
+
 .main-register form div div.box-check-box{
     margin-top: 21px;
     font-size: 12px;
@@ -14,6 +12,9 @@
 }
 
 @media (min-width: 768px) {
+    .main-register div.formulario div.box-formulario{
+        height: 350px;
+    }
     .main-register form div div.box-check-box div.box-check{
         display: flex;
         align-items: center;
