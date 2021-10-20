@@ -23,9 +23,10 @@ module.exports = {
                     avatar : user.avatar,
                     rol : user.rol
                 }
-                if (req.body.remember) {
-                    res.cookie('petsociety', req.session.userLogin,{maxAge : 1000 * 60})
+                if(req.body.remember){
+                    res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 60})
                 }
+                
                 return res.redirect('/')
             }else{
                 return res.render('login',{
@@ -51,6 +52,14 @@ module.exports = {
                 }
                 users.push(user);
                 fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
+                
+                req.session.userLogin ={
+                    id : user.id,
+                    name : user.name,
+                    avatar : user.avatar,
+                    rol : user.rol
+                }
+
                 return res.redirect('/')}
                 else{
                     return res.render('register',{
