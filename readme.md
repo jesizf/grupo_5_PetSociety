@@ -33,4 +33,4 @@ Contamos con varias paletas de colores que le permitirán destacar de la compete
 - Poppins
 
 ## Logo:
-[alt text](logoproyecto.png)
+![alt text](logoproyecto.png)
