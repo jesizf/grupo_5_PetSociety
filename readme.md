@@ -31,3 +31,6 @@ Contamos con varias paletas de colores que le permitirán destacar de la compete
 
 ## Tipografía:
 - Poppins
+
+## Logo:
+[alt text](logoproyecto.png)
