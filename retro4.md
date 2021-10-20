@@ -4,4 +4,4 @@
 ## -Qué deberíamos empezar a hacer? 
 ## -Qué debemos hacer menos? 
 ## -Qué debemos dejar de hacer?
-![alt text](sprint4.png)
+![alt text](4.png)
