@@ -22,8 +22,8 @@
 .main-register div.formulario div.box-formulario,
  .main-login  div.formulario div.box-formulario{
     width: 280px;
-    height: 194px;
-    display: flex;
+  
+   
     flex-wrap: wrap;
     align-items: center;
     padding-left: 10%;
@@ -42,7 +42,7 @@
 }
 .main-login  div.formulario div.box-formulario div.box-form label.primer-label,
 .main-register  div.formulario div.box-formulario div.box-form label.primer-label{
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .main-login  div.formulario div.box-formulario div.box-form label,
@@ -54,7 +54,7 @@
 
 .main-login  div.formulario div.box-formulario div.box-form input,
 .main-register div.formulario div.box-formulario div.box-form input{
-    width: 220px;
+   
     background-color: var(--colorGrisClaro);
     border: none;
     height: 23px;
@@ -68,6 +68,11 @@
     color: var(--colorNaranja);
     font-size: 12px;
 }
+.main-login  div.formulario div.box-formulario div.box-error .box-remember{
+    margin-bottom: 20px;
+}
+
+
 .main-login  div.formulario div.box-formulario div.box-error a p,
 .main-register div.formulario div.box-formulario div.box-error a p{
     padding-bottom: 20px;
@@ -117,7 +122,10 @@
     background-color: #ffad6a;
     cursor: pointer;
 }
-
+span.error{
+    font-size: 0.5rem;
+    color:#ffad6a;
+}
 @media (min-width: 768px) {
 
  .main-login  div.formulario,
@@ -163,7 +171,10 @@
 font-size: 18px;
 }
 }
-
+span.error{
+    font-size: 0.9rem;
+    color: #fb9d5a;
+}
 @media (min-width: 1024px) {
     
  .main-login  div.formulario h2,
@@ -175,6 +186,8 @@ font-size: 18px;
 .main-register div.formulario div.box-formulario{
         width: 880px;
         height: 330px;
+        display: flex;
+        align-items: center;
 }
 .main-login  div.formulario div.box-formulario div.box-form label,
 .main-register div.formulario div.box-formulario div.box-form label{
@@ -192,10 +205,18 @@ font-size: 18px;
     margin-top: -20px;
     font-size: 16px;
 }
+.main-login  div.formulario div.box-formulario div.box-error .box-remember{
+    margin-right: -100%;
+}
+
 .main-login  form button,
 .main-register form button{
     width: 220px;
     height: 55px;
 font-size: 20px;
+}
+span.error{
+    font-size: 1rem;
+    color:#ffad6a;
 }
 }

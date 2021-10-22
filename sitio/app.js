@@ -3,14 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 const methodOverride=require('method-override');
 const session = require ('express-session');
+const localUserCheck = require('./middlewares/localUserCheck');
+const cookieUserCheck = require('./middlewares/cookieUserCheck');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var footerRouter = require('./routes/footer');
+const { RequestTimeout } = require('http-errors');
 
 var app = express();
 
@@ -24,10 +27,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(methodOverride('_method'))
+
+app.use(methodOverride('_method'));
+
+
 app.use(session({
-    secret : "petSociety",
-  }));
+  secret:'petsociety',
+  resave : false,
+  saveUninitialized : true}));
+
+
+app.use(cookieUserCheck);
+app.use(localUserCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
