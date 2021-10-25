@@ -13,35 +13,35 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12 col-md-4">
-                                        <img class="img-fluid rounded-start" style="border: #383e56;" src=""  alt="">
+                                        <img class="img-fluid rounded-start" style="border: #383e56;" src="/img/users/<%= user.image %>" alt="img-rota">
                                     </div>
                                     <div class="col-12 col-md-8">
                                         <form class="row" method="POST" enctype="multipart/form-data">
                                             <div class="col-12 mb-3">
                                                 <div class="form-floating ">
-                                                    <input type="text" class="form-control " id="name" placeholder="Nombre " name="name" value="user.name">
+                                                    <input type="text" class="form-control " id="name" placeholder="Nombre" name="name" value="<%= user.name %> ">
                                                     <label for="name">Nombre</label>
                                                 </div>
                                                     <span class="text-danger small ms-2"></span>
                                             </div>
                                             <div class="col-12 mb-3">
                                                 <div class="form-floating ">
-                                                    <input type="text" class="form-control" id="email" placeholder="Email" name="email" value=" user.email" disabled>
+                                                    <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="<%= user.email %>" disabled>
                                                     <label for="email">Email</label>
                                                   </div>
                                             </div>
                                             <div class="col-12 mb-3">
                                                 <div class="form-floating ">
-                                                    <input type="password" class="form-control" id="password" placeholder="Contraseña" name="password" >
-                                                    <label for="email">Cambiar contraseña</label>
+                                                    <input type="pass" class="form-control" id="pass" placeholder="Contraseña" name="pass" >
+                                                    <label for="pass">Cambiar contraseña</label>
                                                   </div>
                                                   <span class="text-danger small ms-2"> </span>
         
                                             </div>
                                            <div class="col-12 col-md-6">
                                             <div class="mb-3 mt-3">
-                                                <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subí una imagen</label>
-                                                <input hidden class="form-control" type="file" name="image" id="image" multiple>
+                                                <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen de perfil</label>
+                                                <input hidden class="form-control" type="file" id="image" name="image">
                                             </div>
                                            </div>
                                            <div class="d-flex justify-content-center col-12 mt-5">

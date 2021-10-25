@@ -6,7 +6,7 @@
       "email": "mcannavan0@a8.net",
       "password": "SnuhNoN6ONo",
       "rol": "user",
-      "avatar": "user_1.jpg"
+      "image": "user_1.jpg"
    },
    {
       "id": 2,
@@ -15,7 +15,7 @@
       "email": "whazeldene1@hexun.com",
       "password": "M0B2xm9cWx",
       "rol": "user",
-      "avatar": "user_2.jpg"
+      "image": "user_2.jpg"
    },
    {
       "id": 3,
@@ -24,7 +24,7 @@
       "email": "bpierson2@ox.ac.uk",
       "password": "qNm68BV",
       "rol": "user",
-      "avatar": "user_3.jpg"
+      "image": "user_3.jpg"
    },
    {
       "id": 4,
@@ -33,7 +33,7 @@
       "email": "dandover3@princeton.edu",
       "password": "okovsoHKG",
       "rol": "user",
-      "avatar": "user_4.jpg"
+      "image": "user_4.jpg"
    },
    {
       "id": 5,
@@ -42,7 +42,7 @@
       "email": "cbrimelow4@guardian.co.uk",
       "password": "z4ITAf",
       "rol": "user",
-      "avatar": "user_5.jpg"
+      "image": "user_5.jpg"
    },
    {
       "id": 6,
@@ -51,7 +51,7 @@
       "email": "wcampany5@biblegateway.com",
       "password": "jbmWIR",
       "rol": "user",
-      "avatar": "user_6.jpg"
+      "image": "user_6.jpg"
    },
    {
       "id": 7,
@@ -60,7 +60,7 @@
       "email": "treame6@prweb.com",
       "password": "YhGUbxkc",
       "rol": "user",
-      "avatar": "user_7.jpg"
+      "image": "user_7.jpg"
    },
    {
       "id": 8,
@@ -69,7 +69,7 @@
       "email": "phallaways7@home.pl",
       "password": "nX88G0We8P4",
       "rol": "user",
-      "avatar": "user_8.jpg"
+      "image": "user_8.jpg"
    },
    {
       "id": 9,
@@ -78,7 +78,7 @@
       "email": "mhawkswell8@surveymonkey.com",
       "password": "yn6B0I",
       "rol": "user",
-      "avatar": "user_9.jpg"
+      "image": "user_9.jpg"
    },
    {
       "id": 10,
@@ -87,7 +87,7 @@
       "email": "mvaneschi9@jigsy.com",
       "password": "eJVSwWp",
       "rol": "user",
-      "avatar": "user_10.jpg"
+      "image": "user_10.jpg"
    },
    {
       "id": 11,
@@ -96,7 +96,7 @@
       "email": "guerrero191094@gmail.com",
       "password": "$2a$10$Lm58RqklYhKDAr8ETjLZlu5cPUdsUWFWCZSDbiyxdDTFm.bqbkRni",
       "rol": "user",
-      "avatar": "default.png"
+      "image": "default.png"
    },
    {
       "id": 12,
@@ -104,7 +104,7 @@
       "last_name": "jj",
       "email": "guerrero1910945@gmail.com",
       "password": "$2a$10$kUUBNXLydFntpPBK6YlXK.kQFuOsNlFM/5.Fm7w4l2ohbt8DBtzJ6",
-      "avatar": "default.png",
+      "image": "default.png",
       "rol": "user"
    },
    {
@@ -112,7 +112,7 @@
       "name": "jesica",
       "email": "jesicaguerrerof@gmail.com",
       "password": "$2a$10$BDVhNTBbW3ObztYgwR6djeOeLwnOJMZr6TVr/iGxn/O9Fa97foiQy",
-      "avatar": "default.png",
+      "image": "default.png",
       "rol": "user"
    },
    {
@@ -120,15 +120,15 @@
       "name": "Jesica Daniela Guerrero",
       "email": "guerrero191094123@gmail.com",
       "pass": "$2a$10$UkiNbkpujocedAgu6m61YeUkbAtMt7lcJoJX8AZBsyxrNcbY6GGYe",
-      "avatar": "default.png",
+      "image": "default.png",
       "rol": "user"
    },
    {
       "id": 15,
       "name": "Patricia",
       "email": "patricia.soledad0395@gmail.com",
-      "pass": "$2a$10$fn.GbZ7JOOl0wIjUOL72wer9/bQlIjBvd.s4x27l20MrI0LA.d1vS",
-      "avatar": "default.png",
-      "rol": "admin"
+      "pass": "$2a$10$cPt1ck8T0REI5gPC.21dneNJNvoEphEX5cWctLTAaxnR8KHdq8KOS",
+      "image": "image1635181044768.png",
+      "rol": "user"
    }
 ]
