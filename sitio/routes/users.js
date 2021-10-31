@@ -10,15 +10,15 @@ const profileValidator = require('../validations/profileValidator')
 /*middlewares*/
 const userLoginCheck = require('../middlewares/userLoginCheck');
 const ImageUser = require('../middlewares/ImageUser');
-
+const logueoCheck = require('../middlewares/logeoCheck')
 
 const {register,processRegister, login, processLogin, profile, logout, updateProfile} = require('../controllers/usersController');
 
 
 /* /users */
-router.get('/register', register);
+router.get('/register', logueoCheck, register);
 router.post('/register',registerValidator,processRegister)
-router.get('/login', login);
+router.get('/login', logueoCheck, login);
 router.post('/login',loginValidator, processLogin)
 router.get('/profile', userLoginCheck, profile);
 router.post('/profile',ImageUser.single('image'), profileValidator, updateProfile);
