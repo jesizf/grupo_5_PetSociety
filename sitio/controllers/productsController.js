@@ -83,9 +83,9 @@ module.exports = {
                 name : name.trim(),
                 description : description.trim(),
                 price : +price,
-                pesoProducts:product.pesoProducts,
+                pesoProducts,
                 category,
-                image :product.image
+                image : product.image
             }
             let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
     
