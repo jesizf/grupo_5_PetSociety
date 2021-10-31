@@ -43,7 +43,7 @@
                                                 <option value="" selected hidden>Seleccioná la categoría</option>
                                                 <% categories.forEach(category => { %>
                                                 <option value="<%= category %>" <%= product.category === category ? 'selected' : null%>><%= firstLetter(category)%></option>
-                                            <% }) %>                                          
+                                            <% }) %>                        
                                             </select>
                                             <label for="category">Categorías</label>
                                         </div>
@@ -54,10 +54,10 @@
                                     <div class="col-12 col-md-6 mt-3">
                                         <div class="form-floating pt-2">
                                             <select class="form-select" name="pesoProducts" id="pesoProducts" >
-                                                <option value="<%= pesoProducts %> " selected hidden>Seleccioná el Peso</option>
+                                                <option value="" selected hidden>Seleccioná el Peso</option>
                                                 <% pesoProducts.forEach(pesoProducts => { %>
-                                                <option value="<%= pesoProducts %>"<%= pesoProducts === pesoProducts ? 'selected' : null%>><%= pesoProducts %></option>
-                                            <% }) %>                                     
+                                                <option value="<%= pesoProducts %>" <%= product.pesoProducts === pesoProducts ? 'selected' : null%> ><%= pesoProducts %></option>
+                                         <% }) %>                                    
                                             </select>
                                         <label for="pesoProducts">Peso</label>
                                         </div>
