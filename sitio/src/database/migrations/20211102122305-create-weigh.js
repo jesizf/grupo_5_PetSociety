@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       weigh: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
