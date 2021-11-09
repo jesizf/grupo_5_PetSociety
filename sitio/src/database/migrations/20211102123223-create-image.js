@@ -14,12 +14,12 @@ module.exports = {
       },
       productId: {
         type: Sequelize.INTEGER,
-        references:  {model : { /*foreign key*/
-          tableName : 'Products'
-        },
-        key : 'id'
-      },
-      	onDelete:'cascade' /*para que cuando se borre un prducto se borren las imagenes */ 
+        references : {
+          model : {
+            tableName : 'Products'
+          },
+          key : 'id'
+        }
       },
       createdAt: {
         allowNull: false,

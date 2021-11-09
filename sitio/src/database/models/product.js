@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
      static associate(models) {
       // define association here
+     
       Product.hasMany(models.Image,{
         as : 'images',
         onDelete : 'cascade',
@@ -24,8 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         as : 'weigh',
         foreignKey : 'weighId'
       })
-
-      
+            
     }
   };
 
