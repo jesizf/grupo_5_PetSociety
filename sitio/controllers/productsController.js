@@ -75,7 +75,7 @@ module.exports = {
     update :(req, res) =>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            const {name,description,price,category} = req.body;
+            const {name,description,price,category, pesoProducts} = req.body;
             let product = products.find(product => product.id === +req.params.id);
     
             let productModified = {
@@ -83,9 +83,9 @@ module.exports = {
                 name : name.trim(),
                 description : description.trim(),
                 price : +price,
-                pesoProducts:product.pesoProducts,
+                pesoProducts,
                 category,
-                image :product.image
+                image : product.image
             }
             let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
     

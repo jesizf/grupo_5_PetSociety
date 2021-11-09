@@ -1,6 +1,6 @@
-module.exports = (res, req, next)=>{
-    if (req.cookie.petsociety) {
-        req.session.userLogin = req.cookie.petsociety
+module.exports = (req,res,next) =>{
+    if(req.cookies.petSociety){
+        req.session.userLogin = req.cookies.petSociety
     }
     next()
 }
