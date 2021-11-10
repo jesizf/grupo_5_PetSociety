@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
@@ -58,11 +59,18 @@ module.exports = {
     },
 
     detail : (req, res) =>{
-        return res.render('detail',{
-            title: 'Detalles de productos',
-            products : products.find(product => product.id === +req.params.id)
-            
+        db.Product.findByPk(req.params.id, {
+            include : ['images']
         })
+         .then(products =>{
+            return res.render('detail',{
+                title: 'Detalles de productos',
+                products
+                
+            })
+            .catch(error => console.log(error))
+         })
+        
     },
     edit : (req, res) =>{
         return res.render('productEdit',{

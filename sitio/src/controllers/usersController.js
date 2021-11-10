@@ -5,6 +5,7 @@ const bcrypt=require('bcryptjs');
 const users=require(path.join(__dirname,'../data/users.json'))
 
 const {validationResult} = require('express-validator');
+const db = require('../database/models');
 
 
 module.exports = {
@@ -43,25 +44,26 @@ module.exports = {
         processRegister : (req,res) => {
             let errors=validationResult(req);
             if (errors.isEmpty()){
-                const {name,email,pass} = req.body;
-                let user = {
-                    id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
-                    name : name.trim(),
-                    email : email.trim(),
-                    pass : bcrypt.hashSync(pass,10),
-                    image : 'default.png',
-                    rol : "user"
-                }
-                users.push(user);
-                fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
-                
-                req.session.userLogin ={
-                    id : user.id,
-                    name : user.name,
-                    image : user.image,
-                    rol : user.rol
-                }
-                return res.redirect('/')
+                const {name,email,password} = req.body;
+                db.User.create({
+                    name: name.trim(),
+                    email: email.trim(),
+                    password: bcrypt.hashSync(password,10),
+                    rol : 1,
+                })
+                .then(user =>{
+                    req.session.userLogin ={
+                        id : user.id,
+                        name : user.name,
+                        image : user.image,
+                        rol : user.rol
+                    }
+                    res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 60})
+                    res.locals.userLogin = req.session.userLogin
+
+                    return res.redirect('/')
+                })
+                .catch(error => console.log(error))              
             }
                 else{
                     return res.render('register',{
@@ -70,26 +72,7 @@ module.exports = {
                         old : req.body
                     })
                 }
-                    
-                
-            
-                /*
-                req.session.userLogin = {
-                    id : user.id,
-                    name : user.name,
-                    avatar : user.avatar,
-                    rol : user.rol
-                }
-                
-                return res.redirect('/')
-            }else{
-                return res.render('register',{
-                    errores : errors.mapped(),
-                    old : req.body
-                })
-            }
-          
-        },return res.send(req.body)}*/
+                           
     },
     profile: (req, res) => {
         let users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
