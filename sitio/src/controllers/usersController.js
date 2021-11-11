@@ -4,8 +4,9 @@ const path = require('path');
 const bcrypt=require('bcryptjs');
 const users=require(path.join(__dirname,'../data/users.json'))
 
-const {validationResult} = require('express-validator');
+const {validationResult, body} = require('express-validator');
 const db = require('../database/models');
+const { builtinModules } = require('module');
 
 
 module.exports = {
@@ -16,46 +17,57 @@ module.exports = {
         processLogin: (req, res) =>{
     
             let errors = validationResult(req);
+            const {email} = req.body;
 
-            if(errors.isEmpty()){
-                let user = users.find(user => user.email === req.body.email);
-                req.session.userLogin = {
-                    id : user.id,
-                    name : user.name,
-                    image : user.image,
-                    rol : user.rol
-                }
-                if(req.body.remember){
-                    res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 60})
-                }
-                
-                return res.redirect('/')
-            }else{
-                return res.render('login',{
-                    title: 'login',
-                    errores : errors.mapped()
-                })
+    if (errors.isEmpty()) {
+        db.User.findOne({
+            where: {
+                email
             }
+        })
+            .then(user => {
+                   req.session.userLogin = {
+                        id: user.id,
+                        name: user.name,
+                        password: user.password,
+                        rol : user.rolId,
+                        image: user.image
+                    }
+
+                 res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 100})
+                    return res.redirect('/')
+                })
+                .catch(error => res.send(error)) 
+                
+                } else {
+                    return res.render('login',{
+                    title: 'login',
+                    errores : errors.mapped(),
+                    old : req.body
+                }) 
+            }
+           
         },
+
         register: (req, res) => {
             return res.render('register',{title: 'register'})
         },
         
         processRegister : (req,res) => {
-            let errors=validationResult(req);
+            let errors = validationResult(req);
             if (errors.isEmpty()){
                 const {name,email,password} = req.body;
                 db.User.create({
                     name: name.trim(),
                     email: email.trim(),
                     password: bcrypt.hashSync(password,10),
-                    rol : 1,
+                    image: 'default.png',
+                    rolId : 1,
                 })
                 .then(user =>{
                     req.session.userLogin ={
                         id : user.id,
                         name : user.name,
-                        image : user.image,
                         rol : user.rol
                     }
                     res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 60})
@@ -75,10 +87,18 @@ module.exports = {
                            
     },
     profile: (req, res) => {
-        let users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
-        return res.render('profile',{title: 'profile',
-        user : users.find(user => user.id === req.session.userLogin.id)
-    })
+        db.User.findOne({
+            where : {
+                id: req.session.userLogin.id
+            }
+        })
+        .then(user =>{
+            return res.render('profile',{
+                title: 'profile',
+                 user 
+        })
+        })
+        .catch(error =>console.log(error))
     },
     updateProfile : (req,res) => {
         let errors = validationResult(req);
@@ -132,3 +152,6 @@ module.exports = {
 
       
     }
+
+
+    
