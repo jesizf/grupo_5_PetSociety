@@ -123,22 +123,17 @@ module.exports = {
         categories,
         products : products.filter(product => product.category === req.query.category)
     }),
-    destroy : (req, res) => 
-    
-    {
-        let product = products.find(product => product.id === +req.params.id);
-
-        product.image.forEach(img => {
-            fs.existsSync(path.join(__dirname,'../public/img/products',img)) ? fs.unlinkSync(path.join(__dirname,'../public/img/products',img)) : null
-            
-        });
-
-		let productsModified = products.filter(product => product.id !== +req.params.id);
-		
-		fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsModified, null,3),'utf-8');
-        res.redirect('/admin');
-        
-
+    destroy : (req, res) => {
+       
+        db.Product.destroy({
+            where : {
+                id : freq.params.id
+            }
+        })
+        .then ( () => {
+            return res.redirect('/admin')
+        })
+        .catch(error => console.log(error))
 	}
 
 }

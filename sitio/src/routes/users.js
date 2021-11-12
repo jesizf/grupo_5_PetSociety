@@ -21,7 +21,7 @@ router.post('/register',registerValidator,processRegister)
 router.get('/login', logueoCheck, login);
 router.post('/login',loginValidator, processLogin)
 router.get('/profile', userLoginCheck, profile);
-router.post('/profile',ImageUser.single('image'), profileValidator, updateProfile);
+router.put('/profile/:id',ImageUser.single('image'), profileValidator, updateProfile);
 router.get('/logout', userLoginCheck, logout)
 
 
