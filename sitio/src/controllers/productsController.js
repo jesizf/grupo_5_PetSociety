@@ -7,6 +7,8 @@ const firstLetter = require('../utils/firstLetter');
 const {validationResult} = require('express-validator')
 
 const pesoProducts = require('../data/pesoProducts.json');
+const { decodeBase64 } = require('bcryptjs');
+const { promiseImpl } = require('ejs');
 
 module.exports = {
     add : (req,res) => {
@@ -65,12 +67,17 @@ module.exports = {
         })
     },
     edit : (req, res) =>{
+        let product=db.Product.findByPk(req.params.id)
+        let categories= db.Category.findAll()
+        Promise.All([product,categories])
+        .then(product, categories => {
         return res.render('productEdit',{
-            product : products.find(product => product.id === +req.params.id),
             categories,
             firstLetter,
             pesoProducts,
-        })  ;
+        })  
+    })
+    .catch(error =>console.log(error))
     },
     update :(req, res) =>{
         let errors = validationResult(req);

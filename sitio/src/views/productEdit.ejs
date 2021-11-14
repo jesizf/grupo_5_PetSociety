@@ -16,7 +16,7 @@
                             <div class="car-body">
 
                                 <!--Formulario-->
-                                <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" >
+                                <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
 
                                     <!--Nombrar producto-->
                                     <div class="col-12">
@@ -42,7 +42,7 @@
                                             <select class="form-select" name="category" id="floatingSelect" aria-label="Floating label select example" >
                                                 <option value="" selected hidden>Seleccioná la categoría</option>
                                                 <% categories.forEach(category => { %>
-                                                <option value="<%= category %>" <%= product.category === category ? 'selected' : null%>><%= firstLetter(category)%></option>
+                                                <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null%>><%= firstLetter(category.name)%></option>
                                             <% }) %>                        
                                             </select>
                                             <label for="category">Categorías</label>
