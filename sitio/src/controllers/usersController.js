@@ -83,13 +83,7 @@ module.exports = {
                         old : req.body
                     })
                 }
-<<<<<<< HEAD
-                    
-                
-            
-=======
                            
->>>>>>> f570420c031c401b8f08f2030bdb35106b9a50d7
     },
     profile: (req, res) => {
         db.User.findOne({
