@@ -16,7 +16,7 @@
                                         <img class="img-fluid rounded-start" style="border: #383e56;" src="/img/users/<%= user.image %>" alt="img-rota">
                                     </div>
                                     <div class="col-12 col-md-8">
-                                        <form class="row" method="POST" enctype="multipart/form-data">
+                                            <form action="/users/profile/<%= user.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
                                             <div class="col-12 mb-3">
                                                 <div class="form-floating ">
                                                     <input type="text" class="form-control " id="name" placeholder="Nombre" name="name" value="<%= user.name %> ">
@@ -32,8 +32,8 @@
                                             </div>
                                             <div class="col-12 mb-3">
                                                 <div class="form-floating ">
-                                                    <input type="pass" class="form-control" id="pass" placeholder="Contraseña" name="pass" >
-                                                    <label for="pass">Cambiar contraseña</label>
+                                                    <input type="password" class="form-control" id="pass" placeholder="Contraseña" name="password" >
+                                                    <label for="password">Cambiar contraseña</label>
                                                   </div>
                                                   <span class="text-danger small ms-2"> </span>
         

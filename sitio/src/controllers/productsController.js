@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
@@ -7,18 +8,26 @@ const firstLetter = require('../utils/firstLetter');
 const {validationResult} = require('express-validator')
 
 const pesoProducts = require('../data/pesoProducts.json');
+const db = require('../database/models');
+const { Op } = require('sequelize')
+
 const { decodeBase64 } = require('bcryptjs');
 const { promiseImpl } = require('ejs');
 
 module.exports = {
-    add : (req,res) => {
-        return res.render('productAdd',{ title: 'Agregar Productos',
-            products,
-            categories,
-            firstLetter,
-            pesoProducts
-        })
-        
+   
+    add: (req, res) => {
+
+        db.Category.findAll()
+            .then(categories => {
+                return res.render('productAdd', {title: 'Agregar Productos',
+                products,
+                    categories,
+                    firstLetter,
+                    pesoProducts
+                })
+            })
+            .catch(error => console.log(error))
     },
     store : (req,res) => {
         let errors = validationResult(req);
@@ -60,11 +69,18 @@ module.exports = {
     },
 
     detail : (req, res) =>{
-        return res.render('detail',{
-            title: 'Detalles de productos',
-            products : products.find(product => product.id === +req.params.id)
-            
+        db.Product.findByPk(req.params.id, {
+            include : ['images']
         })
+         .then(products =>{
+            return res.render('detail',{
+                title: 'Detalles de productos',
+                products
+                
+            })
+            .catch(error => console.log(error))
+         })
+        
     },
     edit : (req, res) =>{
         let product=db.Product.findByPk(req.params.id)
@@ -122,22 +138,17 @@ module.exports = {
         categories,
         products : products.filter(product => product.category === req.query.category)
     }),
-    destroy : (req, res) => 
-    
-    {
-        let product = products.find(product => product.id === +req.params.id);
-
-        product.image.forEach(img => {
-            fs.existsSync(path.join(__dirname,'../public/img/products',img)) ? fs.unlinkSync(path.join(__dirname,'../public/img/products',img)) : null
-            
-        });
-
-		let productsModified = products.filter(product => product.id !== +req.params.id);
-		
-		fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsModified, null,3),'utf-8');
-        res.redirect('/admin');
-        
-
+    destroy : (req, res) => {
+       
+        db.Product.destroy({
+            where : {
+                id : freq.params.id
+            }
+        })
+        .then ( () => {
+            return res.redirect('/admin')
+        })
+        .catch(error => console.log(error))
 	}
 
 }
