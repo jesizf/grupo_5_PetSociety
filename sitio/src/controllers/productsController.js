@@ -10,14 +10,19 @@ const {validationResult} = require('express-validator')
 const pesoProducts = require('../data/pesoProducts.json');
 
 module.exports = {
-    add : (req,res) => {
-        return res.render('productAdd',{ title: 'Agregar Productos',
-            products,
-            categories,
-            firstLetter,
-            pesoProducts
-        })
-        
+   
+    add: (req, res) => {
+
+        db.Category.findAll()
+            .then(categories => {
+                return res.render('productAdd', {title: 'Agregar Productos',
+                products,
+                    categories,
+                    firstLetter,
+                    pesoProducts
+                })
+            })
+            .catch(error => console.log(error))
     },
     store : (req,res) => {
         let errors = validationResult(req);
