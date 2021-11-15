@@ -21,7 +21,7 @@ module.exports = [
             }
         }).withMessage('el email ya se encuentra registrado'),
 
-    check('pass')
+    check('password')
         .isLength({
             min : 8,
             max : 12
@@ -29,7 +29,7 @@ module.exports = [
     
     body('pass2')
         .custom((value,{req}) => {
-            if(value !== req.body.pass){
+            if(value !== req.body.password){
                 return false
             }else{
                 return true

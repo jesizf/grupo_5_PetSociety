@@ -6,7 +6,7 @@ module.exports = [
     check('name')
         .notEmpty().withMessage('Debe ingresar un nombre'),
    
-    body('pass')
+    body('password')
         .custom(value => {
             if(value.length != 0){
                 if(value.length < 6 || value.length > 12){

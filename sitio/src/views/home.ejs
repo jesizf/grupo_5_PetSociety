@@ -33,13 +33,13 @@
         <h3 id= "perros" class="titulos">Perros</h3>
         <!--Productos-->
         <section class="productos">
-            <% productsPerros.forEach(productsPerros =>{ %>
+            <% perro.forEach(product =>{ %>
                 <article>
                     <div class="tarjeta">
-                    <a href="/products/detail/<%= productsPerros.id %>"><img src="/img/products/<%= productsPerros.image[0] %>" alt="foto"></a> 
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.images[0].file %>" alt="foto"></a> 
                         <div class="detalle-producto">
-                            <h4><%= productsPerros.name %></h4>
-                            <span>$<%= productsPerros.price %></span>
+                            <h4><%= product.name %></h4>
+                            <span>$<%= product.price %></span>
                             
                         </div>
                     </div>
@@ -50,13 +50,13 @@
         <h3 id="gatos" class="titulos">Gatos</h3>
         <section class="productos">
             <!--Tarjetas-->
-            <% productsGatos.forEach(productsGatos => { %>
+            <% gato.forEach(product => { %>
                 <article>
                     <div class="tarjeta">
-                    <a href="/products/detail/<%= productsGatos.id %>"><img src="/img/products/<%= productsGatos.image[0] %>" alt="foto"></a> 
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.images[0].file %>" alt="foto"></a> 
                         <div class="detalle-producto">
-                            <h4><%= productsGatos.name %></h4>
-                            <span>$<%= productsGatos.price %></span>
+                            <h4><%= product.name %></h4>
+                            <span>$<%= product.price %></span>
                         </div>
                     </div>
             </article>
