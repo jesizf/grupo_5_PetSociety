@@ -73,23 +73,6 @@ module.exports = {
                     
                 
             
-                /*
-                req.session.userLogin = {
-                    id : user.id,
-                    name : user.name,
-                    avatar : user.avatar,
-                    rol : user.rol
-                }
-                
-                return res.redirect('/')
-            }else{
-                return res.render('register',{
-                    errores : errors.mapped(),
-                    old : req.body
-                })
-            }
-          
-        },return res.send(req.body)}*/
     },
     profile: (req, res) => {
         let users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
