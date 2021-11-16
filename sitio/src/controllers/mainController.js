@@ -41,12 +41,21 @@
         return res.render('carrito',{title: 'carrito'})
     },
     
-    admin: (req,res)=>{
-      let products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
-    return res.render('admin', {title: 'admin',
-    products:JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')),
-    products})
+    admin : (req,res) => {
+      let products = db.Product.findAll({
+          include : ['images','category']
+      })
+      let categories = db.Category.findAll()
 
-
+      Promise.all([products,categories])
+          .then(([products,categories]) => {
+              return res.render('admin',{
+                  title : "Administración",
+                  products,
+                  categories
+              })
+          })
+          .catch(error => console.log(error))
+  
+  }
 }
- }

@@ -34,7 +34,7 @@
                                         <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="category">
                                          <option value="" selected hidden>Selecciona la categoría</option>
                                           <% categories.forEach(category => { %>
-                                            <option value="<%= category %>" <%= locals.old && old.category === category  ? 'selected' : null%> ><%= firstLetter(category)%></option>
+                                            <option value="<%= category.id %>" <%= locals.old && old.category.id === category.id  ? 'selected' : null%> ><%= firstLetter(category.name)%></option>
                                           <% }) %>                                          
                                         </select>
                                         <label for="floatingSelect">Categorías</label>

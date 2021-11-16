@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const db = require('../database/models')
+
 
 let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
@@ -29,43 +29,50 @@ module.exports = {
             })
             .catch(error => console.log(error))
     },
-    store : (req,res) => {
+    store: (req, res) => {
         let errors = validationResult(req);
-        
-        
 
-        let images = req.files.map(image => image.filename)
 
         if (errors.isEmpty()) {
-            const {name,description,price,category, pesoProducts} = req.body;
-            let product = {
-                id : products[products.length - 1].id + 1,
+            const { name, description, price, category } = req.body;
+
+            db.Product.create({
                 name : name.trim(),
                 description : description.trim(),
-                price : +price,
-                category,
-                pesoProducts,
-                image : req.files.length != 0 ? images : ['default.jpg'],
-                
-            }
-    
-            products.push(product);
-    
-            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
-    
-            return res.redirect('/admin')
-        }else{
-            return res.render('productAdd',{
-            products,
-            categories,
-            firstLetter,
-            pesoProducts,
-            errors : errors.mapped(),
-            old : req.body
+                price,
+                categoryId : category
+
             })
-            
+                .then(product => {
+                    if(req.files[0] != undefined) {
+
+                        let images = req.files.map(image => {
+                            let img = {
+                                file : image.filename,
+                                productId : product.id
+                            }
+                            return img
+                        });
+                        db.Image.bulkCreate(images, {validate : true})
+                            .then( () => console.log('imagenes agregadas'))
+                    }
+                    return res.redirect('/admin')
+                })
+                .catch(error => console.log(error))
+           
+        } else {
+
+            db.Category.findAll()
+            .then(categories => {
+                return res.render('productAdd', {
+                    categories,
+                    firstLetter,
+                    errors: errors.mapped(),
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
         }
-        
     },
 
     detail : (req, res) =>{
@@ -83,11 +90,12 @@ module.exports = {
         
     },
     edit : (req, res) =>{
-        let product=db.Product.findByPk(req.params.id)
+        let product= db.Product.findByPk(req.params.id)
         let categories= db.Category.findAll()
-        Promise.All([product,categories])
+        Promise.all([product,categories])
         .then(product, categories => {
         return res.render('productEdit',{
+           
             categories,
             firstLetter,
             pesoProducts,
@@ -95,38 +103,56 @@ module.exports = {
     })
     .catch(error =>console.log(error))
     },
-    update :(req, res) =>{
+    
+    update: (req, res) => {
         let errors = validationResult(req);
-        if(errors.isEmpty()){
-            const {name,description,price,category, pesoProducts} = req.body;
-            let product = products.find(product => product.id === +req.params.id);
+
+        if (errors.isEmpty()) {
+            const { name, description, price, category } = req.body;
+         
+            db.Product.update(
+                {
+                    name : name.trim(),
+                    description : description.trim(),
+                    price,
+                    categoryId : category,
+                    
+                },
+                {
+                    where : {
+                        id : req.params.id
+                    }
+                }
+            )
+                .then( () => {
+                    return res.redirect('/admin')
+                })
+        
+
+
+        } else {
+
+            let product = db.Product.findByPk(req.params.id)
+            let categories = db.Category.findAll()
     
-            let productModified = {
-                id : +req.params.id,
-                name : name.trim(),
-                description : description.trim(),
-                price : +price,
-                pesoProducts,
-                category,
-                image : product.image
-            }
-            let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
+            Promise.all([product,categories])
     
-            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
-    
-            return res.redirect('/admin')
-        }else{
-            return res.render('productEdit',{
-                product : products.find(product => product.id === +req.params.id),
-                categories,
-                firstLetter,
-                pesoProducts,
-                errors : errors.mapped(),
-                
+            .then(([product,categories]) => {
+                return res.render('productEdit', {
+                    categories,
+                    product,
+                    firstLetter,
+                    errors: errors.mapped(),
+                })
             })
+            .catch(error => console.log(error))
+
         }
+
     },
-    search : (req,res) => res.render('admin',{
+    
+
+    /*search : (req,res) => res.render('admin',{
         title : 'Resultado de la búsqueda',
         products,
         categories,
@@ -137,7 +163,55 @@ module.exports = {
         title : 'Categoría: ' + req.query.category,
         categories,
         products : products.filter(product => product.category === req.query.category)
-    }),
+    }),*/
+    search: (req, res) => {
+
+        let products = db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.search
+                }
+            },
+            include: ['images', 'category']
+        })
+        let categories = db.Category.findAll()
+
+        Promise.all([products, categories])
+
+            .then(([products, categories]) => {
+                return res.render('admin', {
+                    products,
+                    categories,
+                    title: 'Resultado de la búsqueda'
+                })
+            })
+            .catch(error => console.log(error))
+    },
+    filter: (req, res) => {
+
+        let category = db.Category.findByPk(req.query.category,{
+           
+            include: [
+                {
+                    association : 'products',
+                    include : ['images','category']
+                }
+
+            ]
+        })
+        let categories = db.Category.findAll();
+
+        Promise.all([category, categories])
+
+            .then(([category,categories]) => {
+                return res.render('admin', {
+                    title: 'Categoría: ' + req.query.category,
+                    categories,
+                    products : category.products
+                })
+            })
+            .catch(error => console.log(error))
+    },
     destroy : (req, res) => {
        
         db.Product.destroy({
