@@ -1,11 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+
 const bcrypt=require('bcryptjs');
-const users=require(path.join(__dirname,'../data/users.json'))
 
 const {validationResult, body} = require('express-validator');
 const db = require('../database/models');
-const { builtinModules } = require('module');
 
 
 module.exports = {

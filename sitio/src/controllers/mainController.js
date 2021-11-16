@@ -1,7 +1,3 @@
- const fs = require('fs');
- const path = require('path');
-
- let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
  
  const db = require('../database/models');
  const {Op} = require('sequelize')
@@ -45,17 +41,18 @@
       let products = db.Product.findAll({
           include : ['images','category', 'weigh']
       })
+      
       let categories = db.Category.findAll()
-      let weigh = db.Weigh.findAll()
+      let weighs = db.Weigh.findAll()
     
 
-      Promise.all([products,categories,weigh])
-          .then(([products,categories,weigh]) => {
+      Promise.all([products,categories,weighs])
+          .then(([products,categories,weighs]) => {
               return res.render('admin',{
                   title : "Administración",
                   products,
                   categories,
-                  weigh
+                  weighs
               })
           })
           .catch(error => console.log(error))

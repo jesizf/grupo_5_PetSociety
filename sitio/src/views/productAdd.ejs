@@ -47,8 +47,8 @@
                                         <div class="form-floating pt-2">
                                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="pesoProducts">
                                              <option value="" selected hidden>Selecciona el peso</option>
-                                              <% pesoProducts.forEach(pesoProducts => { %>
-                                                <option value="<%= pesoProducts %>" <%= locals.old && old.pesoProducts.id === pesoProducts.id  ? 'selected' : null%> ><%= firstLetter(pesoProducts)%></option>
+                                              <% weighs.forEach(weigh => { %>
+                                                <option value="<%= weigh.id %>" <%= locals.old && old.weigh.id === weigh.id  ? 'selected' : null%> ><%= weigh.weigh%></option>
                                               <% }) %>                                          
                                             </select>
                                             <label for="floatingSelect">Peso de los prodúctos</label>

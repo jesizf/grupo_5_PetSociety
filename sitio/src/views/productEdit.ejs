@@ -55,8 +55,8 @@
                                         <div class="form-floating pt-2">
                                             <select class="form-select" name="pesoProducts" id="pesoProducts" >
                                                 <option value="" selected hidden>Seleccioná el Peso</option>
-                                                <% pesoProducts.forEach(pesoProducts => { %>
-                                                <option value="<%= pesoProducts %>" <%= product.pesoProducts === pesoProducts ? 'selected' : null%> ><%= pesoProducts %></option>
+                                                <% weighs.forEach(weigh => { %>
+                                                <option value="<%= weigh %>" <%= product.weighId === weigh.id ? 'selected' : null%> ><%= weigh.weigh %></option>
                                          <% }) %>                                    
                                             </select>
                                         <label for="pesoProducts">Peso</label>

@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 
   
   Weigh.init({
-    weigh: DataTypes.DECIMAL
+    weigh: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Weigh',

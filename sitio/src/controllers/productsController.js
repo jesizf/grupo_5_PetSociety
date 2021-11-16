@@ -1,13 +1,5 @@
-const fs = require('fs');
-const path = require('path');
-
-
-let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8'));
-let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 const firstLetter = require('../utils/firstLetter');
 const {validationResult} = require('express-validator')
-
-const pesoProducts = require('../data/pesoProducts.json');
 const db = require('../database/models');
 const { Op } = require('sequelize')
 
@@ -17,13 +9,16 @@ module.exports = {
    
     add: (req, res) => {
 
-        db.Category.findAll()
-            .then(categories => {
-                return res.render('productAdd', {title: 'Agregar Productos',
-                products,
+       let categories = db.Category.findAll()
+       let weighs = db.Weigh.findAll()
+
+       Promise.all([categories, weighs ])
+            .then(([categories, weighs ]) => {
+                return res.render('productAdd', {
+                    title: 'Agregar Productos',
                     categories,
                     firstLetter,
-                    pesoProducts
+                    weighs
                 })
             })
             .catch(error => console.log(error))
@@ -63,13 +58,13 @@ module.exports = {
         } else {
 
             let categories = db.Category.findAll()
-            let pesoProducts = db.Weigh.findAll()
+            let weighs = db.Weigh.findAll()
             
-            Promise.all([categories, pesoProducts])
-            .then(([categories, pesoProducts]) => {
+            Promise.all([categories, weighs])
+            .then(([categories, weighs]) => {
                 return res.render('productAdd', {
                     categories,
-                    pesoProducts,
+                    weighs,
                     firstLetter,
                     errors: errors.mapped(),
                     old: req.body
@@ -96,15 +91,15 @@ module.exports = {
     edit : (req, res) =>{
         let product= db.Product.findByPk(req.params.id)
         let categories= db.Category.findAll()
-        let pesoProducts = db.Weigh.findAll()
+        let weighs = db.Weigh.findAll()
 
-        Promise.all([product,categories, pesoProducts])
+        Promise.all([product,categories, weighs])
         
-        .then(([product, categories, pesoProducts]) => {
+        .then(([product, categories, weighs]) => {
         return res.render('productEdit',{
            product,
             categories,
-            pesoProducts,
+            weighs,
             firstLetter,
             
         })  
@@ -116,7 +111,7 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, description, price, category } = req.body;
+            const { name, description, price, category, weigh } = req.body;
          
             db.Product.update(
                 {
@@ -124,7 +119,7 @@ module.exports = {
                     description : description.trim(),
                     price,
                     categoryId : category,
-                    
+                    weighId: weigh
                 },
                 {
                     where : {
@@ -142,16 +137,16 @@ module.exports = {
 
             let product = db.Product.findByPk(req.params.id)
             let categories = db.Category.findAll()
-            let pesoProducts = db.Weigh.findAll()
+            let weighs = db.Weigh.findAll()
 
     
-            Promise.all([product,categories, pesoProducts])
+            Promise.all([product,categories, weighs])
     
-            .then(([product,categories, pesoProducts]) => {
+            .then(([product,categories, weighs]) => {
                 return res.render('productEdit', {
                     categories,
                     product,
-                    pesoProducts,
+                    weighs,
                     firstLetter,
                     errors: errors.mapped(),
                 })
