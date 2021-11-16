@@ -151,19 +151,6 @@ module.exports = {
 
     },
     
-
-    /*search : (req,res) => res.render('admin',{
-        title : 'Resultado de la búsqueda',
-        products,
-        categories,
-        firstLetter,
-        products : products.filter(product => product.name.toLowerCase().includes(req.query.search.toLowerCase()))
-    }),
-    filter : (req,res) => res.render('admin',{
-        title : 'Categoría: ' + req.query.category,
-        categories,
-        products : products.filter(product => product.category === req.query.category)
-    }),*/
     search: (req, res) => {
 
         let products = db.Product.findAll({
@@ -216,7 +203,7 @@ module.exports = {
        
         db.Product.destroy({
             where : {
-                id : freq.params.id
+                id : req.params.id
             }
         })
         .then ( () => {

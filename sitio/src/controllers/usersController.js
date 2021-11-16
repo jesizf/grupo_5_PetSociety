@@ -34,7 +34,7 @@ module.exports = {
                     }
 
                  res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 100})
-                    return res.redirect('/')
+                    return res.redirect('/admin')
                 })
                 .catch(error => res.send(error)) 
                 
