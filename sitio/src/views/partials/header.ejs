@@ -25,15 +25,16 @@
                 <div class="menu-logueado">
                     <div class="dropdown" style="margin-right: 30px;">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                          <%= locals.userLogin.name  %>  
+                          <%= locals.userLogin.name%>  
                         </a>
                       
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                           <li><a class="dropdown-item" href="/users/profile">Mi Perfil</a></li>
-                          <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
-                    <% if (locals.userLogin.rol === 'admin') { %>
+                          
+                    <% if (locals.userLogin.rol === 'admin') {%>
                         <li><a class="dropdown-item" href="/admin">Administracion</a></li>
-                    <% } %>
+                    <% }%> <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
                  </ul>
                     </div>
                     </div>

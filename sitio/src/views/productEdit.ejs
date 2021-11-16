@@ -21,7 +21,7 @@
                                     <!--Nombrar producto-->
                                     <div class="col-12">
                                         <div class="form-floating pt-2">
-                                            <input type="text" class="form-control" id="nombre" placeholder=" Nombre del Producto" name="name" value="<%= product.name %>">
+                                            <input type="text" class="form-control" id="name" placeholder=" Nombre del Producto" name="name" value="<%= product.name %>">
                                             <label for="name">Nombre del Producto</label>
                                         </div>
                                         <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
