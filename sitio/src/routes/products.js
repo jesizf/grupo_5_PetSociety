@@ -3,7 +3,7 @@ var router = express.Router();
 const upload = require('../middlewares/multerImageProduct');
 
 /* GET products page. */
-const {detail, add,edit, search, store, destroy, update} = require('../controllers/productsController');
+const {detail, add, store, edit, update, search, destroy} = require('../controllers/productsController');
 
 const adminUserCheck = require('../middlewares/adminUserCheck')
 

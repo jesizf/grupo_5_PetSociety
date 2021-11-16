@@ -43,16 +43,19 @@
     
     admin : (req,res) => {
       let products = db.Product.findAll({
-          include : ['images','category']
+          include : ['images','category', 'weigh']
       })
       let categories = db.Category.findAll()
+      let weigh = db.Weigh.findAll()
+    
 
-      Promise.all([products,categories])
-          .then(([products,categories]) => {
+      Promise.all([products,categories,weigh])
+          .then(([products,categories,weigh]) => {
               return res.render('admin',{
                   title : "Administración",
                   products,
-                  categories
+                  categories,
+                  weigh
               })
           })
           .catch(error => console.log(error))

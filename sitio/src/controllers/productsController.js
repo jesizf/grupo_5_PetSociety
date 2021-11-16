@@ -11,8 +11,7 @@ const pesoProducts = require('../data/pesoProducts.json');
 const db = require('../database/models');
 const { Op } = require('sequelize')
 
-const { decodeBase64 } = require('bcryptjs');
-const { promiseImpl } = require('ejs');
+
 
 module.exports = {
    
@@ -34,13 +33,14 @@ module.exports = {
 
 
         if (errors.isEmpty()) {
-            const { name, description, price, category } = req.body;
+            const { name, description, price, category, weigh } = req.body;
 
             db.Product.create({
                 name : name.trim(),
                 description : description.trim(),
                 price,
-                categoryId : category
+                categoryId : category,
+                weighId : weigh
 
             })
                 .then(product => {
@@ -62,10 +62,14 @@ module.exports = {
            
         } else {
 
-            db.Category.findAll()
-            .then(categories => {
+            let categories = db.Category.findAll()
+            let pesoProducts = db.Weigh.findAll()
+            
+            Promise.all([categories, pesoProducts])
+            .then(([categories, pesoProducts]) => {
                 return res.render('productAdd', {
                     categories,
+                    pesoProducts,
                     firstLetter,
                     errors: errors.mapped(),
                     old: req.body
@@ -92,13 +96,17 @@ module.exports = {
     edit : (req, res) =>{
         let product= db.Product.findByPk(req.params.id)
         let categories= db.Category.findAll()
-        Promise.all([product,categories])
-        .then(product, categories => {
+        let pesoProducts = db.Weigh.findAll()
+
+        Promise.all([product,categories, pesoProducts])
+        
+        .then(([product, categories, pesoProducts]) => {
         return res.render('productEdit',{
-           
+           product,
             categories,
-            firstLetter,
             pesoProducts,
+            firstLetter,
+            
         })  
     })
     .catch(error =>console.log(error))
@@ -134,13 +142,16 @@ module.exports = {
 
             let product = db.Product.findByPk(req.params.id)
             let categories = db.Category.findAll()
+            let pesoProducts = db.Weigh.findAll()
+
     
-            Promise.all([product,categories])
+            Promise.all([product,categories, pesoProducts])
     
-            .then(([product,categories]) => {
+            .then(([product,categories, pesoProducts]) => {
                 return res.render('productEdit', {
                     categories,
                     product,
+                    pesoProducts,
                     firstLetter,
                     errors: errors.mapped(),
                 })
@@ -201,15 +212,16 @@ module.exports = {
     },
     destroy : (req, res) => {
        
-        db.Product.destroy({
+       db.Product.destroy({
             where : {
-                id : req.params.id
+                id : req.params.id,
             }
         })
-        .then ( () => {
-            return res.redirect('/admin')
-        })
-        .catch(error => console.log(error))
-	}
+            .then( () => {
+                return res.redirect('/admin')
+            })
+            .catch(error => console.log(error))
+
+    }
 
 }

@@ -56,6 +56,7 @@ module.exports = {
             let errors = validationResult(req);
             if (errors.isEmpty()){
                 const {name,email,password} = req.body;
+                
                 db.User.create({
                     name: name.trim(),
                     email: email.trim(),
