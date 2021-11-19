@@ -197,11 +197,12 @@ module.exports = {
         Promise.all([category, categories])
 
             .then(([category,categories]) => {
-                return res.render('admin', {
+                return res.render('admin',{
                     title: 'Categoría: ' + req.query.category,
                     categories,
                     products : category.products
                 })
+               
             })
             .catch(error => console.log(error))
     },
