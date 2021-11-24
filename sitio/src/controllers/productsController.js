@@ -145,7 +145,7 @@ module.exports = {
                 }
                 Promise.all(image)
                     .then((image) => {
-                        return res.redirect('/')
+                        return res.redirect('/admin')
                     })
                     .catch(error => res.send(error))
             })
