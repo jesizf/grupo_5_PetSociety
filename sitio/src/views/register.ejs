@@ -16,7 +16,8 @@
                     </div>
                     <div class="box-form">
                         <label for="email">Correo electrónico</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
+                        <span class="error"><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
                         <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                     </div>
                     <div class="box-form">
@@ -27,7 +28,6 @@
                     <div class="box-form">
                         <label for="pass2">Reingrese contraseña</label>
                         <input class="ultimo-input" type="password" name="pass2" id="pass2">
-                    <span class="error"><%= locals.errores && errores.pass2 ? errores.pass2.msg : null %></span>
                     </div>
             </div>
              
@@ -37,6 +37,7 @@
                     <label for="terms">Acepto términos y condiciones</label>
                    
                 </div> <span class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %></span>
+                
             </div>
             <div class="box-button">
                 <button type="submit">Registrarse</button>

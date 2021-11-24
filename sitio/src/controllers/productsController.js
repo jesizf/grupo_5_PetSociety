@@ -113,8 +113,7 @@ module.exports = {
         if (errors.isEmpty()) {
             const { name, description, price, category, weigh } = req.body;
          
-            db.Product.update(
-                {
+            db.Product.update({
                     name : name.trim(),
                     description : description.trim(),
                     price,
@@ -127,9 +126,30 @@ module.exports = {
                     }
                 }
             )
-                .then( () => {
-                    return res.redirect('/admin')
-                })
+            .then(product => {
+                if(req.files[0] != undefined) {
+  
+                    db.Image.destroy({
+                        where: {
+                            productId: req.params.id
+                        }
+                    })
+                    var image = req.files.map(name => {
+                        return db.Image.create({
+                            file: name.filename,
+                            productId: req.params.id
+                        })
+                    })
+                } else {
+                    var image = []
+                }
+                Promise.all(image)
+                    .then((image) => {
+                        return res.redirect('/admin')
+                    })
+                    .catch(error => res.send(error))
+            })
+            .catch(error => console.log(error))
         
 
 
