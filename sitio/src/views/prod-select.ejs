@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include('./partials/head')%>
+    <body class="body-admin">
+        <%-include('./partials/header')%>
+        <!--cuerpo-->
+        <main class="main-admin">
+          
+            <div class="row" style=" justify-content: center;">
+             
+             
+               
+             
+              <table class="tabla">
+                <thead>
+                    <tr>
+                        
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Categoria</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                  <% products.forEach((product,home) => { %>
+                      <tr>
+                          
+                        <td data-titulo="Imagen"> <a href="/products/detail/<%= product.id %>"><img width="50" src="/img/products/<%= product.images[0].file%>" alt="imagen"> </a></td>
+                          <td data-titulo="Nombre"><%= product.name %></td>
+                          <td  data-titulo="Precio"><%= product.price %></td>
+                          <td data-titulo="Categoria"><%= product.category.name %></td>
+                       
+                            
+                          </div>
+                          
+                    </tr>
+                  <% }) %>
+                </tbody>
+            </table>
+           
+            
+        </main>
+        <%-include('./partials/footer')%>
+        <%-include('./partials/scripts')%>
+      
+    </body>
+
+</html>

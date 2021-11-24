@@ -3,7 +3,7 @@ var router = express.Router();
 const upload = require('../middlewares/multerImageProduct');
 
 /* GET products page. */
-const {detail, add, store, edit, update, search, destroy} = require('../controllers/productsController');
+const {detail, add, store, edit, update, search, destroy, search2} = require('../controllers/productsController');
 
 const adminUserCheck = require('../middlewares/adminUserCheck')
 
@@ -15,6 +15,7 @@ router.post('/add',upload.array('image'), productValidator ,store)
 router.get('/edit/:id',adminUserCheck, edit)
 router.put('/update/:id',upload.array('image'), productValidator ,update)
 router.get('/search',search)
+router.get('/search2',search2)
 
 router.delete('/destroy/:id', destroy);
 

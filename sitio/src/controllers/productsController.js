@@ -180,6 +180,30 @@ module.exports = {
             })
             .catch(error => console.log(error))
     },
+    search2: (req, res) => {
+
+        let products = db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.search2
+                }
+            },
+            include: ['images', 'category']
+        })
+        let categories = db.Category.findAll()
+
+        Promise.all([products, categories])
+
+            .then(([products, categories]) => {
+                return res.render('prod-select', {
+                    products,
+                    categories,
+                    title: 'Resultado de la búsqueda'
+                })
+            })
+            .catch(error => console.log(error))
+    },
+   
     filter: (req, res) => {
 
         let category = db.Category.findByPk(req.query.category,{
