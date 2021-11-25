@@ -108,7 +108,7 @@ display: flex;
     justify-content:start;
 }
 .box-contrato .box-form .botones #cantidad{ 
-    width: 20px;
+    width: 35px;
     height: 25px;
     margin: 0;
     border: none;
@@ -447,6 +447,17 @@ display: flex;
         .detail{
             display: flex;
             justify-content: center;
+        }
+        .detail .box-detail {
+            width: 70%;
+            background-color: var(--colorGrisClaro);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        
+        }
+        .detail .box-content{
+            margin-left: 5%;
         }
     .detail .box-content .box-contrato{
         width: 100%;
