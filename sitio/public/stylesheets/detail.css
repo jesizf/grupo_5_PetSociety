@@ -444,7 +444,7 @@ display: flex;
 /*laptop*/
 
     @media (min-width:1020px){
-        .detail{
+        .detail{ 
             display: flex;
             justify-content: center;
         }
