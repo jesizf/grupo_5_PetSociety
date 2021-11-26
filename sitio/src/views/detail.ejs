@@ -12,18 +12,19 @@
         <!--contenedor imagenes -->
         <div class="box-detail">
 
-            <div class="box-products">z
+            <div class="box-products">
                 <!-- Imagen Grande  -->
                 <div class="images">
                     <img id="img-main" src="/img/products/<%= products.images[0].file %>" alt="">
                 </div>
                 <!-- Imagenes pequeñas  -->
                 <div class="images-min">
-                    <% products.images.forEach(image => { %>
+                    <% for( let i = 1; i < products.images.length; i++ ) { %>
                         <div class="box-img-min">
-                            <img class="img-mini" src="/img/products/<%= image.file %>" alt="" onclick="document.getElementById('img-main').setAttribute('src','/img/products/<%=image%>')">
+                            <img class="img-mini" src="/img/products/<%= products.images[i].file %>" alt="roto" onclick="document.getElementById('img-main').setAttribute('src','/img/products/<%=products.images[i].file%>')">
                         </div>
-                    <% }) %>
+                    <% } %>
+                    
                 </div>
 
             </div>
