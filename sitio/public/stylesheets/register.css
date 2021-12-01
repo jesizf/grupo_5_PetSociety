@@ -1,5 +1,5 @@
 .main-register div.formulario div.box-formulario{
-    height: 280px;
+    height: 390px;
 }
 
 .main-register form div div.box-check-box{
@@ -13,7 +13,7 @@
 
 @media (min-width: 768px) {
     .main-register div.formulario div.box-formulario{
-        height: 350px;
+        height: 390px;
     }
     .main-register form div div.box-check-box div.box-check{
         display: flex;
@@ -29,7 +29,7 @@
 @media (min-width: 1024px) {
   
     .main-register div.formulario div.box-formulario{
-        height: 410px;
+        height: 430px;
     }
     .main-register form div div.box-check-box div.box-check label{
         font-size: 16px;
