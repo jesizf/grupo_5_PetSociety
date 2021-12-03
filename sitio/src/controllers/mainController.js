@@ -22,9 +22,11 @@
         limit : 8,
         include : ['images', 'category']
       })
+      
 
       Promise.all([perro, gato])
       .then(([perro, gato]) =>{
+       
         return res.render('home', {title: 'Pet Society', 
        perro,
        gato
