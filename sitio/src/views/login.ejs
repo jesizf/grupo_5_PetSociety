@@ -4,7 +4,7 @@
 <body class="login">
    <%- include('./partials/header')  %> 
     <main class="main-login">
-        <form action="" method="POST" >
+        <form action="" method="POST" id="form-login">
             <div class="formulario">
                 <h2>Iniciar sesión</h2>
                 <div class="box-formulario">
@@ -18,13 +18,13 @@
                     </div>
                     
                 <div class="box-error">
-                   <a href=""><p>Olvidé mi contraseña</p></a> 
+                    <a href=""><p>Olvidé mi contraseña</p></a> 
                 </div>
-                   <div class="box-error">
+                    <div class="box-error">
                     <div class="box-remember">
                         <input type="checkbox" name="remember" id="remember">
                         <label for="remember">Recordarme</label>
-                       
+                
                     </div> 
                 </div>
             </div>
@@ -36,9 +36,9 @@
                 <span class="error"><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
                 <span class="error"><%= typeof error != 'undefined' && error.password ? error.password : null %></span>
                 <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
-                   
+                
                 </div>
-             
+            
             <div class="box-button">
                 <button type="submit">Ingresar</button>
             </div>
@@ -48,5 +48,7 @@
     <%-include('./partials/footer')%>
 
     <%-include('./partials/scripts')%>
+
+    <script src="/javascripts/loginValidator.js"></script>
 </body>
 </html>
