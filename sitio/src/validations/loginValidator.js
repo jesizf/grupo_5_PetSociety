@@ -3,6 +3,7 @@ const db = require('../database/models');
 const bcrypt = require('bcryptjs')
 
 module.exports = [
+    
     body('email')
         .custom((value,{req}) => {
             return db.User.findOne({
@@ -14,6 +15,6 @@ module.exports = [
                     if(!user || !bcrypt.compareSync(req.body.password, user.password)){
                         return Promise.reject()
                     }
-                }).catch( () => Promise.reject('Credenciales inválidas'))
+                }).catch( () => Promise.reject('email o clave incorrectas'))
         })
 ]

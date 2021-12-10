@@ -4,40 +4,55 @@
 <body class="login">
    <%- include('./partials/header')  %> 
     <main class="main-login">
-        <form action="" method="POST" id="form-login">
+        <form action="" method="POST" id="form-login" autocomplete="off">
             <div class="formulario">
                 <h2>Iniciar sesión</h2>
+
                 <div class="box-formulario">
+
+                    <!-- Email -->
                     <div class="box-form">
                         <label for="email" class="primer-label">Correo electrónico</label>
                         <input type="email" name="email" id="email">
+                        <span id="error-email" class="small text-danger"><%= locals.errores && errores.error-email ? info.info-email.msg : null %> </span>
+                        <span id="info-email" class="small text-info"></span>
                     </div>
+
+                    <!-- password -->
+
                     <div class="box-form">
                         <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password">
+                        <span id="error-password" class="small text-danger"><%= locals.errores && errores.error-password ? errores.info-password.msg : null %> </span>
+                        <span id="info-password" class="small text-info"></span>
                     </div>
                     
+                    <!-- eroores -->
+
                 <div class="box-error">
                     <a href=""><p>Olvidé mi contraseña</p></a> 
                 </div>
+
+                    <!-- mensajes de error -->
+
+                <div class="box-errors" style="text-align: center; font-size: 16px">
+                    <span id="error" class="text-danger"><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
+                    <span id="error" class="text-danger"><%= typeof error != 'undefined' && error.password ? error.password : null %></span>
+                    <span id="error" class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
+                    <span id="error" class="text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
+
+                </div>
+
                     <div class="box-error">
-                    <div class="box-remember">
-                        <input type="checkbox" name="remember" id="remember">
-                        <label for="remember">Recordarme</label>
-                
-                    </div> 
+                        <div class="box-remember">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Recordarme</label>
+                        </div> 
+                    </div>
                 </div>
-            </div>
             <div class="box-crea-cuenta">
-            <a href="/users/register"><p>No tengo cuenta. Crea una.</p></a>        
+                <a href="/users/register"><p>No tengo cuenta. Crea una.</p></a>        
             </div>
-            
-            <div class="box-error">
-                <span class="error"><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
-                <span class="error"><%= typeof error != 'undefined' && error.password ? error.password : null %></span>
-                <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
-                
-                </div>
             
             <div class="box-button">
                 <button type="submit">Ingresar</button>
