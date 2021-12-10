@@ -12,7 +12,7 @@ module.exports = [
     check('category')
 .notEmpty().withMessage('indicá la categoría'),
 
-    check('pesoProducts')
+    check('weigh')
     .notEmpty().withMessage('Indicá el peso'),
 
     check('description')

@@ -13,13 +13,15 @@
                         <h5>Agregar Producto</h5>
                     </div>
                     <div class="car-body">
-                            <form class="row m-1" method="POST" enctype="multipart/form-data" >
+                            <form class="row m-1" method="POST" autocomplete="off" enctype="multipart/form-data" id="form-product">
                                 <div class="col-12">
                                     <div class="form-floating pt-2">
-                                        <input type="text" class="form-control" id="nombre" placeholder=" Nombre del Producto" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                                        <input type="text" class="form-control" id="name-product" placeholder=" Nombre del Producto" name="name" value="<%= locals.old && old.name ? old.name : null %>">
                                         <label for="name">Nombre del Producto</label>
                                        </div>
-                                       <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
+
+                                       <span id="error-name" style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
+                                       <span id="error-product-name" class="text-info" ></span>
                                 </div>
                                 
                                 <div class="col-12 col-md-6 mt-3">
@@ -27,11 +29,14 @@
                                      <input type="number" class="form-control" id="price" value="<%= locals.old && old.price ? old.price : null %>" placeholder=" Precio" name="price">
                                      <label for="price">Precio</label>
                                     </div>
-                                    <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                                    <span id="error-price" style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                                    <span id="error-product-price" class="text-info" ></span>
                                 </div>
+
+
                                 <div class="col-12 col-md-6 mt-3">
                                     <div class="form-floating pt-2">
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="category">
+                                        <select id="option-category" class="form-select" aria-label="Floating label select example" name="category">
                                          <option value="" selected hidden>Selecciona la categoría</option>
                                           <% categories.forEach(category => { %>
                                             <option value="<%= category.id %>" <%= locals.old && old.category.id === category.id  ? 'selected' : null%> ><%= firstLetter(category.name)%></option>
@@ -39,40 +44,51 @@
                                         </select>
                                         <label for="floatingSelect">Categorías</label>
                                       </div>
-                                      <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.category ? errors.category.msg : null%></span>
+                                      <span id="error-category" style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.category ? errors.category.msg : null%></span>
+                                     
                                      </div>
-
 
                                      <div class="col-12 col-md-6 mt-3">
                                         <div class="form-floating pt-2">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="pesoProducts">
+                                            <select id="option-weigh" class="form-select" aria-label="Floating label select example" name="weigh">
                                              <option value="" selected hidden>Selecciona el peso</option>
                                               <% weighs.forEach(weigh => { %>
-                                                <option value="<%= weigh.id %>" <%= locals.old && old.weigh.id === weigh.id  ? 'selected' : null%> ><%= weigh.weigh%></option>
+                                                <option value="<%= weigh.id %>" <%= locals.old && old.weigh.id === weigh.id ? 'selected' : null%> ><%= weigh.weigh%></option>
                                               <% }) %>                                          
                                             </select>
                                             <label for="floatingSelect">Peso de los prodúctos</label>
                                           </div>
-                                          <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.pesoProducts ? errors.pesoProducts.msg : null%></span>
+                                          <span id="error-weigh" style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.weigh ? errors.weigh.msg : null%></span>
+                                    
                                          </div>
 
 
                                      <div class="col-12 col-md-6">
 
                                          <div class="mb-3 mt-3">
-                                            <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
-                                            <input hidden class="form-control" type="file" id="image" name="image" multiple>
+                                            <label for="image" class="btn btn-outline-secondary w-100 mt-2" id="btnImagen" >Subir imagen</label>
+                                            <input  hidden class="form-control" type="file" id="image" name="image" multiple>
                                           </div>
+                                          <span id="imageError" class="text-danger small ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
                                        </div>
                                     </div>
-                            
+                                    <div  id="preview">
+                                     
+                                    </div>       
+                                                        
                                 <div class="col-12 p-3 mt-3">
                                     <div class="form-floating">
-                                        <textarea style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" id="description" name="description"><%= locals.old && old.description ? old.description : null %></textarea></textarea>
+                                        <textarea  style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" id="description" name="description"><%= locals.old && old.description ? old.description : null %></textarea></textarea>
                                         <label for="description">Descripción del producto</label>
                                       </div>
-                                      <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
+                                      <span id="error-description" style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
+                                      <span id="error-product-description" class="text-info" ></span>
                                 </div>
+                                <div class="col-12 p-3 mt-3">
+                                   
+                                    <span id="validation-campos" class="text-info" ></span>
+                                </div>
+                             
                              
                                 
                             <div class="d-flex justify-content-center col-12 mt-5"  >
@@ -90,6 +106,8 @@
         </main>
         <%-include('./partials/footer')%>
         <%-include('./partials/scripts')%>
+   
+        <script src="/javascripts/productValidator.js"></script>
       
     </body>
 

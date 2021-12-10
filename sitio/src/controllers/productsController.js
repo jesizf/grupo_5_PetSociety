@@ -1,7 +1,8 @@
 const firstLetter = require('../utils/firstLetter');
 const {validationResult} = require('express-validator')
 const db = require('../database/models');
-const { Op } = require('sequelize')
+const { Op } = require('sequelize');
+//const { all } = require('sequelize/types/lib/operators');
 
 
 
@@ -57,6 +58,16 @@ module.exports = {
            
         } else {
 
+            errors = errors.mapped();
+            if(req.fileValidationError){
+                errors = {
+                    ...errors,
+                    image: {
+                        msg: req.fileValidationError,
+                    },
+                };
+            }
+
             let categories = db.Category.findAll()
             let weighs = db.Weigh.findAll()
             
@@ -66,7 +77,7 @@ module.exports = {
                     categories,
                     weighs,
                     firstLetter,
-                    errors: errors.mapped(),
+                    errors,
                     old: req.body
                 })
             })
@@ -89,9 +100,12 @@ module.exports = {
         
     },
     edit : (req, res) =>{
-        let product= db.Product.findByPk(req.params.id)
+        let product= db.Product.findByPk(req.params.id,{
+            include : ['images', 'category', 'weigh']
+        })
         let categories= db.Category.findAll()
         let weighs = db.Weigh.findAll()
+      
 
         Promise.all([product,categories, weighs])
         
@@ -126,36 +140,20 @@ module.exports = {
                     }
                 }
             )
-            .then(product => {
-                if(req.files[0] != undefined) {
-  
-                    db.Image.destroy({
-                        where: {
-                            productId: req.params.id
-                        }
-                    })
-                    var image = req.files.map(name => {
-                        return db.Image.create({
-                            file: name.filename,
-                            productId: req.params.id
-                        })
-                    })
-                } else {
-                    var image = []
-                }
-                Promise.all(image)
-                    .then((image) => {
-                        return res.redirect('/admin')
-                    })
-                    .catch(error => res.send(error))
+            .then( () => {
+                return res.redirect('/admin')
             })
+    
+
             .catch(error => console.log(error))
         
 
 
         } else {
 
-            let product = db.Product.findByPk(req.params.id)
+            let product= db.Product.findByPk(req.params.id,{
+            include : [{all: true}]
+        })
             let categories = db.Category.findAll()
             let weighs = db.Weigh.findAll()
 
