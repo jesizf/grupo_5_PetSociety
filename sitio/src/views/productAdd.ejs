@@ -21,7 +21,7 @@
                                        </div>
 
                                        <span id="error-name" style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
-                                       <span id="error-product-name" class="text-info" ></span>
+                                       <span id="error-product-name"  class="error" ></span>
                                 </div>
                                 
                                 <div class="col-12 col-md-6 mt-3">
@@ -30,7 +30,7 @@
                                      <label for="price">Precio</label>
                                     </div>
                                     <span id="error-price" style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
-                                    <span id="error-product-price" class="text-info" ></span>
+                                    <span id="error-product-price"  class="error" ></span>
                                 </div>
 
 
@@ -72,7 +72,7 @@
                                           <span id="imageError" class="text-danger small ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
                                        </div>
                                     </div>
-                                    <div  id="preview">
+                                    <div class="box-img-mini-add" id="preview">
                                      
                                     </div>       
                                                         
@@ -82,11 +82,11 @@
                                         <label for="description">Descripción del producto</label>
                                       </div>
                                       <span id="error-description" style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
-                                      <span id="error-product-description" class="text-info" ></span>
+                                      <span id="error-product-description"  class="error" ></span>
                                 </div>
                                 <div class="col-12 p-3 mt-3">
                                    
-                                    <span id="validation-campos" class="text-info" ></span>
+                                    <span id="validation-campos" style="color: red; font-size: 12px; margin-bottom: 20px;" ></span>
                                 </div>
                              
                              

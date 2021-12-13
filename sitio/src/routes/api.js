@@ -12,11 +12,10 @@ router.post('/delete-image/:id',deleteImage);
 router.post('/add-images/:id',upload.any(),addImage)
 
 // carrito
-router
-      .get('/cart/show', show)
-      .post('/cart/add/:id', add)
-      .get('/cart/remove/:id', remove)
-      .get('/cart/empty', empty)
+router.get('/carts/show', show);
+router.get('/carts/add/:id', add);
+router.get('/carts/remove/:id', remove);
+router.get('/carts/empty', empty);
 
 
 module.exports = router;

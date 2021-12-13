@@ -15,13 +15,13 @@
             <div class="box-products">
                 <!-- Imagen Grande  -->
                 <div class="images">
-                    <img id="img-main" src="/img/products/<%= products.images[0].file %>" alt="">
+                    <img id="img-main" src="/img/products/<%= product.images[0].file %>" alt="">
                 </div>
                 <!-- Imagenes pequeñas  -->
                 <div class="images-min">
-                    <% for( let i = 1; i < products.images.length; i++ ) { %>
+                    <% for( let i = 1; i < product.images.length; i++ ) { %>
                         <div class="box-img-min">
-                            <img class="img-mini" src="/img/products/<%= products.images[i].file %>" alt="roto" onclick="document.getElementById('img-main').setAttribute('src','/img/products/<%=products.images[i].file%>')">
+                            <img class="img-mini" src="/img/products/<%= product.images[i].file %>" alt="roto" onclick="document.getElementById('img-main').setAttribute('src','/img/products/<%=product.images[i].file%>')">
                         </div>
                     <% } %>
                     
@@ -35,8 +35,8 @@
             <!--informacion del producto -->
             <div class="box-info">
                 <div>
-                    <h2><%= products.name %></h2>
-                    <h3> $<%= products.price %></h3>
+                    <h2><%= product.name %></h2>
+                    <h3> $<%= product.price %></h3>
                 </div>
             </div>
             <hr>
@@ -56,12 +56,12 @@
                     <div class="btn-carrito">
                         <button>
                             <div class="boton-carrito-a">
-                                <i class="fas fa-cart-plus"></i> <a href="/carrito"> Agregar al carrito </a>
+                                <i class="fas fa-cart-plus"></i> <a href="/carrito" onclick="addItem(event, '<%= product.id %>')"> Agregar al carrito </a>
                             </div>
                         </button>
                     </div>
                 </div>
-
+ 
                 <!--Metorodos de pago-->
 
                 <div class="pagos">
@@ -141,7 +141,7 @@
         </div>
 </main>
 <main class="descripcion">
-        <p><%= products.description %> </p>
+        <p><%= product.description %> </p>
 </main>
 <%-include('./partials/footer')%>
     <%-include('./partials/scripts')%>

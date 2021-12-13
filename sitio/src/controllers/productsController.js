@@ -89,13 +89,13 @@ module.exports = {
         db.Product.findByPk(req.params.id, {
             include : ['images']
         })
-         .then(products =>{
+         .then(product =>{
             return res.render('detail',{
                 title: 'Detalles de productos',
-                products
+                product
                 
             })
-            .catch(error => console.log(error))
+        
          })
         
     },

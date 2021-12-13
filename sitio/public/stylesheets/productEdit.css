@@ -1,0 +1,30 @@
+.box-img-mini{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.box-img-mini-add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) {
+    .preview1{
+   
+        display: flex;
+        justify-content: center;
+    }
+    .box-img-mini-add{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+}

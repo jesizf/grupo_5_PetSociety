@@ -1,5 +1,4 @@
 console.log('productValidator sucess');
-const $ = id => document.getElementById(id); // para capturar los id 
 
 const formulario = $('form-product');
 const nameProduct = $('name-product');
@@ -140,12 +139,13 @@ description.addEventListener('blur', function() {
 image.addEventListener('change', function (e) {
     switch (true) {
         case !regExExt.exec(this.value): // si esto da false largame este mensaje
-            imageError.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif, webp"
+            $('imageError').innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif, webp"
+        
             this.classList.add('is-invalid')
             preview.innerHTML = null;
             break;
         case !this.value :
-            imageError.innerHTML = "Tiene subir una imagen"
+            $('imageError').innerHTML = "Tiene subir una imagen"
             this.classList.add('is-invalid');
             preview.innerHTML = null;
             break
@@ -193,11 +193,7 @@ formulario.addEventListener('submit', function(e) {
             this.elements[i].classList.add('is-invalid');
             $('validation-campos').innerHTML = 'Los campos señanalados son obligatorios';
             error = true; 
-            if(!this.image.value){
-                $('btnImagen').classList.remove('btn-outline-secondary')
-
-                $('btnImagen').classList.add('btn-outline-danger')
-            } 
+           
         }
     }
     !error && this.submit();
