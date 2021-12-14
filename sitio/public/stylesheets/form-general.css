@@ -126,6 +126,10 @@ span.error{
     font-size: 0.5rem;
     color:#ffad6a;
 }
+.text-info {
+    --bs-text-opacity: 1;
+    color: var(--colorNaranja)!important;
+}
 @media (min-width: 768px) {
 
  .main-login  div.formulario,
