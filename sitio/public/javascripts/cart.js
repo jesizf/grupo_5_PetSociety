@@ -5,7 +5,7 @@ const $ = id => document.getElementById(id);
 let spanCantidad = document.querySelector('span.badge');; //cantidad de productos en el icono del carrito
 let changuito = $('lista-carrito div');
 let spanTotal =  $('total'); //h4 el valor total 
-let cartHead = $('cart-head'); //encabezado 
+let cartHead = document.getElementById('cart-head'); //encabezado 
 let cartFooter = $('cart-footer')
 let cartEmpty = $('cart-empty'); //span con la leyenda: no hay productos agregados
 
@@ -25,7 +25,7 @@ const mostrarCantidad = changuito => {
     }
     if(spanCantidad){
         spanCantidad.innerHTML = cantidad;
-        spanTotal.innerHTML = `<span>$</span><span class="float-end">${total}</span>`;
+        spanTotal.innerHTML = `<span class="float-end">${total}</span>`;
     }
     
 
@@ -42,6 +42,7 @@ const mostrarCantidad = changuito => {
     }
 
 }
+
 
 
 const cargarTabla = carrito => {
@@ -75,6 +76,7 @@ const getCarrito = async () => {
     try {
         let response = await fetch('/api/carts/show')
         let result = await response.json()
+       
 
    
         if(result.data.length > 0) {
@@ -83,12 +85,13 @@ const getCarrito = async () => {
 
         }else{
             mostrarCantidad(result.data)
-
+           
         }
     } catch (error) {
         console.log(error)
     }
 }
+
 
 // addItem viene de la vista detail
 const addItem = async (e,id) => { //recibe el evento y el adi
@@ -104,6 +107,7 @@ const addItem = async (e,id) => { //recibe el evento y el adi
     }
 }
 
+console.log("------------------------------------------------", addItem(mostrarCantidad()));
 getCarrito();
 
 
