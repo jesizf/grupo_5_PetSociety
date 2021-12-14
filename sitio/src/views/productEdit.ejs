@@ -3,7 +3,7 @@
 
     <%- include('./partials/head',{title : 'Editar producto'}) %>
 
-    <body id="body-edit">
+    <body class="productEdit" id="body-edit">
         <%-include('./partials/header')%>
             <!--Cuerpo-->
             <main class="container" style="margin-bottom: 50px;">
@@ -16,15 +16,17 @@
                             <div class="car-body">
 
                                 <!--Formulario-->
-                                <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
+                                <form action="/products/update/<%= product.id %>?_method=PUT" class="row m-1" method="POST" id="form-product-edit">
 
                                     <!--Nombrar producto-->
                                     <div class="col-12">
                                         <div class="form-floating pt-2">
-                                            <input type="text" class="form-control" id="name" placeholder=" Nombre del Producto" name="name" value="<%= product.name %>">
+                                            <input type="text" class="form-control" id="name-product" placeholder=" Nombre del Producto" name="name" value="<%= product.name %>">
                                             <label for="name">Nombre del Producto</label>
                                         </div>
-                                        <span style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
+                                        <span id="error-name" style="color: red; font-size: 12px; margin-bottom: 20px;" ><%= locals.errors && errors.name ? errors.name.msg : null%></span>
+                                        <span id="error-product-name"  class="error" ></span>
+                                       
                                     </div>
 
                                     <!--$ Precio -->
@@ -33,13 +35,15 @@
                                             <input type="number" class="form-control" id="price" value="<%= product.price %>" placeholder=" Precio" name="price">
                                             <label for="price">Precio</label>
                                         </div>
-                                        <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                                        <span  id="error-price"  style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.price ? errors.price.msg : null%></span>
+                                        <span id="error-product-price"  class="error" ></span>
+                                  
                                     </div>
 
                                     <!-- seleccionar categoria -->
                                     <div class="col-12 col-md-6 mt-3">
                                         <div class="form-floating pt-2">
-                                            <select class="form-select" name="category" id="floatingSelect" aria-label="Floating label select example" >
+                                            <select id="option-category" class="form-select" name="category" aria-label="Floating label select example" >
                                                 <option value="" selected hidden>Seleccioná la categoría</option>
                                                 <% categories.forEach(category => { %>
                                                 <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null%>><%= firstLetter(category.name)%></option>
@@ -53,10 +57,10 @@
                                     <!--Seleccionar el peso-->
                                     <div class="col-12 col-md-6 mt-3">
                                         <div class="form-floating pt-2">
-                                            <select class="form-select" name="pesoProducts" id="pesoProducts" >
+                                            <select id="option-weigh" class="form-select" name="weigh" id="pesoProducts" >
                                                 <option value="" selected hidden>Seleccioná el Peso</option>
                                                 <% weighs.forEach(weigh => { %>
-                                                <option value="<%= weigh %>" <%= product.weighId === weigh.id ? 'selected' : null%> ><%= weigh.weigh %></option>
+                                                <option value="<%= weigh.id %>" <%= product.weighId === weigh.id ? 'selected' : null%> ><%= weigh.weigh %></option>
                                          <% }) %>                                    
                                             </select>
                                         <label for="pesoProducts">Peso</label>
@@ -68,26 +72,48 @@
                                     <div class="col-12 col-md-6">
 
                                         <div class="mb-3 mt-3">
-                                            <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subí una imagen</label>
-                                            <input hidden class="form-control" type="file" name="image" id="image" multiple>
+                                            <label for="image" class="btn btn-outline-secondary w-100 mt-2" id="btnImagen">Subí una imagen</label>
+                                            <input hidden class="form-control" type="file" accept="image/*"  name="image" id="image" multiple  onchange="addImage('<%=product.id%>',this.files)">
+                                        </div>
+                                        <span id="imageError" class="text-danger small ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
+                                    </div>
+                                    <div >
+                                        <div  id="preview" class="preview1">
+                                          <% product.images.forEach((image,index) => { %>
+                                            <div class="box-img-mini" >
+                                                <div>
+                                                    <img class="img-edit-mini" width="150" src="/img/products/<%= image.file %>" alt="imagen">
+                                                </div>
+                                             
+                                                <div >
+                                                  <a onclick="deleteImage('<%=image.id%>')" class="btn btn-danger ">Eliminar</a>
+                                                </div>
+                                            </div>
+                                          <% }) %>
                                         </div>
                                     </div>
-                                    </div>
+                                       </div>
+                                  
 
                             <!-- Descripción del producto -->
                             <div class="col-12 p-3 mt-3">
                                 <div class="form-floating">
-                                    <textarea style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" id="description" name="description"><%= product.description %></textarea>
+                                    <textarea style="resize: none; height: 90px;" class="form-control" placeholder="Descripción del producto" name="description"  id="description"><%= product.description %></textarea>
                                     <label for="description">Descripción del producto</label>
                                 </div>
-                                    <span style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
+                                    <span id="error-description" style="color: red; font-size: 12px; margin-bottom: 20px;"><%= locals.errors && errors.description ? errors.description.msg : null%></span>
+                                    <span id="error-product-description"  class="error" ></span>
+                            </div>
+                            <div class="col-12 p-3 mt-3">
+                                   
+                                <span id="validation-campos" style="color: red; font-size: 12px; margin-bottom: 20px;" ></span>
                             </div>
 
                             <!-- Botón Guardar-->
                             <div class="d-flex justify-content-center col-12 mt-5">
                                 <button type="submit"
                                     style="height: 60px; width: 180px; border-radius: 30px; background-color: #fb9d5a; border: none; margin-bottom: 20px; "
-                                    class="btn btn-primary">Guardar</button>"
+                                    class="btn btn-primary">Guardar</button>
                             </div>
 
                             </form>
@@ -100,7 +126,10 @@
                 </div>
             </main>
             <%-include('./partials/footer')%>
-                <%-include('./partials/scripts')%>
+                <%-include('./partials/scripts')%>}
+               
+                <script src="/javascripts/productEditValidator.js"></script>
+              
 
     </body>
 

@@ -26,7 +26,7 @@
 
       Promise.all([perro, gato])
       .then(([perro, gato]) =>{
-       
+        req.session.carrito = []
         return res.render('home', {title: 'Pet Society', 
        perro,
        gato
@@ -36,7 +36,27 @@
 
 
     cart: (req,res)=> {
-        return res.render('carrito',{title: 'carrito'})
+      let products = db.Product.findAll({
+        include : ['images','category', 'weigh']
+    })
+    
+    let categories = db.Category.findAll()
+    let weighs = db.Weigh.findAll()
+  
+
+    Promise.all([products,categories,weighs])
+        .then(([products,categories,weighs]) => {
+          req.session.carrito = [];
+          console.log('carrito', req.session.carrito);
+          return res.render('carrito',{
+            title: 'carrito',
+                products,
+                categories,
+                weighs
+            })
+        })
+        .catch(error => console.log(error))
+        
     },
     
     admin : (req,res) => {
