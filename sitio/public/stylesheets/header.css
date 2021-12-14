@@ -51,7 +51,7 @@ header div .buscador form input{
 }
 header div .buscador form .lupa{
     font-size: 10px;
-    padding: 7.5px 7px 7px 0;
+    padding: 7.5px 7px 5px 0;
     color: black;
     border-radius: 0 15px 15px 0;
     background-color: #fff;  
@@ -95,13 +95,43 @@ header div.iconos nav ul a.carrito-header:hover{
     color: var(--colorAzul);
     transform: scale(1.08);
     }
-
-   
-    .rounded-pill{
+    
+  .rounded-pill{
         position: absolute;
         right: 5px;
         top: 3px;
     }
+
+ .menu-desplegable {
+  position: fixed;
+  width: 200px;
+  height: 1000%;
+  background-color: var(--colorNaranja);
+  left: -200px;
+}
+
+.menu-desplegable ul li {
+  color: #fff;
+  list-style: none;
+ font-size: 20px;
+  padding: 15px 10px;
+ 
+}
+
+
+.menu-desplegable.mostrar {
+  left: 0
+}
+.menu-desplegable .iconos-session {
+    display: flex;
+    background-color: var(--colorAzul);
+ text-align: center;
+ margin-top: 120%;
+}
+
+
+
+
 
 
 /*Tablet*/
