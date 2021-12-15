@@ -122,7 +122,9 @@ header div.iconos nav ul a.carrito-header:hover{
   padding: 15px 10px;
  
 }
-
+.menu-desplegable ul li a{
+    color:#fff
+}
 
 .menu-desplegable.mostrar {
   left: 0
