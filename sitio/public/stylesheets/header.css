@@ -109,7 +109,12 @@ header div.iconos nav ul a.carrito-header:hover{
   background-color: var(--colorNaranja);
   left: -200px;
 }
-
+.fa-times-circle:before {
+   
+    color: var(--colorAzul);
+    position: relative;
+    left: 180px;
+}
 .menu-desplegable ul li {
   color: #fff;
   list-style: none;

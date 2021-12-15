@@ -16,6 +16,7 @@
                         <span id="info-name" class="small text-info"></span>
                     </div>
                     <div class="box-form">
+                        
                         <label for="email">Correo electrónico</label>
                         <input  type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
                         <span class="error"><%= typeof error != 'undefined' && error.email ? error.email : null %></span>
