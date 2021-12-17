@@ -15,10 +15,16 @@ var preview = document.querySelector('#preview');
 // Product add 
 // Nombre del Producto
 
-nameProduct.addEventListener('focus', function(){
-    $('error-product-name').innerText ='Debe tener al menos 5 caracteres';
-    
-    
+nameProduct.addEventListener('blur', function(){
+    var Max_Length = 5;
+    var length =nameProduct.value.length;
+    if (length < Max_Length) {
+         $('error-product-name').innerText ='Debe tener al menos 5 caracteres';
+        
+      }
+      
+     
+   
 })
 
 nameProduct.addEventListener('keydown', function() {
@@ -32,6 +38,7 @@ nameProduct.addEventListener('blur', function() {
             $('error-name').innerText ='Obligatorio';
             this.classList.add('is-invalid'); // crear la clase y cambiar
             break;
+            
     
         default:
             $('error-name').innerText = null;

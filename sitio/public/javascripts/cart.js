@@ -4,8 +4,8 @@ const $ = id => document.getElementById(id);
 
 let spanCantidad = document.querySelector('span.badge');; //cantidad de productos en el icono del carrito
 let changuito = $('lista-carrito div');
-let spanTotal =  $('total'); //h4 el valor total 
-let cartHead = document.getElementById('cart-head'); //encabezado 
+let spanTotal =  document.getElementById('total-total'); //h4 el valor total 
+let cartHead = document.getElementById('encabezado'); //encabezado 
 let cartFooter = $('cart-footer')
 let cartEmpty = $('cart-empty'); //span con la leyenda: no hay productos agregados
 
@@ -24,8 +24,8 @@ const mostrarCantidad = changuito => {
         });
     }
     if(spanCantidad){
-        spanCantidad.innerHTML = cantidad;
-        spanTotal.innerHTML = `<span class="float-end">${total}</span>`;
+        spanCantidad.innerHTML = cantidad; 
+        spanTotal.innerHTML = `<h4>${total}</h4>`;
     }
     
 
@@ -45,43 +45,17 @@ const mostrarCantidad = changuito => {
 
 
 
-const cargarTabla = carrito => {
-    changuito.innerHTML = ""
-    carrito.forEach(producto => {
-        let item = `
-            <td class="col-2">
-            <img class="w-100" src="/images/products/${producto.image}" id="imgProduct"> 
-            </td>
-            <td class="text-center col-3 align-middle">
-            <a class="text-danger h5" onClick="removeItem(event,${producto.id})"><i class="fas fa-minus-square"></i></a>
-            <span class="h5">${producto.cantidad}<span>
-            <a class="text-success h5" onClick="addItem(event,${producto.id})"><i class="fas fa-plus-square"></i></a>
-            </td>
-            <td class="align-middle">
-            ${producto.nombre}
-            </td>
-           
-            <td class="align-middle">
-            <span>$</span><span class="float-end">${producto.precio}</span>
-            </td>
-            <td class="align-middle">
-            <span>$</span><span class="float-end">${producto.total}</span>
-            </td>
-            `;
-        changuito.innerHTML += item
-    });
-    return false
-}
+
+
 const getCarrito = async () => {
     try {
         let response = await fetch('/api/carts/show')
         let result = await response.json()
-       
-
+      
    
-        if(result.data.length > 0) {
+        if(result.data > 0) {
             mostrarCantidad(result.data)
-            cargarTabla(result.data)
+            //cargarTabla(result.data)
 
         }else{
             mostrarCantidad(result.data)
@@ -94,20 +68,20 @@ const getCarrito = async () => {
 
 
 // addItem viene de la vista detail
-const addItem = async (e,id) => { //recibe el evento y el adi
-    e.preventDefault()
+const addItem = async (event,id) => { //recibe el evento y el id
+    event.preventDefault()
     try {
         let response = await fetch('/api/carts/add/' + id) //hace una consulta a la base de datos y le paso el id
         let result = await response.json()
+        console.log(result);
         mostrarCantidad(result.data);
-        cargarTabla(result.data);
+        //cargarTabla(result.data);
 
     } catch (error) {
         console.log(error)
     }
 }
 
-console.log("------------------------------------------------", addItem(mostrarCantidad()));
 getCarrito();
 
 

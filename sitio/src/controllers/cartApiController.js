@@ -21,6 +21,7 @@ module.exports = {
             },
              data: req.session.carrito //lo que va a devolver
         }
+        console.log(response);
         return res.status(200).json(response);
 
     },
@@ -39,7 +40,7 @@ module.exports = {
                 categoria: product.category.name,
                 weigh : product.weigh.weigh,
                 cantidad: 1,
-                total: +product.price,
+                total: +product.price, 
             }
 
             if (req.session.carrito.length == 0) { // si no hay nada
