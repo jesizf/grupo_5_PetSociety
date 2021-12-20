@@ -4,7 +4,11 @@ const users = require('../data/users.json');
 module.exports = [
 
     check('name')
-        .notEmpty().withMessage('El nombre es requerido'),
+        .notEmpty().withMessage('El nombre es requerido')
+        .isLength({
+            min : 15,
+            max : 30
+        }).withMessage('El nombre debe tener un mínimo de 15 y un máximo de 30 caracteres'),
 
 
     check('email')
@@ -25,7 +29,8 @@ module.exports = [
         .isLength({
             min : 8,
             max : 12
-        }).withMessage('La contraseña debe tener un mínimo de 8 y un máximo de 12 caracteres'),
+        }).withMessage('La contraseña debe tener un mínimo de 8 y un máximo de 12 caracteres')
+        .notEmpty().withMessage('Debes ingresar contraseña'),
     
     body('pass2')
         .custom((value,{req}) => {
@@ -34,7 +39,8 @@ module.exports = [
             }else{
                 return true
             }
-        }).withMessage('Las contraseñas no coinciden'),
+        }).withMessage('Las contraseñas no coinciden')
+        .notEmpty().withMessage('Debes reingresar contraseña'),
 
     check('terms')
     .isString('on').withMessage('Debes aceptar los términos y condiciones')

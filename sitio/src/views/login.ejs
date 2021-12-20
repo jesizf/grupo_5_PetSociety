@@ -6,7 +6,7 @@
     <main class="main-login">
         <div class="row">
             <div class="col-12 col-md-15 mx-auto mt-8">
-            <form action="" method="POST" id="form-login" autocomplete="off" novalidate>
+            <form action="" method="POST" id="form-login" autocomplete="off">
             
                 <div class="formulario">
                     <h2>Iniciar sesión</h2>
@@ -19,7 +19,7 @@
                             <label for="email" class="primer-label">Correo electrónico</label>
                         <input type="email" name="email" id="email" placeholder="correo@correo.com" value="<%= locals.old && old.email ? old.email : null %>">
                         </div>
-                        <span id="error-email" class="text-danger"><%= locals.errores && errores.error-email ? info.info-email.msg : null %> </span>
+                        
                         <span id="info-email" class="text-info"></span>
     
     
@@ -27,9 +27,9 @@
     
                         <div class="box-form">
                             <label for="password" class="primer-label">Contraseña</label>
-                            <input type="password" name="password" id="password"  placeholder="contraseña">
+                            <input type="password" name="password" id="password">
                         </div>
-                        <span id="error-password" class="text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
+                        <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
                         <span id="info-password" class="text-info"></span>
                         
                         <!-- recuperar clave -->
@@ -44,9 +44,9 @@
                             </div> 
                         </div>
                         
-                        <div class="box-form">
-                            <span id="error-empty" class="text-danger"></span>
-                        </div>
+                       
+                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
+                        
     
                     </div>
                 <div class="box-crea-cuenta">

@@ -20,7 +20,7 @@ module.exports = {
 
                 let user = await db.User.findOne({
                     where:{
-                        email: email
+                        email: req.body.email
                     }  
                   }) 
                   // si el usuario no existe

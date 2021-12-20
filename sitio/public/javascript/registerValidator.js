@@ -76,7 +76,7 @@ inputEmail.addEventListener('blur', async function() {
 })
 /* password */
 inputPassword.addEventListener('focus', function() {
-    $('info-password').innerText = "Mayúscula, minúscula, número y caracter especial"
+    $('info-password').innerText = "La contraseña debe tener un mínimo de 8 y un máximo de 12 caracteres"
     $('error-password').innerText = null;
     this.classList.remove('is-invalid');
 })

@@ -1,14 +1,22 @@
-const {body} = require('express-validator');
+const {body,check} = require('express-validator');
 const db = require('../database/models');
 const bcrypt = require('bcryptjs')
 
-module.exports = [
     
-    body('email')
+module.exports = [
+        check('email')
+        .notEmpty().withMessage('Debes ingresar tu email').bail()
+        .isEmail().withMessage('Email inválido'),
+    
+        check('password')
+        .notEmpty().withMessage('Debes ingresar tu contraseña'),
+        
+    body('password')
         .custom((value,{req}) => {
+            console.log(req.body)
             return db.User.findOne({
                 where : {
-                    email : value,
+                    email : req.body.email,
                 }
             })
                 .then(user => {
