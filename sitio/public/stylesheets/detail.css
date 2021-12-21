@@ -144,8 +144,6 @@ display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-.detail .btn-carrito button{
     width: 121px;
     height: 40px;
     font-size: 14px;
@@ -154,17 +152,14 @@ display: flex;
     background-color: var(--colorNaranja);
     text-align: center;
 }
-.btn-carrito button:hover{
-    background-color: var(--colorAzul);
-    cursor: pointer;
-}
-.btn-carrito button a{
+
+.btn-carrito  a{
     padding: 10px;
     color: var(--colorGrisClaro);
     text-decoration: none;
     text-align: center;
 }
-.btn-carrito button i.fas.fa-cart-plus {
+.btn-carrito  i.fas.fa-cart-plus {
     padding-top: 5px;
     font-size: 15px;
     color: var(--colorNegro);
@@ -352,12 +347,12 @@ display: flex;
         display: flex;
         flex-wrap: nowrap;
     }
-    .cantidad-carrito .btn-carrito button{
+    .cantidad-carrito .btn-carrito {
         width: 100%;
         height: 45px;
         margin: auto;
     }
-    .btn-carrito button .boton-carrito-a{
+    .btn-carrito  .boton-carrito-a{
         padding: 6px;
     }
     .detail .box-content h4{
@@ -488,6 +483,9 @@ display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
+.cantidad-carrito .btn-carrito {
+    width: 25%;
+    }
 .box-content .pagos {
     width: 100%;
     display: flex;

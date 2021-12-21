@@ -51,6 +51,7 @@ module.exports = {
                     rol : user.rolId,
                     image: user.image
                 }
+                req.session.carrito = []
 
                 res.cookie('petsociety', req.session.userLogin,{maxAge : 2000 * 100})
                 return res.redirect('/')
@@ -195,9 +196,4 @@ module.exports = {
 
       
     }
-
-
-
-
-  
     

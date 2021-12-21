@@ -67,7 +67,7 @@ formulario.addEventListener('submit', (e) => {
         $('error-empty').innerText ="hay un error, por favor revise los campos incorrectos"
     error = true
     }
-    if(!error){
+    if(error){
         formulario.submit()
     }
 

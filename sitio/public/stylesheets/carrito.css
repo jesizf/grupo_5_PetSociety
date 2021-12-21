@@ -52,18 +52,30 @@ main section article div.foto-carrito .botones input {
 
   border: 1px solid #e5e5e5;
 }
+.box-img-cantidad {
+  display: flex;
+  height: 100%;
+}
+.box-cantidad-carrito {
+  margin-top: 26%;
+  
+}
 /*agrega producto*/
-main section article div.foto-carrito .botones .agregar {
-  border-radius: 0px 25px 25px 0px;
-  width: 30px;
+main section article div.foto-carrito .agregar {
+  border-radius: 0px 15px 15px 0px;
+  color: #ffff;
+  font-size: 16px;
+  padding-left: 5px;
   background-color: var(--colorNaranja);
   border: none;
+  transition: background-color 0.5s;
+  cursor: pointer;
 }
 /*saca producto*/
-main section article div.foto-carrito .botones .sacar {
-  border-radius: 25px 0px 0px 25px;
-
-  width: 30px;
+main section article div.foto-carrito .sacar {
+  border-radius: 15px 0px 0px 15px;
+  color: #ffff;
+  padding-left: 5px;
   background-color: var(--colorNaranja);
   border: none;
   transition: background-color 0.5s;
@@ -99,6 +111,10 @@ button i:hover {
 main .section-carrito .carrito-producto .cierre i {
   border-radius: 14px;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.fa-times-circle:before {
+ 
+  left: 0px;
 }
 main .section-carrito .carrito-producto div.foto-carrito {
   width: 80%;
@@ -242,6 +258,7 @@ aside.total-compra div.boton-pagar button:hover {
     top: -38%;
     left: 167%;
   }
+  
 
   main aside.total-compra {
     display: flex;

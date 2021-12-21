@@ -15,13 +15,14 @@ const productVerify = (carrito, id) => {
 
 module.exports = {
     show : async (req, res) =>{ //la info de req.session la que esta almacenada
+
+        console.log('CARRITOOOOO', req.session.carrito)
         let response = {
             meta:{
                 link : getURL(req)
             },
              data: req.session.carrito //lo que va a devolver
         }
-        console.log(response);
         return res.status(200).json(response);
 
     },
@@ -40,7 +41,7 @@ module.exports = {
                 categoria: product.category.name,
                 weigh : product.weigh.weigh,
                 cantidad: 1,
-                total: +product.price, 
+                total: +product.price,
             }
 
             if (req.session.carrito.length == 0) { // si no hay nada
@@ -134,12 +135,81 @@ module.exports = {
         
         }
     },
-    remove : async (req, res) =>{ //remover
+    remove: async (req, res) => {
+        try {
+            let index = productVerify(req.session.carrito,req.params.id)
 
+            let product = req.session.carrito[index]
 
+            if(product.cantidad > 1){
+
+                product.cantidad--
+                product.total = product.cantidad * product.precio
+                req.session.carrito[index] = product   
+
+                /* disminuye la cantidad del producto seleccinado */
+                await db.Cart.update(
+                    {
+                        quantity : product.cantidad
+                    },
+                    {
+                        where : {
+                            orderId : product.orderId,
+                            productId : product.id
+                        }
+                    }
+                )
+
+            }else{
+                req.session.carrito.splice(index,1);
+
+                /* elimina el producto de la tabla carrito */
+                await db.Cart.destroy({
+                    where : {
+                        productId : product.id,
+                        orderId : product.orderId
+                    }
+                })
+            }
+
+            let response = {
+                meta: {
+                    link: getURL(req)
+                },
+                data: req.session.carrito
+            }
+            return res.status(200).json(response)
+
+        } catch (error) {
+            console.log(error)
+            return res.status(500).json(error)
+
+        }
     },
-    empty : async (req, res) =>{ //vaciar el carrito
 
+    
+    
+    empty: async (req, res) => {
+        try {
+            await db.Order.destroy({
+                where : { 
+                    userId : req.session.userLogin.id,
+                    status : 'pending'
+                }
+            })
 
+            req.session.carrito = [];
+            let response = {
+                meta: {
+                    link: getURL(req)
+                },
+                data: req.session.carrito
+            }
+            return res.status(200).json(response)
+        } catch (error) {
+            console.error(error)
+            return res.status(500).json(error)
+
+        }
     }
 }
