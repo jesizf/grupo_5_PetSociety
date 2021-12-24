@@ -10,7 +10,7 @@ const inputPassword = $('password');
 /* email */
 
 inputEmail.addEventListener('focus', function() {
-    $('info-email').innerText = "Ingresá tu email"
+    $('error-email').innerText = "Ingresá tu email"
     $('error-email').innerText = null;
     this.classList.remove('is-invalid');
 })

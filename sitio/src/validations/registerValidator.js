@@ -6,9 +6,9 @@ module.exports = [
     check('name')
         .notEmpty().withMessage('El nombre es requerido')
         .isLength({
-            min : 15,
+            min : 5,
             max : 30
-        }).withMessage('El nombre debe tener un mínimo de 15 y un máximo de 30 caracteres'),
+        }).withMessage('El nombre debe tener un mínimo de 5 y un máximo de 30 caracteres'),
 
 
     check('email')
